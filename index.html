@@ -23,6 +23,16 @@
   .plat { color:var(--muted); font-size:12px }
   .cnt { color:var(--muted); font-size:12px; margin-left:auto }
   .low { color:var(--muted) } .low::after { content:" ?"; color:var(--warn) }
+  .plat .long { display:inline } .plat .short { display:none }
+  @media (max-width: 520px) {
+    body { padding:10px } h1 { font-size:18px } .sub { display:none }
+    th, td { padding:6px 4px } .s { min-width:30px; padding:2px 4px }
+    .year { display:none }
+    .plat .long { display:none } .plat .short { display:inline }
+    th[data-k="critic"] .l, th[data-k="user"] .l { display:none }
+    td.name .plat { display:none }
+    input#q { width:100%; }
+  }
 </style>
 </head>
 <body>
@@ -39,9 +49,9 @@
 <table>
   <thead><tr>
     <th data-k="name">Jogo</th>
-    <th data-k="critic" class="on">Metacritic</th>
-    <th data-k="user">Usuários</th>
-    <th data-k="year">Ano</th>
+    <th data-k="critic" class="on">MC<span class="l">etacritic</span></th>
+    <th data-k="user">Us<span class="l">uários</span></th>
+    <th data-k="year" class="year">Ano</th>
     <th data-k="plat">Plataforma</th>
   </tr></thead>
   <tbody id="tb"></tbody>
@@ -51,6 +61,8 @@
   const S = { list:'B', k:'critic', asc:false, plat:'', q:'' };
   const cls = (v,max) => v==null ? 'n' : (v/max >= 0.75 ? 'g' : v/max >= 0.5 ? 'y' : 'r');
   const badge = (v,max) => `<span class="s ${cls(v,max)}">${v==null ? '–' : v}</span>`;
+  const SHORT = {'Xbox Series X/S':'XSX','Nintendo Switch':'NSW','Nintendo Switch 2':'NSW2','Nintendo 3DS':'3DS','PlayStation 5':'PS5','PlayStation 4':'PS4','PlayStation 3':'PS3','PlayStation 2':'PS2','GameCube':'GC'};
+  const plat = p => `<span class="long">${p}</span><span class="short">${SHORT[p]||p}</span>`;
   document.getElementById('gen').textContent = GENERATED;
   const plats = [...new Set(GAMES.map(g=>g.plat))].sort();
   for (const p of plats) { const o=document.createElement('option'); o.value=o.textContent=p; document.getElementById('plat').appendChild(o); }
@@ -59,7 +71,7 @@
     rows.sort((a,b)=>{ let x=a[S.k], y=b[S.k]; if (typeof x==='string') return S.asc ? x.localeCompare(y) : y.localeCompare(x); x = x==null ? -1 : x; y = y==null ? -1 : y; return S.asc ? x-y : y-x; });
     document.getElementById('tb').innerHTML = rows.map(g=>`<tr>
       <td class="name${g.conf<60?' low':''}"><a href="https://www.metacritic.com/game/${g.mslug}/" target="_blank" rel="noopener">${g.name}</a>${g.found&&g.found!==g.name?` <span class="plat">(${g.found})</span>`:''}</td>
-      <td>${badge(g.critic,100)}</td><td>${badge(g.user,10)}</td><td>${g.year||''}</td><td class="plat">${g.plat}</td></tr>`).join('');
+      <td>${badge(g.critic,100)}</td><td>${badge(g.user,10)}</td><td class="year">${g.year||''}</td><td class="plat">${plat(g.plat)}</td></tr>`).join('');
     document.getElementById('cnt').textContent = rows.length + ' jogos';
     document.querySelectorAll('th').forEach(th=>{ th.classList.toggle('on', th.dataset.k===S.k); th.classList.toggle('asc', th.dataset.k===S.k && S.asc); });
     document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on', t.dataset.list===S.list));
