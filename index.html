@@ -23,13 +23,12 @@
   .plat { color:var(--muted); font-size:12px }
   .cnt { color:var(--muted); font-size:12px; margin-left:auto }
   .low { color:var(--muted) } .low::after { content:" ?"; color:var(--warn) }
-  .plat .long { display:inline } .plat .short { display:none }
+  .long { display:inline } .short { display:none }
   @media (max-width: 520px) {
     body { padding:10px } h1 { font-size:18px } .sub { display:none }
     th, td { padding:6px 4px } .s { min-width:30px; padding:2px 4px }
     .year { display:none }
-    .plat .long { display:none } .plat .short { display:inline }
-    th[data-k="critic"] .l, th[data-k="user"] .l { display:none }
+    .long { display:none } .short { display:inline }
     td.name .plat { display:none }
     input#q { width:100%; }
   }
@@ -49,8 +48,8 @@
 <table>
   <thead><tr>
     <th data-k="name">Jogo</th>
-    <th data-k="critic" class="on">MC<span class="l">etacritic</span></th>
-    <th data-k="user">Us<span class="l">uários</span></th>
+    <th data-k="critic" class="on"><span class="long">Metacritic</span><span class="short">MC</span></th>
+    <th data-k="user"><span class="long">Usuários</span><span class="short">Us.</span></th>
     <th data-k="year" class="year">Ano</th>
     <th data-k="plat">Plataforma</th>
   </tr></thead>
