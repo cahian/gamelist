@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backlog & Wishlist</title>
+<title>Playlist</title>
 <style>
   :root { --bg:#0f1115; --fg:#e6e6e6; --muted:#8a8f98; --row:#161a21; --row2:#1b2028; --acc:#4ade80; --warn:#facc15; --bad:#f87171; --link:#7dd3fc; }
   * { box-sizing:border-box }
@@ -35,11 +35,14 @@
 </style>
 </head>
 <body>
-<h1>Backlog &amp; Wishlist</h1>
+<h1>Playlist</h1>
 <p class="sub">Playlist IGN cruzada com Metacritic. Clique nos cabeçalhos para ordenar. Nomes com <span style="color:var(--warn)">?</span> = match incerto no Metacritic. Gerado em <span id="gen"></span>.</p>
 <div class="bar">
   <button class="tab on" data-list="B">Backlog</button>
   <button class="tab" data-list="W">Wishlist</button>
+  <button class="tab" data-list="P">Jogando</button>
+  <button class="tab" data-list="Z">Pausados</button>
+  <button class="tab" data-list="Q">Desisti</button>
   <button class="tab" data-list="*">Tudo</button>
   <select id="plat"><option value="">Todas plataformas</option></select>
   <input id="q" placeholder="filtrar…" size="18">
@@ -60,7 +63,7 @@
   const S = { list:'B', k:'critic', asc:false, plat:'', q:'' };
   const cls = (v,max) => v==null ? 'n' : (v/max >= 0.75 ? 'g' : v/max >= 0.5 ? 'y' : 'r');
   const badge = (v,max) => `<span class="s ${cls(v,max)}">${v==null ? '–' : v}</span>`;
-  const SHORT = {'Xbox Series X/S':'XSX','Nintendo Switch':'NSW','Nintendo Switch 2':'NSW2','Nintendo 3DS':'3DS','PlayStation 5':'PS5','PlayStation 4':'PS4','PlayStation 3':'PS3','PlayStation 2':'PS2','GameCube':'GC'};
+  const SHORT = {'Steam Deck':'Deck','Xbox Series X/S':'XSX','Nintendo Switch':'NSW','Nintendo Switch 2':'NSW2','Nintendo 3DS':'3DS','PlayStation 5':'PS5','PlayStation 4':'PS4','PlayStation 3':'PS3','PlayStation 2':'PS2','GameCube':'GC'};
   const plat = p => `<span class="long">${p}</span><span class="short">${SHORT[p]||p}</span>`;
   document.getElementById('gen').textContent = GENERATED;
   const plats = [...new Set(GAMES.map(g=>g.plat))].sort();
