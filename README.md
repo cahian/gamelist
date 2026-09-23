@@ -7,7 +7,7 @@ Página estática (HTML puro, zero build) que lista a minha playlist do IGN — 
 A plataforma de cada jogo segue a regra (virei "nintendista"):
 
 1. **Switch 2** se o jogo tem versão específica pra ele (nativo, *Switch 2 Edition* ou port anunciado).
-2. **Switch 1** se tem versão de Switch e não cai acima.
+2. **Switch 1** se tem versão nativa de Switch e não cai acima (*Cloud Version* não conta).
 3. **Steam Deck** se não tem Switch e está na Steam como **Verified**, ou **Playable** com ProtonDB
    **Gold/Platinum**.
 4. **PC** para o resto (inclui emulação de PS2/PS3/PSP/3DS/GameCube).
