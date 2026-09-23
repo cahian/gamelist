@@ -6,8 +6,9 @@ Página estática (HTML puro, zero build) que lista a minha playlist do IGN — 
 
 A plataforma de cada jogo segue a regra (virei "nintendista"):
 
-1. **Switch 2** se o jogo já tem versão própria de Switch 2 **lançada** (nativo ou *Switch 2 Edition*). Anunciado não
-   conta, nem o jogo de Switch 1 rodando por retrocompatibilidade.
+1. **Switch 2** se o jogo tem versão própria de Switch 2 (nativo ou *Switch 2 Edition*) **lançada ou com data
+   definida** (dia exato ou janela tipo mês/estação). Só o ano ou sem data não conta, nem o jogo de Switch 1
+   rodando por retrocompatibilidade.
 2. **Switch 1** se tem versão nativa de Switch e não cai acima (*Cloud Version* não conta).
 3. **Steam Deck** se não tem Switch e está na Steam como **Verified**, ou **Playable** com ProtonDB
    **Gold/Platinum**.
