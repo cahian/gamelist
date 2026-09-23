@@ -14,7 +14,8 @@ A plataforma de cada jogo segue a regra (virei "nintendista"):
 5. **Console** só quando o jogo não existe em PC nem Switch (PS5/Xbox exclusivo).
 
 - `index.html` — a tela. Abra direto no navegador ou publique no GitHub Pages.
-- `data.js` — snapshot dos dados (`GAMES` + `GENERATED`). Regerado sob demanda pelo Claude Code
+- `data.js` — snapshot dos dados (`GAMES` + `GENERATED`). Ao regerar, trocar o `?v=` do `<script src="data.js?v=…">`
+  no `index.html`, senão o navegador segura a versão antiga em cache. Regerado sob demanda pelo Claude Code
   (IGN GraphQL → Metacritic backend API, via Claude in Chrome).
 
 Sem userscript, sem backend, sem dependências.
