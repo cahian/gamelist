@@ -44,7 +44,7 @@
 </head>
 <body>
 <h1>Playlist</h1>
-<p class="sub">Playlist IGN cruzada com Metacritic. Plataforma = onde o jogo roda melhor entre Switch 2, Switch, Steam Deck e PC (Steam Machine/SteamOS): fps estável primeiro, gráfico desempata, portátil vence quando já está bom. Coluna <b>Deck</b> = nota A–F rodando no Steam Deck <b>LCD</b> (A = 60 travado, B = 60 com cortes ou 45, C = 40 @ 40Hz, D = 30, F = abaixo de 30). Clique na linha para ver como rodar e a fonte. <span style="color:var(--warn)">?</span> na plataforma = sem medição pública de fps (escolha por selo da Steam/ProtonDB). Clique nos cabeçalhos para ordenar. Nomes com <span style="color:var(--warn)">?</span> = match incerto no Metacritic. Gerado em <span id="gen"></span>.</p>
+<p class="sub">Playlist IGN cruzada com Metacritic. Plataforma = onde o jogo roda melhor entre Switch 2, Switch, Steam Deck e PC (Steam Machine/SteamOS): fps estável primeiro, gráfico desempata, portátil vence quando já está bom. Coluna <b>Deck</b> = nota A–F rodando no Steam Deck <b>LCD</b> (A = 60 travado, B = 60 com cortes ou 45, C = 40 @ 40Hz, D = 30, F = abaixo de 30). Clique na linha para ver como rodar e a fonte. <span style="color:var(--warn)">?</span> na plataforma = pesquisado e não existe teste de fps publicado; escolha por evidência indireta (motor, requisitos, selo da Steam). Clique nos cabeçalhos para ordenar. Nomes com <span style="color:var(--warn)">?</span> = match incerto no Metacritic. Gerado em <span id="gen"></span>.</p>
 <div class="bar">
   <button class="tab on" data-list="B">Backlog</button>
   <button class="tab" data-list="W">Wishlist</button>
@@ -67,7 +67,7 @@
   </tr></thead>
   <tbody id="tb"></tbody>
 </table>
-<script src="data.js?v=2026-09-30b"></script>
+<script src="data.js?v=2026-09-30c"></script>
 <script>
   const S = { list:'B', k:'critic', asc:false, plat:'', q:'' };
   const cls = (v,max) => v==null ? 'n' : (v/max >= 0.75 ? 'g' : v/max >= 0.5 ? 'y' : 'r');
