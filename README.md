@@ -16,7 +16,7 @@ A plataforma de cada jogo é **onde ele roda melhor** entre 4 opções (regra de
 6. **Windows / PS5 / Xbox** só quando nenhuma das 4 roda (anticheat que bloqueia Linux, exclusivo sem emulação).
 
 Coluna **Deck**: nota A–F no Steam Deck **LCD** (A = 60 travado, B = 60 com cortes ou 45 estável, C = 40 @ 40Hz,
-D = 30, F = abaixo de 30), para os jogos que não têm versão Nintendo. Cada linha tem o **motivo** da
+D = 30, F = abaixo de 30, X = não roda, N = não lançado) para TODOS os jogos — exclusivos de console avaliados com o Deck emulando. Cada linha tem o **motivo** da
 plataforma e, ao clicar, **como rodar**.
 
 - `index.html` — a tela. Abra direto no navegador ou publique no GitHub Pages.
