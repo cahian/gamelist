@@ -22,6 +22,12 @@
   .g { background:var(--acc) } .y { background:var(--warn) } .r { background:var(--bad) } .n { background:#2a2f38; color:var(--muted); font-weight:400 }
   .plat { color:var(--muted); font-size:12px }
   .cnt { color:var(--muted); font-size:12px; margin-left:auto }
+  .why { display:block; color:var(--muted); font-size:12px; margin-top:2px }
+  .how { display:none; color:var(--fg); font-size:12px; margin-top:4px; padding:6px 8px; background:#0f1115; border-radius:4px }
+  tr.open .how { display:block } tbody tr { cursor:pointer }
+  .dg { display:inline-block; min-width:22px; text-align:center; padding:2px 6px; border-radius:4px; font-weight:700; color:#000 }
+  .dA { background:#4ade80 } .dB { background:#a3e635 } .dC { background:#facc15 } .dD { background:#fb923c } .dF { background:#f87171 }
+  .pc-baixa::after { content:" ?"; color:var(--warn) }
   .low { color:var(--muted) } .low::after { content:" ?"; color:var(--warn) }
   .long { display:inline } .short { display:none }
   @media (max-width: 520px) {
@@ -36,7 +42,7 @@
 </head>
 <body>
 <h1>Playlist</h1>
-<p class="sub">Playlist IGN cruzada com Metacritic. Clique nos cabeçalhos para ordenar. Nomes com <span style="color:var(--warn)">?</span> = match incerto no Metacritic. Gerado em <span id="gen"></span>.</p>
+<p class="sub">Playlist IGN cruzada com Metacritic. Plataforma = onde o jogo roda melhor entre Switch 2, Switch, Steam Deck e PC (Steam Machine/SteamOS): fps estável primeiro, gráfico desempata, portátil vence quando já está bom. Coluna <b>Deck</b> = nota A–F rodando no Steam Deck (A = 60 travado, B = 60 com cortes ou 45, C = 40 @ 40Hz, D = 30, F = abaixo de 30). Clique na linha para ver como rodar. Clique nos cabeçalhos para ordenar. Nomes com <span style="color:var(--warn)">?</span> = match incerto no Metacritic. Gerado em <span id="gen"></span>.</p>
 <div class="bar">
   <button class="tab on" data-list="B">Backlog</button>
   <button class="tab" data-list="W">Wishlist</button>
@@ -54,26 +60,29 @@
     <th data-k="critic" class="on"><span class="long">Metacritic</span><span class="short">MC</span></th>
     <th data-k="user"><span class="long">Usuários</span><span class="short">Us.</span></th>
     <th data-k="year" class="year">Ano</th>
+    <th data-k="dg">Deck</th>
     <th data-k="plat">Plataforma</th>
   </tr></thead>
   <tbody id="tb"></tbody>
 </table>
-<script src="data.js?v=2026-09-23d"></script>
+<script src="data.js?v=2026-09-30a"></script>
 <script>
   const S = { list:'B', k:'critic', asc:false, plat:'', q:'' };
   const cls = (v,max) => v==null ? 'n' : (v/max >= 0.75 ? 'g' : v/max >= 0.5 ? 'y' : 'r');
   const badge = (v,max) => `<span class="s ${cls(v,max)}">${v==null ? '–' : v}</span>`;
-  const SHORT = {'Steam Deck':'Deck','Xbox Series X/S':'XSX','Nintendo Switch':'NSW','Nintendo Switch 2':'NSW2','Nintendo 3DS':'3DS','PlayStation 5':'PS5','PlayStation 4':'PS4','PlayStation 3':'PS3','PlayStation 2':'PS2','GameCube':'GC'};
+  const SHORT = {'Windows':'Win','Steam Deck':'Deck','Xbox Series X/S':'XSX','Nintendo Switch':'NSW','Nintendo Switch 2':'NSW2','Nintendo 3DS':'3DS','PlayStation 5':'PS5','PlayStation 4':'PS4','PlayStation 3':'PS3','PlayStation 2':'PS2','GameCube':'GC'};
   const plat = p => `<span class="long">${p}</span><span class="short">${SHORT[p]||p}</span>`;
   document.getElementById('gen').textContent = GENERATED;
   const plats = [...new Set(GAMES.map(g=>g.plat))].sort();
   for (const p of plats) { const o=document.createElement('option'); o.value=o.textContent=p; document.getElementById('plat').appendChild(o); }
   function render(){
     let rows = GAMES.filter(g => (S.list==='*'||g.list===S.list) && (!S.plat||g.plat===S.plat) && (!S.q||g.name.toLowerCase().includes(S.q)));
-    rows.sort((a,b)=>{ let x=a[S.k], y=b[S.k]; if (typeof x==='string') return S.asc ? x.localeCompare(y) : y.localeCompare(x); x = x==null ? -1 : x; y = y==null ? -1 : y; return S.asc ? x-y : y-x; });
+    const GR={A:5,B:4,C:3,D:2,F:1};
+    rows.sort((a,b)=>{ let x=a[S.k], y=b[S.k]; if (S.k==='dg') { x=GR[x]||0; y=GR[y]||0; return S.asc ? x-y : y-x; } if (typeof x==='string') return S.asc ? x.localeCompare(y) : y.localeCompare(x); x = x==null ? -1 : x; y = y==null ? -1 : y; return S.asc ? x-y : y-x; });
     document.getElementById('tb').innerHTML = rows.map(g=>`<tr>
-      <td class="name${g.conf<60?' low':''}"><a href="https://www.metacritic.com/game/${g.mslug}/" target="_blank" rel="noopener">${g.name}</a>${g.found&&g.found!==g.name?` <span class="plat">(${g.found})</span>`:''}</td>
-      <td>${badge(g.critic,100)}</td><td>${badge(g.user,10)}</td><td class="year">${g.year||''}</td><td class="plat">${plat(g.plat)}</td></tr>`).join('');
+      <td class="name"><a class="${g.conf<60?'low':''}" href="https://www.metacritic.com/game/${g.mslug}/" target="_blank" rel="noopener">${g.name}</a>${g.found&&g.found!==g.name?` <span class="plat">(${g.found})</span>`:''}<span class="why">${g.why||''}</span><div class="how"><b>Como rodar (${g.plat}):</b> ${g.how||'–'}${g.dg&&g.plat!=='Steam Deck'?`<br><b>No Deck (${g.dg}):</b> ${g.dfps} — ${g.dset}`:''}${g.dnote?`<br><i>${g.dnote}</i>`:''}<br><span class="plat">confiança da escolha: ${g.pconf||'–'}</span></div></td>
+      <td>${badge(g.critic,100)}</td><td>${badge(g.user,10)}</td><td class="year">${g.year||''}</td><td>${g.dg?`<span class="dg d${g.dg}">${g.dg}</span>`:'<span class="plat">–</span>'}</td><td class="plat${g.pconf==='baixa'?' pc-baixa':''}">${plat(g.plat)}</td></tr>`).join('');
+    document.querySelectorAll('#tb tr').forEach(tr=>tr.onclick=e=>{ if(e.target.tagName!=='A') tr.classList.toggle('open'); });
     document.getElementById('cnt').textContent = rows.length + ' jogos';
     document.querySelectorAll('th').forEach(th=>{ th.classList.toggle('on', th.dataset.k===S.k); th.classList.toggle('asc', th.dataset.k===S.k && S.asc); });
     document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on', t.dataset.list===S.list));

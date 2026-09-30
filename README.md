@@ -4,16 +4,20 @@ Página estática (HTML puro, zero build) que lista a minha playlist do IGN — 
 **Jogando**, **Pausados** e **Desisti** (tudo menos os zerados) — ordenada por nota do Metacritic
 (crítica e usuários).
 
-A plataforma de cada jogo segue a regra (virei "nintendista"):
+A plataforma de cada jogo é **onde ele roda melhor** entre 4 opções (regra de 30/09/2026):
+**Switch 2**, **Switch**, **Steam Deck** e **PC** (Steam Machine com SteamOS — Linux, emula PS3/360/PS4).
 
-1. **Switch 2** se o jogo tem versão própria de Switch 2 (nativo ou *Switch 2 Edition*) **lançada ou com data
-   definida** (dia exato ou janela tipo mês/estação). Só o ano ou sem data não conta, nem o jogo de Switch 1
-   rodando por retrocompatibilidade.
-2. **Switch 1** se tem versão nativa de Switch e não cai acima (*Cloud Version* não conta).
-3. **Steam Deck** se não tem Switch e está na Steam como **Verified**, ou **Playable** com ProtonDB
-   **Gold/Platinum**.
-4. **PC** para o resto (inclui emulação de PS2/PS3/PSP/3DS/GameCube).
-5. **Console** só quando o jogo não existe em PC nem Switch (PS5/Xbox exclusivo).
+1. **fps estável e frame pacing** primeiro; **gráfico** (resolução, preset, DLSS × FSR) desempata.
+2. **Portátil vence quando já está bom** (60 travado, ou 40 @ 40Hz liso; 30 só em jogo lento).
+3. **Deck × Switch 2 equivalentes em fps e gráfico → Deck.** Switch 2 só quando é claramente melhor.
+4. **Rótulo Switch 2 só quando o Switch 1 não roda bem** (se o Deck não tem o jogo e o Switch 1 já está
+   liso, fica "Switch" mesmo com update/edição de S2).
+5. **PC** quando os portáteis sofrem (Deck D/F), emulação pesada (PS3/360/PS4) ou VR. PS2/PSP/GC/3DS → Deck.
+6. **Windows / PS5 / Xbox** só quando nenhuma das 4 roda (anticheat que bloqueia Linux, exclusivo sem emulação).
+
+Coluna **Deck**: nota A–F no Steam Deck (A = 60 travado, B = 60 com cortes ou 45 estável, C = 40 @ 40Hz,
+D = 30, F = abaixo de 30), para os jogos que não têm versão Nintendo. Cada linha tem o **motivo** da
+plataforma e, ao clicar, **como rodar**.
 
 - `index.html` — a tela. Abra direto no navegador ou publique no GitHub Pages.
 - `data.js` — snapshot dos dados (`GAMES` + `GENERATED`). Ao regerar, trocar o `?v=` do `<script src="data.js?v=…">`
