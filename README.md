@@ -15,7 +15,7 @@ A plataforma de cada jogo é **onde ele roda melhor** entre 4 opções (regra de
 5. **PC** quando os portáteis sofrem (Deck D/F), emulação pesada (PS3/360/PS4) ou VR. PS2/PSP/GC/3DS → Deck.
 6. **Windows / PS5 / Xbox** só quando nenhuma das 4 roda (anticheat que bloqueia Linux, exclusivo sem emulação).
 
-Coluna **Deck**: nota A–F no Steam Deck (A = 60 travado, B = 60 com cortes ou 45 estável, C = 40 @ 40Hz,
+Coluna **Deck**: nota A–F no Steam Deck **LCD** (A = 60 travado, B = 60 com cortes ou 45 estável, C = 40 @ 40Hz,
 D = 30, F = abaixo de 30), para os jogos que não têm versão Nintendo. Cada linha tem o **motivo** da
 plataforma e, ao clicar, **como rodar**.
 
