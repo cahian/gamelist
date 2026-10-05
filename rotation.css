@@ -1,0 +1,50 @@
+.rotation {margin:24px 0 30px; padding:22px; border:1px solid #33423b; border-radius:14px; background:linear-gradient(135deg,#16241e 0%,#12171b 45%,#151a24 100%)}
+.rotation-heading {display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:16px}
+.rotation-heading h2 {font-size:23px; margin:2px 0 5px; letter-spacing:-.5px}
+.eyebrow {font-size:10px; font-weight:700; letter-spacing:1.7px; color:var(--green); text-transform:uppercase; margin:0}
+.rotation-heading p:not(.eyebrow) {margin:0; color:var(--muted); max-width:700px; font-size:13px}
+.rotation-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+.rotation-card {min-width:0; background:#151b21; border:1px solid #303944; border-radius:10px; padding:17px; display:flex; flex-direction:column}
+.slot-heading {display:flex; align-items:center; gap:9px; margin-bottom:8px}
+.slot-number {display:grid; place-items:center; background:#20372b; color:#8cebb2; width:29px; height:29px; border-radius:8px; font-size:13px; font-weight:700; flex-shrink:0}
+.rotation-card:nth-child(2) .slot-number {background:#233443; color:#93cffe}
+.rotation-card:nth-child(3) .slot-number {background:#382e43; color:#d0adf6}
+.slot-heading h3 {margin:0; font-size:15px}
+.slot-description {color:var(--muted); font-size:12px; margin:0 0 15px; min-height:35px}
+.slot-search-label {font-size:12px; color:#c2c8d0; margin-bottom:5px; display:block}
+.slot-search,.slot-select {width:100%; min-width:0; background:#10161c; padding:10px; margin-bottom:7px}
+.slot-select {text-overflow:ellipsis; min-height:40px}
+.slot-summary {border-left:2px solid #4ade80; padding:7px 0 7px 11px; margin:10px 0 8px; min-height:57px}
+.slot-summary strong {display:block; margin-bottom:3px; overflow-wrap:anywhere}
+.slot-summary .muted {font-size:12px}
+.slot-summary .steam-price {margin-top:6px; display:block}
+.slot-clear {align-self:flex-start; padding:4px 0; font-size:11px; border:0; color:var(--muted); margin-bottom:10px}
+.slot-clear:hover {color:var(--fg)}
+.suggestion-heading {font-size:11px; font-weight:600; color:#b5beca; margin:14px 0 8px; text-transform:uppercase; letter-spacing:.6px}
+.suggestion-details summary {cursor:pointer; padding:4px 0}
+.suggestion-list {list-style:none; padding:0; margin:0; display:grid; gap:7px}
+.suggestion {width:100%; text-align:left; padding:10px; background:#1c242d; border-color:#2d3845; border-radius:7px}
+.suggestion:hover {border-color:#6e9b83; background:#202e2b}
+.suggestion strong {font-size:12px; display:block; margin-bottom:4px}
+.suggestion small {display:block; color:#aab5c2; font-size:11px; line-height:1.5}
+.suggestion .suggestion-list-label {color:#78cfa0; margin-top:5px}
+.suggestion-empty {font-size:12px; color:var(--muted); padding:12px; border:1px dashed #34404c; border-radius:7px; margin:0}
+.rotation-footer {display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:16px; align-items:center}
+.rotation-footer p {margin:0; color:var(--muted); font-size:12px}
+.rotation-save {color:#92dcb0!important}
+.rotation-save.warning {color:var(--yellow)!important}
+.share-result {width:100%; margin-top:12px; border-top:1px solid #344139; padding-top:12px; font-size:12px}
+.share-result input {width:100%; margin-top:6px; font-size:12px}
+.share-import {margin:0 0 15px; padding:12px; background:#223326; border:1px solid #4c765c; border-radius:8px}
+.share-import p {margin:0 0 8px; font-size:13px}
+.share-import button {margin-right:6px}
+.steam-price {white-space:nowrap; font-size:12px; font-variant-numeric:tabular-nums}
+.steam-price a {color:#98e5b4; font-weight:600}
+.steam-price s {font-size:11px; color:var(--muted)}
+.price-discount {display:inline-block; padding:2px 4px; border-radius:3px; background:#244a28; color:#b3f38c; font-size:10px; font-weight:700}
+.price-date {display:block; font-size:10px; color:var(--muted); white-space:nowrap; margin-top:3px}
+.rotation-tag {font-size:10px; color:#a2eac0; margin:3px 0; display:block}
+.catalog-title {font-size:17px; margin:0 0 12px}
+@media(min-width:1550px) {.rotation {max-width:1500px}}
+@media(max-width:1000px) {.rotation-grid {grid-template-columns:1fr} .rotation-card {padding:16px} .slot-description {min-height:0} .suggestion-list {grid-template-columns:repeat(3,minmax(0,1fr))} .rotation-heading {flex-direction:column}}
+@media(max-width:650px) {.rotation {margin-top:18px; padding:14px} .rotation-heading h2 {font-size:21px} .suggestion-list {grid-template-columns:1fr} .rotation-footer {align-items:flex-start} .slot-search,.slot-select {font-size:16px}}

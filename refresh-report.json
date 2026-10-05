@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T18:42:27+00:00",
+  "generatedAt": "2026-10-05T23:44:10+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -8,7 +8,8 @@
     "steam": 327,
     "proton": 319,
     "deck": 327,
-    "emulation": 50
+    "emulation": 50,
+    "steamPrice": 307
   },
   "errors": []
 }

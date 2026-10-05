@@ -9,6 +9,48 @@ rota recomendada: Linux nativo, Proton, launcher externo ou emulação. Há filt
 ordenação por duração/nota/compatibilidade e soma das horas dos jogos filtrados.
 Clique em **+** para ver instruções, fontes e datas por jogo.
 
+## Rotação de três jogos
+
+No topo da página, escolha uma **aventura principal**, uma **campanha para alternar**
+e um jogo de **partidas ou tentativas**. Há busca e seleção manual em cada slot.
+A segunda posição sugere campanhas menores com mecânicas que contrastem com a
+primeira; a terceira considera os dois jogos escolhidos. As sugestões combinam
+perfis de estrutura, gêneros, duração e lista pessoal, com uma explicação visível.
+Backlog e Jogando têm prioridade; jogos em Desisti e lançamentos indisponíveis
+ficam fora das sugestões. A seleção manual continua livre.
+
+As escolhas são salvas automaticamente no `localStorage` deste navegador, sem
+conta ou servidor. **Minha rotação** filtra os jogos escolhidos; as listas originais
+do catálogo continuam independentes. Mudar um jogo recalcula as sugestões sem
+apagar as outras escolhas. Limpar os dados do navegador remove a seleção local.
+**Copiar link da seleção** permite transferi-la: o outro dispositivo mostra uma
+prévia e só substitui a seleção local ao clicar em **Usar esta seleção**. Não há
+sincronização automática entre dispositivos. Se o armazenamento estiver bloqueado,
+a interface avisa e o link ainda permite guardar a combinação.
+
+## Preços da Steam Brasil
+
+Cada edição vinculada a um AppID tem seu preço consultado pela API pública da loja
+(`https://store.steampowered.com/api/appdetails?appids=APPID&cc=br&l=brazilian`).
+A rotina Python executa no GitHub Actions, sem chave de API e sem chamadas da Steam
+no navegador. O preço da expansão usa o AppID da expansão, não o do jogo base.
+
+Valores são armazenados em centavos e só aceitos em **BRL**, com preço normal,
+preço promocional, desconto, data e link da loja. Gratuitos, sem preço no Brasil,
+lançamentos sem preço e jogos sem edição Steam confirmada têm estados distintos.
+Há ordenação por preço e filtros de promoção, gratuitos e pagos. Promoções podem
+mudar depois da consulta; a oferta válida é a apresentada na loja.
+
+A fonte `steamPrice` tem cache independente de 23 horas, permitindo renovar a
+cotação em cada execução diária. Falhas preservam a última
+cotação e sua data, identificadas como **dado anterior**; cotações com mais de 48 h
+também recebem esse aviso. Preços antigos não entram no filtro de promoções.
+Para consultar só preços sem atualizar os demais metadados:
+
+```sh
+python3 -u scripts/refresh.py --prices-only
+```
+
 A preferência é pelo Deck quando a referência anterior de desempenho favorece o
 portátil. Jogos pesados vão para PC Linux. Bloqueios de Linux ficam explícitos como
 **PC Windows**. Edições sem port ou emulação jogável confirmada ficam **Aguardando**;
@@ -66,12 +108,15 @@ o snapshot anterior.
 - `scripts/game_metadata.py`: identificação de edições, normalização e recomendação.
 - `data.js`: dados gerados; não editar manualmente. A versão de cache no HTML é
   atualizada automaticamente pelo script.
-- `index.html` e `app.js`: página estática, sem build; funciona também abrindo o HTML.
+- `index.html` e `app.js`: catálogo estático, sem build.
+- `rotation.js`: perfis, ranking contextual e persistência versionada da rotação.
+- `rotation-ui.js` e `rotation.css`: seleção, sugestões e transferência por link.
+- `prices.js`: apresentação e estados de preço compartilhados pelo catálogo e slots.
 - `refresh-report.json`: cobertura e falhas da execução mais recente.
 
 ```sh
 python3 -m unittest discover -s tests -v
-node --test tests/frontend.test.cjs
+node --test tests/*.test.cjs
 python3 -u scripts/refresh.py
 # Para forçar nova consulta ou testar um trecho:
 python3 -u scripts/refresh.py --force --limit 12

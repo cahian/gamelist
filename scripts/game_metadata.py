@@ -99,6 +99,41 @@ def parse_proton(payload):
     return {key: payload.get(key) for key in ['tier', 'trendingTier', 'confidence', 'total', 'score']}
 
 
+def parse_steam_price(payload, appid):
+    """Normalize the Brazilian Store price, keeping absent prices distinct from free."""
+    entry = payload.get(str(appid)) if isinstance(payload, dict) else None
+    if not isinstance(entry, dict) or not isinstance(entry.get('success'), bool):
+        raise ValueError('Steam BR: resposta de preço inválida')
+    result = {'appid': int(appid), 'country': 'BR', 'currency': 'BRL',
+              'initial': None, 'final': None, 'discountPercent': None,
+              'isFree': False, 'status': 'unavailable',
+              'url': f'https://store.steampowered.com/app/{appid}/?cc=br'}
+    # A valid negative answer can mean a removed or region-unavailable listing.
+    if not entry['success']:
+        return result
+    item = entry.get('data')
+    if not isinstance(item, dict) or item.get('type') not in {'game', 'dlc'} or not item.get('name'):
+        raise ValueError('Steam BR: dados do aplicativo ausentes')
+    if item.get('steam_appid') is not None and str(item['steam_appid']) != str(appid):
+        raise ValueError('Steam BR: aplicativo retornado difere do solicitado')
+    if item.get('is_free') is True:
+        return {**result, 'initial': 0, 'final': 0, 'discountPercent': 0,
+                'isFree': True, 'status': 'free'}
+    price = item.get('price_overview')
+    if price is not None:
+        if not isinstance(price, dict) or price.get('currency') != 'BRL':
+            raise ValueError('Steam BR: preço retornado não está em BRL')
+        initial, final, discount = (price.get(key) for key in ('initial', 'final', 'discount_percent'))
+        if (any(not isinstance(value, int) or isinstance(value, bool) for value in (initial, final, discount))
+                or initial < 0 or final < 0 or final > initial or not 0 <= discount <= 100):
+            raise ValueError('Steam BR: valores de preço inválidos')
+        return {**result, 'initial': initial, 'final': final,
+                'discountPercent': discount, 'status': 'available'}
+    if item.get('release_date', {}).get('coming_soon') is True:
+        result['status'] = 'coming_soon'
+    return result
+
+
 def parse_ign(item):
     names = item.get('metadata', {}).get('names', {})
     if not item.get('id') or not names.get('name'):

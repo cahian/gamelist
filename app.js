@@ -11,7 +11,7 @@
   if (typeof module !== 'undefined' && module.exports) module.exports = {escapeHtml, safeUrl, compare};
   if (!root.document) return;
   const $ = id => document.getElementById(id);
-  const S = {list:'*', k:'critic', asc:false, device:'', method:'', status:'', q:'', time:'main'};
+  const S = {list:'*', k:'critic', asc:false, device:'', method:'', status:'', q:'', time:'main', price:''};
   const STATUS = {ready:'Disponível', check:'Conferir ajustes', fallback:'Requer Windows', waiting:'Aguardando'};
   const DECK = {0:'Sem avaliação', 1:'Não suportado', 2:'Jogável', 3:'Verificado'};
   const TIERS = {platinum:'Platinum', gold:'Gold', silver:'Silver', bronze:'Bronze', borked:'Borked', pending:'Pendente'};
@@ -42,6 +42,7 @@
     if (hltb) source.push(sourceLine(game, 'hltb', 'HowLongToBeat', hltb.url));
     if (mc) source.push(sourceLine(game, 'metacritic', 'Metacritic', mc.url));
     if (game.steam) source.push(sourceLine(game, 'steam', 'Steam', game.steam.url));
+    if (game.sources?.steamPrice) source.push(sourceLine(game, 'steamPrice', 'Steam — preço no Brasil', game.price?.url || game.steam?.url));
     if (game.proton && game.steam) source.push(sourceLine(game, 'proton', 'ProtonDB — Linux', `https://www.protondb.com/app/${game.steam.compatAppid || game.steam.appid}`));
     if (game.deck && game.steam) source.push(sourceLine(game, 'deck', 'Valve — avaliação do Steam Deck', game.steam.url));
     if (game.steam) source.push(`<li>${link(`https://www.protondb.com/app/${game.steam.compatAppid || game.steam.appid}?device=steamDeck`, 'ProtonDB — relatos do Steam Deck')}</li>`);
@@ -50,6 +51,7 @@
     return `<div class="details">
       <p><b>Como jogar:</b> ${escapeHtml(play.how || 'Aguardando consulta automática.')}</p>
       ${game.steam ? `<p><b>Edição PC:</b> ${link(game.steam.url, game.steam.name)}.</p>` : ''}
+      <p><b>Preço na Steam Brasil:</b> ${root.GamePrices.render(game)}</p>
       ${game.steam?.isDlc ? '<p class="muted">Expansão: requer o jogo base. ProtonDB e Valve referem-se à compatibilidade do jogo base.</p>' : ''}
       ${hltb ? `<p><b>Tempo médio:</b> campanha ${hours(hltb.main)} · extras ${hours(hltb.extras)} · 100% ${hours(hltb.complete)}. ${escapeHtml(hltb.name)}; ${escapeHtml(hltb.samples?.[S.time] || 0)} relatos para ${TIME[S.time].toLowerCase()}.</p>` : '<p class="muted">Tempo: sem correspondência segura ou sem relatos de duração.</p>'}
       ${mc ? `<p><b>Metacritic:</b> crítica e usuários da plataforma ${escapeHtml(mc.platform || 'principal')}${mc.pcCritic != null ? ` · crítica PC: ${mc.pcCritic}/100` : ''}.</p>` : '<p class="muted">Metacritic: nota do snapshot de 30/09/2026, ainda sem atualização confirmada.</p>'}
@@ -62,6 +64,7 @@
     </div>`;
   }
   function value(game, key) {
+    if (key === 'price') return root.GamePrices.state(game).value;
     if (key === 'time') return game.hltb?.[S.time];
     if (key === 'device') return game.play?.device;
     if (key === 'deck') return game.deck?.category;
@@ -77,7 +80,8 @@
     return 'proton';
   }
   function render() {
-    const rows = GAMES.filter(game => (S.list === '*' || game.list === S.list)
+    const rows = GAMES.filter(game => (S.list === '*' || (S.list === 'R' ? (root.currentRotation || []).includes(root.RotationEngine.gameId(game)) : game.list === S.list))
+      && (!S.price || (S.price === 'sale' ? root.GamePrices.state(game).discount > 0 && !root.GamePrices.state(game).stale : S.price === 'free' ? root.GamePrices.state(game).free : root.GamePrices.state(game).value > 0))
       && (!S.device || game.play?.device === S.device) && (!S.method || methodGroup(game) === S.method)
       && (!S.status || game.play?.status === S.status) && (!S.q || game.name.toLocaleLowerCase('pt-BR').includes(S.q)));
     rows.sort((a,b) => compare(value(a,S.k),value(b,S.k),S.asc) || a.name.localeCompare(b.name, 'pt-BR'));
@@ -85,14 +89,15 @@
       const tier = game.proton?.trendingTier || game.proton?.tier;
       const play = game.play || {device:'Aguardando', method:'Consulta pendente', status:'check'};
       const missingMC = !game.metacritic;
-      return `<tr><td class="name"><div class="title-row">${link(game.metacritic?.url || (game.mslug ? `https://www.metacritic.com/game/${game.mslug}/` : ''), game.name)}<button class="expand" aria-expanded="false" aria-controls="details-${index}" aria-label="Detalhes de ${escapeHtml(game.name)}">+</button></div><span class="why">${escapeHtml(play.reason || '')}</span><div id="details-${index}" hidden>${details(game)}</div></td>
+      return `<tr><td class="name"><div class="title-row">${link(game.metacritic?.url || (game.mslug ? `https://www.metacritic.com/game/${game.mslug}/` : ''), game.name)}<button class="expand" aria-expanded="false" aria-controls="details-${index}" aria-label="Detalhes de ${escapeHtml(game.name)}">+</button></div><span class="why">${escapeHtml(play.reason || '')}</span>${(root.currentRotation || []).includes(root.RotationEngine.gameId(game)) ? `<span class="rotation-tag">Na sua rotação · ${(root.currentRotation || []).indexOf(root.RotationEngine.gameId(game)) + 1}º jogo</span>` : ''}<div id="details-${index}" hidden>${details(game)}</div></td>
         <td title="${escapeHtml(missingMC ? 'Snapshot de 30/09/2026; atualização ainda não confirmada' : 'Plataforma: ' + (game.metacritic.platform || 'principal'))}">${badge(game.critic,100)}${missingMC ? '<span class="old" aria-label="Nota anterior">*</span>' : ''}</td>
         <td>${badge(game.user,10)}</td><td class="time">${game.hltb ? link(game.hltb.url, hours(game.hltb[S.time])) : '–'}</td>
+        <td>${root.GamePrices.render(game)}</td>
         <td><span class="pill ${escapeHtml(tier || 'unknown')}">${escapeHtml(TIERS[tier] || (game.steam?.linux ? 'Nativo' : game.emulation ? 'Emulação' : 'Sem relatos'))}</span></td>
         <td><span class="pill deck-${game.deck?.category ?? 'unknown'}">${escapeHtml(DECK[game.deck?.category] || (game.emulation ? 'Emulação' : 'Sem avaliação'))}</span></td>
         <td class="route"><b>${escapeHtml(play.device)}</b><span>${escapeHtml(play.method)}</span><span class="status ${escapeHtml(play.status)}">${escapeHtml(STATUS[play.status] || 'Conferir')}</span></td></tr>`;
     }).join('');
-    if (!rows.length) $('tb').innerHTML = '<tr><td colspan="7" class="empty">Nenhum jogo com esses filtros.</td></tr>';
+    if (!rows.length) $('tb').innerHTML = '<tr><td colspan="8" class="empty">Nenhum jogo com esses filtros.</td></tr>';
     const measured = rows.filter(game => game.hltb?.[S.time] != null);
     $('cnt').textContent = `${rows.length} ${rows.length === 1 ? 'jogo' : 'jogos'}`;
     $('total').textContent = `${TIME[S.time]}: ${hours(measured.reduce((sum,game) => sum + game.hltb[S.time],0))} em ${measured.length} jogos com duração disponível`;
@@ -119,10 +124,12 @@
   document.querySelectorAll('.tab').forEach(tab => tab.onclick = () => { S.list=tab.dataset.list; render(); });
   document.querySelectorAll('th[data-k] button').forEach(button => button.onclick = () => {
     const key = button.closest('th').dataset.k;
-    if (S.k === key) S.asc = !S.asc; else { S.k=key; S.asc=['name','time','device'].includes(key); }
+    if (S.k === key) S.asc = !S.asc; else { S.k=key; S.asc=['name','time','device','price'].includes(key); }
     render();
   });
   for (const key of ['device','method','status']) $(key).onchange = event => { S[key]=event.target.value; render(); };
+  $('price-filter').onchange = event => { S.price=event.target.value; render(); };
+  document.addEventListener('rotationchange', render);
   $('time-mode').onchange = event => { S.time=event.target.value; render(); };
   $('q').oninput = event => { S.q=event.target.value.toLocaleLowerCase('pt-BR'); render(); };
   render();

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Playlist · PC & Steam Deck</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234ade80'/%3E%3Cpath d='M11 8v16l13-8Z' fill='%230f1115'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="rotation.css?v=1">
 <style>
   :root {color-scheme:dark; --bg:#0f1115; --fg:#e6e6e6; --muted:#a1a6af; --row:#161a21; --row2:#1b2028; --green:#4ade80; --yellow:#facc15; --red:#f87171; --link:#7dd3fc}
   * {box-sizing:border-box} body {margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 -apple-system,system-ui,Segoe UI,Roboto,sans-serif; padding:20px}
@@ -38,9 +39,18 @@
 <h1>Playlist · PC & Steam Deck</h1>
 <p class="sub">Seu próximo jogo, com tempo médio para terminar, Metacritic e a melhor rota disponível no PC ou Steam Deck: Linux nativo, Proton ou emulação. ProtonDB avalia compatibilidade Linux; o selo da Valve avalia o Deck. Clique em <b>+</b> para ver como jogar e as fontes.</p>
 <p class="summary">Atualização automática diária · última execução: <span id="gen"></span><span id="freshness"></span></p>
+<section id="rotation" class="rotation" aria-labelledby="rotation-title">
+  <div class="rotation-heading"><div><p class="eyebrow">Seu próximo capítulo</p><h2 id="rotation-title">Sua rotação de jogos</h2><p>Três espaços para vontades diferentes. Você escolhe; as sugestões se adaptam à sua combinação.</p></div></div>
+  <div id="share-import" class="share-import" hidden></div>
+  <div id="rotation-cards" class="rotation-grid"></div>
+  <div class="rotation-footer"><div><p id="rotation-save" class="rotation-save" role="status" aria-live="polite"></p><p>Salvo automaticamente neste navegador. Use um link para levar sua seleção a outro dispositivo.</p></div><button id="rotation-share" type="button">Copiar link da seleção</button></div>
+  <div id="share-result" class="share-result" hidden><label for="share-link" id="share-label">Link da seleção</label><input id="share-link" readonly></div>
+</section>
+<h2 class="catalog-title">Seu catálogo</h2>
+<p class="summary">Preços da Steam no Brasil, consultados diariamente. Confira a data de cada preço; a oferta pode mudar na loja.</p>
 <div class="bar" aria-label="Listas">
   <button class="tab on" data-list="*">Tudo</button><button class="tab" data-list="B">Backlog</button>
-  <button class="tab" data-list="W">Wishlist</button><button class="tab" data-list="P">Jogando</button>
+  <button class="tab" data-list="R">Minha rotação</button><button class="tab" data-list="W">Wishlist</button><button class="tab" data-list="P">Jogando</button>
   <button class="tab" data-list="Z">Pausados</button><button class="tab" data-list="Q">Desisti</button>
   <span class="cnt" id="cnt" aria-live="polite"></span>
 </div>
@@ -49,6 +59,7 @@
   <select id="device" aria-label="Onde jogar"><option value="">PC e Steam Deck</option></select>
   <select id="method" aria-label="Como jogar"><option value="">Todas as rotas</option><option value="native">Nativo Linux</option><option value="proton">Proton / Lutris</option><option value="emulation">Emulação</option><option value="windows">Windows</option><option value="waiting">Aguardando PC/emulação</option></select>
   <select id="status" aria-label="Disponibilidade"><option value="">Todos os estados</option><option value="ready">Disponível</option><option value="check">Conferir ajustes</option><option value="fallback">Requer Windows</option><option value="waiting">Aguardando</option></select>
+  <select id="price-filter" aria-label="Preço Steam"><option value="">Todos os preços</option><option value="sale">Em promoção</option><option value="free">Gratuitos</option><option value="paid">Pagos</option></select>
   <select id="time-mode" aria-label="Tipo de duração"><option value="main">Tempo: campanha</option><option value="extras">Tempo: campanha + extras</option><option value="complete">Tempo: 100%</option></select>
 </div>
 <p id="total" class="summary" aria-live="polite"></p>
@@ -58,13 +69,17 @@
     <th data-k="critic" scope="col" aria-sort="descending"><button>Metacritic</button></th>
     <th data-k="user" scope="col"><button>Usuários</button></th>
     <th data-k="time" scope="col"><button id="time-label">Campanha</button></th>
+    <th data-k="price" scope="col"><button>Steam · R$</button></th>
     <th data-k="proton" scope="col"><button>ProtonDB · Linux</button></th>
     <th data-k="deck" scope="col"><button>Steam Deck · Valve</button></th>
     <th data-k="device" scope="col"><button>Onde / como jogar</button></th>
   </tr></thead><tbody id="tb"></tbody>
 </table></div>
 <noscript>Ative o JavaScript para consultar e filtrar sua lista.</noscript>
-<script src="data.js?v=c9f76b6ca009"></script>
-<script src="app.js?v=2"></script>
+<script src="data.js?v=a5c77b2f250c"></script>
+<script src="prices.js?v=1"></script>
+<script src="rotation.js?v=1"></script>
+<script src="app.js?v=3"></script>
+<script src="rotation-ui.js?v=1"></script>
 </body>
 </html>
