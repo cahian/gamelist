@@ -14,13 +14,29 @@ from urllib.error import HTTPError
 from urllib.parse import urlencode, quote, urlparse
 from urllib.request import Request, urlopen
 
-from game_metadata import match_game, normalize, parse_hltb, parse_metacritic, parse_proton, parse_ign, recommend
+from game_metadata import match_game, normalize, parse_hltb, parse_metacritic, parse_proton, parse_ign, parse_steam_price, recommend
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'Mozilla/5.0 (compatible; GameList/1.0; +https://github.com/cahian/gamelist)'
 # Public application identifier used by Metacritic's own web client, not a user credential.
 MC_KEY = '7e3d2d4f75ed45de84d9e2acbe31af52'
 DAY = 86400
+# Leave margin for the daily workflow to finish earlier than its preceding run.
+STEAM_PRICE_TTL = 23 * 3600
+
+
+def valid_price_snapshot(data, appid):
+    """Only reuse this exact application's normalized Brazilian price snapshot."""
+    if not isinstance(data, dict) or str(data.get('appid')) != str(appid):
+        return False
+    if data.get('country') != 'BR' or data.get('currency') != 'BRL':
+        return False
+    status = data.get('status')
+    if status in {'available', 'free'}:
+        initial, final = data.get('initial'), data.get('final')
+        return (type(initial) is int and type(final) is int and 0 <= final <= initial
+                and (status != 'free' or data.get('isFree') is True and final == 0))
+    return status in {'unavailable', 'coming_soon'} and data.get('final') is None
 
 
 def now():
@@ -46,7 +62,12 @@ class Cache:
             for provider, source in game.get('sources', {}).items():
                 if source.get('status') != 'ok' or not source.get('updatedAt'):
                     continue
-                if provider in {'steam', 'proton', 'deck'}:
+                if provider == 'steamPrice':
+                    appid = (game.get('steam') or {}).get('appid') or (source.get('data') or {}).get('appid')
+                    if not valid_price_snapshot(source.get('data'), appid):
+                        continue
+                    key = f'{appid}:br'
+                elif provider in {'steam', 'proton', 'deck'}:
                     steam = game.get('steam') or {}
                     key = str((steam.get('appid') if provider == 'steam' else steam.get('compatAppid') or steam.get('appid')) or '')
                 elif provider == 'metacritic':
@@ -269,6 +290,12 @@ class Providers:
                 'metacritic': item.get('metacritic'),
                 'vrOnly': any(c.get('id') == 54 for c in item.get('categories', []))}
 
+    def steam_price(self, appid):
+        # Store API is called in CI, never cross-origin from the visitor's browser.
+        payload = self.request('https://store.steampowered.com/api/appdetails?' +
+                               urlencode({'appids': appid, 'l': 'brazilian', 'cc': 'br'}))
+        return parse_steam_price(payload, appid)
+
     def proton(self, appid):
         payload = self.request(f'https://www.protondb.com/api/v1/reports/summaries/{appid}.json', missing=True)
         return parse_proton(payload) if payload is not None else None
@@ -365,6 +392,28 @@ class Providers:
         return result
 
 
+def add_steam_price(game, previous, providers, appid):
+    """The price has its own cache and timestamp; DLC keeps its own app ID."""
+    game['price'] = None
+    if not appid:
+        game['sources'].pop('steamPrice', None)
+        return game
+    envelope = providers.fetch('steamPrice', f'{appid}:br', lambda: providers.steam_price(appid), STEAM_PRICE_TTL)
+    old = previous.get('sources', {}).get('steamPrice', {})
+    if envelope['status'] == 'error' and valid_price_snapshot(old.get('data'), appid):
+        envelope.update(data=old['data'], updatedAt=old.get('updatedAt'), status='stale')
+    game['sources']['steamPrice'] = envelope
+    game['price'] = envelope['data']
+    return game
+
+
+def enrich_prices(game, previous, providers):
+    """Refresh prices without querying or changing other metadata providers."""
+    result = {**game, **previous, 'sources': dict(previous.get('sources', {}))}
+    appid = (result.get('steam') or {}).get('appid')
+    return add_steam_price(result, previous, providers, appid)
+
+
 def enrich(game, previous, providers):
     sources = {}
     def fetch(field, key, loader, ttl=DAY):
@@ -412,7 +461,7 @@ def enrich(game, previous, providers):
     else:
         result.update(critic=previous.get('critic', game.get('critic')),
                       user=previous.get('user', game.get('user')))
-    return result
+    return add_steam_price(result, previous, providers, (steam or {}).get('appid') or appid)
 
 
 def read_snapshot(path):
@@ -427,6 +476,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--limit', type=int, help='Refresh only the first N games (smoke test)')
     parser.add_argument('--force', action='store_true', help='Ignore cache TTLs')
+    parser.add_argument('--prices-only', action='store_true', help='Refresh only Brazilian Steam prices for linked apps')
     parser.add_argument('--workers', type=int, default=6)
     args = parser.parse_args()
     catalog = json.loads((ROOT / 'catalog.json').read_text())
@@ -434,13 +484,15 @@ def main():
     cache = Cache(ROOT / '.cache/providers.json')
     cache.seed(previous.values())
     providers = Providers(cache, args.force)
-    rpc = providers.fetch('rpcs3', 'all', providers.rpcs3)
-    providers.rpcs3_data = rpc['data']
-    providers.rpcs3_source = rpc
+    if not args.prices_only:
+        rpc = providers.fetch('rpcs3', 'all', providers.rpcs3)
+        providers.rpcs3_data = rpc['data']
+        providers.rpcs3_source = rpc
     selected = catalog[:args.limit] if args.limit else catalog
     completed = {}
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(enrich, game, previous.get(game['name'], {}), providers): game for game in selected}
+        refresh_game = enrich_prices if args.prices_only else enrich
+        futures = {pool.submit(refresh_game, game, previous.get(game['name'], {}), providers): game for game in selected}
         for future in as_completed(futures):
             game = future.result()
             completed[game['name']] = game
@@ -451,13 +503,15 @@ def main():
     refreshed = list(completed.values())
     errors = [{'name': game['name'], 'provider': key, 'error': item.get('error'),
                'status': item['status']} for game in refreshed for key, item in game['sources'].items()
-              if item['status'] != 'ok']
+              if item['status'] != 'ok' and (not args.prices_only or key == 'steamPrice')]
     report = {'generatedAt': now(), 'games': len(games), 'refreshed': len(refreshed),
               'coverage': {key: sum(bool(game.get(key)) for game in games) for key in
                            ['hltb', 'metacritic', 'steam', 'proton', 'deck', 'emulation']},
               'errors': errors}
+    report['coverage']['steamPrice'] = sum((game.get('price') or {}).get('status') in {'available', 'free'} for game in games)
     atomic_json(ROOT / 'refresh-report.json', report)
-    if not any(source['status'] == 'ok' for game in refreshed for source in game['sources'].values()):
+    if not any(source['status'] == 'ok' for game in refreshed for key, source in game['sources'].items()
+               if not args.prices_only or key == 'steamPrice'):
         raise RuntimeError('Nenhuma fonte respondeu; snapshot anterior preservado')
     text = 'const GENERATED=' + json.dumps(report['generatedAt']) + ';\n'
     text += 'const UPDATE_INFO=' + json.dumps({k: v for k, v in report.items() if k != 'errors'}, ensure_ascii=False) + ';\n'

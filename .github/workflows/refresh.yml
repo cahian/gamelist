@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['catalog.json', 'scripts/**', 'tests/**', 'app.js', 'index.html', '.github/workflows/refresh.yml']
+    paths: ['catalog.json', 'scripts/**', 'tests/**', '*.js', '*.css', 'index.html', '.github/workflows/refresh.yml']
 
 permissions:
   contents: write
@@ -39,7 +39,7 @@ jobs:
       - name: Testar regras e interface
         run: |
           python3 -m unittest discover -s tests -v
-          node --test tests/frontend.test.cjs
+          node --test tests/*.test.cjs
       - name: Consultar APIs
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -62,7 +62,7 @@ jobs:
       - name: Preparar página
         run: |
           mkdir -p public
-          cp index.html app.js data.js public/
+          cp index.html app.js data.js prices.js rotation.js rotation-ui.js rotation.css public/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
