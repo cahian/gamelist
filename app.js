@@ -11,7 +11,7 @@
   if (typeof module !== 'undefined' && module.exports) module.exports = {escapeHtml, safeUrl, compare};
   if (!root.document) return;
   const $ = id => document.getElementById(id);
-  const S = {list:'B', k:'critic', asc:false, device:'', method:'', status:'', q:'', time:'main'};
+  const S = {list:'*', k:'critic', asc:false, device:'', method:'', status:'', q:'', time:'main'};
   const STATUS = {ready:'Disponível', check:'Conferir ajustes', fallback:'Requer Windows', waiting:'Aguardando'};
   const DECK = {0:'Sem avaliação', 1:'Não suportado', 2:'Jogável', 3:'Verificado'};
   const TIERS = {platinum:'Platinum', gold:'Gold', silver:'Silver', bronze:'Bronze', borked:'Borked', pending:'Pendente'};
