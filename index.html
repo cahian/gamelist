@@ -3,97 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Playlist</title>
+<title>Playlist · PC & Steam Deck</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234ade80'/%3E%3Cpath d='M11 8v16l13-8Z' fill='%230f1115'/%3E%3C/svg%3E">
 <style>
-  :root { --bg:#0f1115; --fg:#e6e6e6; --muted:#8a8f98; --row:#161a21; --row2:#1b2028; --acc:#4ade80; --warn:#facc15; --bad:#f87171; --link:#7dd3fc; }
-  * { box-sizing:border-box }
-  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.4 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; padding:16px }
-  h1 { font-size:20px; margin:0 0 4px } .sub { color:var(--muted); margin:0 0 16px; font-size:12px }
-  .bar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:12px }
-  .tab { padding:6px 12px; border:1px solid #2a2f38; border-radius:6px; background:var(--row); cursor:pointer; color:var(--fg) }
-  .tab.on { background:var(--acc); color:#000; border-color:var(--acc); font-weight:600 }
-  input, select { background:var(--row); color:var(--fg); border:1px solid #2a2f38; border-radius:6px; padding:6px 8px }
-  table { width:100%; border-collapse:collapse } th, td { text-align:left; padding:6px 8px; white-space:nowrap }
-  th { color:var(--muted); font-weight:600; cursor:pointer; user-select:none; position:sticky; top:0; background:var(--bg); border-bottom:1px solid #2a2f38 }
-  th.on { color:var(--fg) } th.on::after { content:" ▼" } th.on.asc::after { content:" ▲" }
-  tbody tr:nth-child(odd) { background:var(--row) } tbody tr:nth-child(even) { background:var(--row2) }
-  td.name { white-space:normal; overflow-wrap:anywhere } td.name a { color:var(--link); text-decoration:none } td.name a:hover { text-decoration:underline }
-  .s { display:inline-block; min-width:34px; text-align:center; padding:2px 6px; border-radius:4px; font-weight:700; color:#000 }
-  .g { background:var(--acc) } .y { background:var(--warn) } .r { background:var(--bad) } .n { background:#2a2f38; color:var(--muted); font-weight:400 }
-  .plat { color:var(--muted); font-size:12px }
-  .cnt { color:var(--muted); font-size:12px; margin-left:auto }
-  .why { display:block; color:var(--muted); font-size:12px; margin-top:2px }
-  .how { display:none; color:var(--fg); font-size:12px; margin-top:4px; padding:6px 8px; background:#0f1115; border-radius:4px }
-  tr.open .how { display:block } tbody tr { cursor:pointer }
-  .dg { display:inline-block; min-width:22px; text-align:center; padding:2px 6px; border-radius:4px; font-weight:700; color:#000 }
-  .dA { background:#4ade80 } .dB { background:#a3e635 } .dC { background:#facc15 } .dD { background:#fb923c } .dF { background:#f87171 } .dX { background:#52525b; color:#e4e4e7 } .dN { background:#2a2f38; color:#8a8f98 }
-  .pc-baixa::after { content:" ?"; color:var(--warn) }
-  .pc-nl::after { content:" (não lançado)"; color:var(--muted); font-size:11px }
-  .low { color:var(--muted) } .low::after { content:" ?"; color:var(--warn) }
-  .long { display:inline } .short { display:none }
-  @media (max-width: 520px) {
-    body { padding:10px } h1 { font-size:18px } .sub { display:none }
-    th, td { padding:6px 4px } .s { min-width:30px; padding:2px 4px }
-    .year { display:none }
-    .long { display:none } .short { display:inline }
-    td.name .plat { display:none }
-    .pc-nl::after { content:" (NL)" }
-    input#q { width:100%; }
-  }
+  :root {color-scheme:dark; --bg:#0f1115; --fg:#e6e6e6; --muted:#a1a6af; --row:#161a21; --row2:#1b2028; --green:#4ade80; --yellow:#facc15; --red:#f87171; --link:#7dd3fc}
+  * {box-sizing:border-box} body {margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 -apple-system,system-ui,Segoe UI,Roboto,sans-serif; padding:20px}
+  h1 {font-size:22px; margin:0 0 6px} .sub {color:var(--muted); margin:0 0 14px; max-width:1150px; font-size:13px}
+  a {color:var(--link); text-decoration:none} a:hover {text-decoration:underline} button,input,select {font:inherit}
+  button,input,select {background:var(--row); color:var(--fg); border:1px solid #353b45; border-radius:6px; padding:7px 10px}
+  button {cursor:pointer} button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {outline:2px solid var(--link); outline-offset:3px}
+  .bar {display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px} .tab.on {background:var(--green); color:#06130a; border-color:var(--green); font-weight:600}
+  .cnt {color:var(--muted); margin-left:auto} .summary {color:var(--muted); font-size:12px; margin:0 0 12px}
+  .table-wrap {overflow-x:auto; border:1px solid #2a2f38; border-radius:8px} table {width:100%; border-collapse:collapse}
+  th,td {text-align:left; padding:9px 10px; vertical-align:top} th {white-space:nowrap; color:var(--muted); background:var(--bg); border-bottom:1px solid #2a2f38}
+  th button {border:0; background:transparent; color:inherit; padding:0; font-size:12px; font-weight:600} th.on {color:var(--fg)}
+  th[aria-sort="descending"] button::after {content:' ▼'} th[aria-sort="ascending"] button::after {content:' ▲'}
+  tbody tr:nth-child(odd) {background:var(--row)} tbody tr:nth-child(even) {background:var(--row2)} tbody tr {cursor:pointer}
+  .name {min-width:260px; width:45%; overflow-wrap:anywhere} .title-row {display:flex; align-items:center; gap:8px} .title-row>a {font-weight:500}
+  .expand {padding:0; min-width:24px; height:24px; margin-left:auto; flex-shrink:0; font-size:17px; line-height:1}
+  .why {display:block; color:var(--muted); font-size:12px; margin-top:4px; max-width:650px}
+  .score {display:inline-block; min-width:34px; text-align:center; padding:2px 6px; border-radius:4px; font-weight:700; color:#000}
+  .green {background:var(--green)} .yellow {background:var(--yellow)} .red {background:var(--red)} .score.muted {background:#2a2f38; color:var(--muted)}
+  .pill {display:inline-block; padding:3px 7px; border-radius:4px; font-size:11px; white-space:nowrap; background:#272d37; color:#c2c6ce}
+  .platinum,.deck-3 {color:#6ee7b7; background:#13352c} .gold,.deck-2 {color:#fde68a; background:#3b3318} .silver {color:#cbd5e1} .bronze {color:#fdba74} .borked,.deck-1 {color:#fda4af; background:#3f2029}
+  .route {min-width:150px; font-size:12px} .route>span {display:block; margin-top:3px} .status {font-size:11px; color:var(--muted)} .status.ready {color:#6ee7b7} .status.check {color:#fde68a} .status.fallback {color:#fdba74}
+  .time {white-space:nowrap; font-variant-numeric:tabular-nums} .muted {color:var(--muted)} .old,.warning {color:var(--yellow)} .old {margin-left:3px}
+  .details {margin-top:10px; padding:10px 12px; background:var(--bg); border-radius:6px; font-size:12px; cursor:auto} .details p {margin:0 0 8px} .details p:last-child {margin:0}
+  .sources {margin:8px 0; padding-left:18px} .sources li {margin:4px 0} .empty {padding:28px; text-align:center; color:var(--muted)}
+  [hidden] {display:none!important}
+  @media(max-width:650px) {body {padding:12px} h1 {font-size:19px} .sub {font-size:12px} #q {width:100%} th,td {padding:8px} .name {min-width:225px} .table-wrap {border-radius:6px} .bar select {flex:1; min-width:140px} .cnt {margin-left:0}}
 </style>
 </head>
 <body>
-<h1>Playlist</h1>
-<p class="sub">Playlist IGN cruzada com Metacritic. Plataforma = onde o jogo roda melhor entre Switch 2, Switch, Steam Deck e PC (Steam Machine/SteamOS): fps estável primeiro, gráfico desempata, portátil vence quando já está bom. Coluna <b>Deck</b> = nota A–F rodando no Steam Deck <b>LCD</b> (A = 60 travado, B = 60 com cortes ou 45, C = 40 @ 40Hz, D = 30, F = abaixo de 30, X = não roda, N = não lançado; exclusivos de console = Deck emulando). Clique na linha para ver como rodar e a fonte. <span style="color:var(--warn)">?</span> na plataforma = pesquisado e não existe teste de fps publicado; escolha por evidência indireta (motor, requisitos, selo da Steam). Clique nos cabeçalhos para ordenar. Nomes com <span style="color:var(--warn)">?</span> = match incerto no Metacritic. Gerado em <span id="gen"></span>.</p>
-<div class="bar">
-  <button class="tab on" data-list="B">Backlog</button>
-  <button class="tab" data-list="W">Wishlist</button>
-  <button class="tab" data-list="P">Jogando</button>
-  <button class="tab" data-list="Z">Pausados</button>
-  <button class="tab" data-list="Q">Desisti</button>
-  <button class="tab" data-list="*">Tudo</button>
-  <select id="plat"><option value="">Todas plataformas</option></select>
-  <input id="q" placeholder="filtrar…" size="18">
-  <span class="cnt" id="cnt"></span>
+<h1>Playlist · PC & Steam Deck</h1>
+<p class="sub">Seu próximo jogo, com tempo médio para terminar, Metacritic e a melhor rota disponível no PC ou Steam Deck: Linux nativo, Proton ou emulação. ProtonDB avalia compatibilidade Linux; o selo da Valve avalia o Deck. Clique em <b>+</b> para ver como jogar e as fontes.</p>
+<p class="summary">Atualização automática diária · última execução: <span id="gen"></span><span id="freshness"></span></p>
+<div class="bar" aria-label="Listas">
+  <button class="tab on" data-list="B">Backlog</button><button class="tab" data-list="W">Wishlist</button>
+  <button class="tab" data-list="P">Jogando</button><button class="tab" data-list="Z">Pausados</button>
+  <button class="tab" data-list="Q">Desisti</button><button class="tab" data-list="*">Tudo</button>
+  <span class="cnt" id="cnt" aria-live="polite"></span>
 </div>
-<table>
+<div class="bar" aria-label="Filtros">
+  <input id="q" type="search" placeholder="Buscar jogo…" aria-label="Buscar jogo" size="24">
+  <select id="device" aria-label="Onde jogar"><option value="">PC e Steam Deck</option></select>
+  <select id="method" aria-label="Como jogar"><option value="">Todas as rotas</option><option value="native">Nativo Linux</option><option value="proton">Proton / Lutris</option><option value="emulation">Emulação</option><option value="windows">Windows</option><option value="waiting">Aguardando PC/emulação</option></select>
+  <select id="status" aria-label="Disponibilidade"><option value="">Todos os estados</option><option value="ready">Disponível</option><option value="check">Conferir ajustes</option><option value="fallback">Requer Windows</option><option value="waiting">Aguardando</option></select>
+  <select id="time-mode" aria-label="Tipo de duração"><option value="main">Tempo: campanha</option><option value="extras">Tempo: campanha + extras</option><option value="complete">Tempo: 100%</option></select>
+</div>
+<p id="total" class="summary" aria-live="polite"></p>
+<div class="table-wrap"><table>
   <thead><tr>
-    <th data-k="name">Jogo</th>
-    <th data-k="critic" class="on"><span class="long">Metacritic</span><span class="short">MC</span></th>
-    <th data-k="user"><span class="long">Usuários</span><span class="short">Us.</span></th>
-    <th data-k="year" class="year">Ano</th>
-    <th data-k="dg">Deck</th>
-    <th data-k="plat">Plataforma</th>
-  </tr></thead>
-  <tbody id="tb"></tbody>
-</table>
-<script src="data.js?v=2026-09-30d"></script>
-<script>
-  const S = { list:'B', k:'critic', asc:false, plat:'', q:'' };
-  const cls = (v,max) => v==null ? 'n' : (v/max >= 0.75 ? 'g' : v/max >= 0.5 ? 'y' : 'r');
-  const badge = (v,max) => `<span class="s ${cls(v,max)}">${v==null ? '–' : v}</span>`;
-  const SHORT = {'Windows':'Win','Steam Deck':'Deck','Xbox Series X/S':'XSX','Nintendo Switch':'NSW','Nintendo Switch 2':'NSW2','Nintendo 3DS':'3DS','PlayStation 5':'PS5','PlayStation 4':'PS4','PlayStation 3':'PS3','PlayStation 2':'PS2','GameCube':'GC'};
-  const plat = p => `<span class="long">${p}</span><span class="short">${SHORT[p]||p}</span>`;
-  document.getElementById('gen').textContent = GENERATED;
-  const plats = [...new Set(GAMES.map(g=>g.plat))].sort();
-  for (const p of plats) { const o=document.createElement('option'); o.value=o.textContent=p; document.getElementById('plat').appendChild(o); }
-  function render(){
-    let rows = GAMES.filter(g => (S.list==='*'||g.list===S.list) && (!S.plat||g.plat===S.plat) && (!S.q||g.name.toLowerCase().includes(S.q)));
-    const GR={A:7,B:6,C:5,D:4,F:3,X:2,N:1};
-    rows.sort((a,b)=>{ let x=a[S.k], y=b[S.k]; if (S.k==='dg') { x=GR[x]||0; y=GR[y]||0; return S.asc ? x-y : y-x; } if (typeof x==='string') return S.asc ? x.localeCompare(y) : y.localeCompare(x); x = x==null ? -1 : x; y = y==null ? -1 : y; return S.asc ? x-y : y-x; });
-    document.getElementById('tb').innerHTML = rows.map(g=>`<tr>
-      <td class="name"><a class="${g.conf<60?'low':''}" href="https://www.metacritic.com/game/${g.mslug}/" target="_blank" rel="noopener">${g.name}</a>${g.found&&g.found!==g.name?` <span class="plat">(${g.found})</span>`:''}<span class="why">${g.why||''}</span><div class="how"><b>Como rodar (${g.plat}):</b> ${g.how||'–'}${g.dg&&g.plat!=='Steam Deck'?`<br><b>No Deck (${g.dg}):</b> ${g.dfps}${g.dset?' — '+g.dset:''}`:''}${g.dsrc?` <a href="${g.dsrc}" target="_blank" rel="noopener" style="color:var(--link)">(fonte Deck)</a>`:''}${g.dnote?`<br><i>${g.dnote}</i>`:''}<br><span class="plat">confiança da escolha: ${g.pconf||'–'}${g.src?` · <a href="${g.src}" target="_blank" rel="noopener" style="color:var(--link)">fonte</a>`:''}</span></div></td>
-      <td>${badge(g.critic,100)}</td><td>${badge(g.user,10)}</td><td class="year">${g.year||''}</td><td>${g.dg?`<span class="dg d${g.dg}">${g.dg}</span>`:'<span class="plat">–</span>'}</td><td class="plat${g.pconf==='baixa'?' pc-baixa':g.pconf==='não lançado'?' pc-nl':''}">${plat(g.plat)}</td></tr>`).join('');
-    document.querySelectorAll('#tb tr').forEach(tr=>tr.onclick=e=>{ if(e.target.tagName!=='A') tr.classList.toggle('open'); });
-    document.getElementById('cnt').textContent = rows.length + ' jogos';
-    document.querySelectorAll('th').forEach(th=>{ th.classList.toggle('on', th.dataset.k===S.k); th.classList.toggle('asc', th.dataset.k===S.k && S.asc); });
-    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on', t.dataset.list===S.list));
-  }
-  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{ S.list=t.dataset.list; render(); });
-  document.querySelectorAll('th').forEach(th=>th.onclick=()=>{ if (S.k===th.dataset.k) S.asc=!S.asc; else { S.k=th.dataset.k; S.asc = th.dataset.k==='name'; } render(); });
-  document.getElementById('plat').onchange = e=>{ S.plat=e.target.value; render(); };
-  document.getElementById('q').oninput = e=>{ S.q=e.target.value.toLowerCase(); render(); };
-  render();
-</script>
+    <th data-k="name" scope="col"><button>Jogo</button></th>
+    <th data-k="critic" scope="col" aria-sort="descending"><button>Metacritic</button></th>
+    <th data-k="user" scope="col"><button>Usuários</button></th>
+    <th data-k="time" scope="col"><button id="time-label">Campanha</button></th>
+    <th data-k="proton" scope="col"><button>ProtonDB · Linux</button></th>
+    <th data-k="deck" scope="col"><button>Steam Deck · Valve</button></th>
+    <th data-k="device" scope="col"><button>Onde / como jogar</button></th>
+  </tr></thead><tbody id="tb"></tbody>
+</table></div>
+<noscript>Ative o JavaScript para consultar e filtrar sua lista.</noscript>
+<script src="data.js?v=233a3b92aa8a"></script>
+<script src="app.js?v=1"></script>
 </body>
 </html>

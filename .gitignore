@@ -1,2 +1,5 @@
 .DS_Store
 .rollback-*.txt
+.cache/
+__pycache__/
+*.tmp

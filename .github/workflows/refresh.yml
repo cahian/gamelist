@@ -1,0 +1,71 @@
+name: Atualizar playlist
+on:
+  schedule:
+    - cron: '17 9 * * *' # 06:17 America/Sao_Paulo
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['catalog.json', 'scripts/**', 'tests/**', 'app.js', 'index.html', '.github/workflows/refresh.yml']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: playlist-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: playlist-api-v1-${{ github.run_id }}
+          restore-keys: playlist-api-v1-
+      - name: Testar regras e interface
+        run: |
+          python3 -m unittest discover -s tests -v
+          node --test tests/frontend.test.cjs
+      - name: Consultar APIs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -u scripts/refresh.py
+      - name: Guardar diagnóstico
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-report
+          path: refresh-report.json
+      - name: Salvar dados atualizados
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data.js index.html refresh-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Atualiza tempo, Metacritic e compatibilidade pelas APIs'
+            git push
+          fi
+      - name: Preparar página
+        run: |
+          mkdir -p public
+          cp index.html app.js data.js public/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Publicar playlist
+        uses: actions/deploy-pages@v4
+        id: deployment

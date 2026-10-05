@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-10-05T16:21:22+00:00",
+  "games": 407,
+  "refreshed": 407,
+  "coverage": {
+    "hltb": 389,
+    "metacritic": 404,
+    "steam": 327,
+    "proton": 319,
+    "deck": 327,
+    "emulation": 50
+  },
+  "errors": []
+}
