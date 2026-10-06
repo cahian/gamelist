@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Playlist · PC, Steam Deck & Nintendo</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234ade80'/%3E%3Cpath d='M11 8v16l13-8Z' fill='%230f1115'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="rotation.css?v=3">
+<link rel="stylesheet" href="rotation.css?v=4">
 <style>
   :root {color-scheme:dark; --bg:#0f1115; --fg:#e6e6e6; --muted:#a1a6af; --row:#161a21; --row2:#1b2028; --green:#4ade80; --yellow:#facc15; --red:#f87171; --link:#7dd3fc}
   * {box-sizing:border-box} body {margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 -apple-system,system-ui,Segoe UI,Roboto,sans-serif; padding:20px}
@@ -40,7 +40,7 @@
 <p class="sub">Prioridade à versão PC, escolhendo PC ou Steam Deck conforme compatibilidade e referências de desempenho. Sem versão PC, Nintendo nativo; nos demais casos, emulação no PC/Deck ou aguardando uma rota viável. Clique em <b>+</b> para ver como jogar e as fontes.</p>
 <p class="summary">Atualização automática diária · última execução: <span id="gen"></span><span id="freshness"></span></p>
 <section id="rotation" class="rotation" aria-labelledby="rotation-title">
-  <div class="rotation-heading"><div><p class="eyebrow">Seu próximo capítulo</p><h2 id="rotation-title">Sua rotação de jogos</h2><p>Três espaços para vontades diferentes. Você escolhe; as sugestões se adaptam à sua combinação.</p></div></div>
+  <div class="rotation-heading"><div><p class="eyebrow">Seu próximo capítulo</p><h2 id="rotation-title">Sua rotação de jogos</h2><p>Escolha manualmente os três jogos da sua rotação.</p></div></div>
   <div id="share-import" class="share-import" hidden></div>
   <div id="rotation-cards" class="rotation-grid"></div>
   <div class="rotation-footer"><div><p id="rotation-save" class="rotation-save" role="status" aria-live="polite"></p><p>Salvo automaticamente neste navegador. Use um link para levar sua seleção a outro dispositivo.</p></div><button id="rotation-share" type="button">Copiar link da seleção</button></div>
@@ -80,9 +80,9 @@
 <noscript>Ative o JavaScript para consultar e filtrar sua lista.</noscript>
 <script src="data.js?v=76b6bf208b92"></script>
 <script src="prices.js?v=2"></script>
-<script src="rotation.js?v=2"></script>
+<script src="rotation.js?v=3"></script>
 <script src="app.js?v=6"></script>
-<script src="rotation-ui.js?v=3"></script>
+<script src="rotation-ui.js?v=4"></script>
 <script src="price-refresh.js?v=1"></script>
 </body>
 </html>

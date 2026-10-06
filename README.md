@@ -13,26 +13,9 @@ Clique em **+** para ver instruções, fontes e datas por jogo.
 
 No topo da página, escolha uma **aventura principal**, uma **campanha para alternar**
 e um jogo de **partidas ou tentativas**. Há busca e seleção manual em cada slot.
-Todos os slots consideram os outros jogos escolhidos, inclusive ao substituir o
-principal. A segunda posição favorece campanhas menores em relação à principal;
-campanhas longas continuam elegíveis, com menor prioridade para alternar. O tempo
-de campanha não é tratado como duração de uma partida. Não há um corte rígido de
-22 horas nem um bônus crescente para aventuras cada vez mais longas.
-
-As sugestões combinam perfis de estrutura, gêneros, duração e lista pessoal.
-Jogando favorece continuidade e Backlog tem prioridade sobre Pausados e Wishlist.
-Cada grupo procura variar as mecânicas entre as alternativas exibidas; **Mais
-opções** e **Anteriores** percorrem outras sugestões sem alterar sua seleção.
-As explicações apontam diferenças, mecânicas compartilhadas, compromisso de tempo
-e dados ausentes. Perfis inferidos dos metadados são identificados. É um ranking
-por regras sobre seu catálogo e rotação, sem inferir gostos a partir de cliques.
-Jogos em Desisti e lançamentos indisponíveis ficam fora das sugestões. A seleção
-manual continua livre.
-
 As escolhas são salvas automaticamente no `localStorage` deste navegador, sem
 conta ou servidor. **Minha rotação** filtra os jogos escolhidos; as listas originais
-do catálogo continuam independentes. Mudar um jogo recalcula as sugestões sem
-apagar as outras escolhas. Limpar os dados do navegador remove a seleção local.
+do catálogo continuam independentes. Mudar um jogo mantém as outras escolhas. Limpar os dados do navegador remove a seleção local.
 **Copiar link da seleção** permite transferi-la: o outro dispositivo mostra uma
 prévia e só substitui a seleção local ao clicar em **Usar esta seleção**. Não há
 sincronização automática entre dispositivos. Se o armazenamento estiver bloqueado,
@@ -59,7 +42,7 @@ conservando a data da consulta original. O restante dos metadados continua diár
 
 O resultado é salvo em `prices.json`, separado do catálogo. A página busca esse
 arquivo ao abrir, a cada **5 minutos** enquanto visível e ao voltar à aba, com cache
-desabilitado. Os preços do catálogo, slots e sugestões se atualizam sem recarregar
+desabilitado. Os preços do catálogo e slots se atualizam sem recarregar
 a página nem perder seleção, busca ou detalhes abertos. As datas são mostradas por
 jogo. Isso é uma atualização periódica automática, **não uma consulta em tempo real
 à Steam a cada visita**; agendamento e publicação também podem sofrer atrasos.
@@ -97,7 +80,7 @@ A ordem de preferência vale no catálogo, nos filtros e nos três slots:
    identificada, aparece **Emulação futura · Aguardando**, sem promessa de funcionamento.
 
 A disponibilidade continua independente da plataforma: lançamentos e emulação
-ainda não jogável ficam **Aguardando** e fora das sugestões automáticas. Bloqueios
+ainda não jogável ficam **Aguardando**. Bloqueios
 de Linux aparecem na rota **Windows** e no estado **Requer Windows**. Emulação e
 launchers sem confirmação atual por jogo ficam **Conferir ajustes**.
 
@@ -155,8 +138,8 @@ o snapshot anterior.
 - `data.js`: dados gerados; não editar manualmente. A versão de cache no HTML é
   atualizada automaticamente pelo script.
 - `index.html` e `app.js`: catálogo estático, sem build.
-- `rotation.js`: perfis, ranking contextual e persistência versionada da rotação.
-- `rotation-ui.js` e `rotation.css`: seleção, sugestões e transferência por link.
+- `rotation.js`: identificadores e persistência versionada da rotação.
+- `rotation-ui.js` e `rotation.css`: seleção manual e transferência por link.
 - `prices.js`: apresentação, validação e mesclagem dos preços do catálogo e slots.
 - `price-refresh.js`: consulta periódica do snapshot, tratamento de falha e atualização
   da página aberta.

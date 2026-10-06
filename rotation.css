@@ -20,18 +20,6 @@
 .slot-summary .steam-price {margin-top:6px; display:block}
 .slot-clear {align-self:flex-start; padding:4px 0; font-size:11px; border:0; color:var(--muted); margin-bottom:10px}
 .slot-clear:hover {color:var(--fg)}
-.suggestion-heading {font-size:11px; font-weight:600; color:#b5beca; margin:14px 0 8px; text-transform:uppercase; letter-spacing:.6px}
-.suggestion-details summary {cursor:pointer; padding:4px 0}
-.suggestion-list {list-style:none; padding:0; margin:0; display:grid; gap:7px}
-.suggestion {width:100%; text-align:left; padding:10px; background:#1c242d; border-color:#2d3845; border-radius:7px}
-.suggestion:hover {border-color:#6e9b83; background:#202e2b}
-.suggestion strong {font-size:12px; display:block; margin-bottom:4px}
-.suggestion small {display:block; color:#aab5c2; font-size:11px; line-height:1.5}
-.suggestion .suggestion-list-label {color:#78cfa0; margin-top:5px}
-.suggestion-empty {font-size:12px; color:var(--muted); padding:12px; border:1px dashed #34404c; border-radius:7px; margin:0}
-.suggestion-nav {display:flex; align-items:center; justify-content:space-between; gap:6px; margin-top:10px; color:var(--muted); font-size:11px}
-.suggestion-nav button {font-size:12px; padding:7px 9px; min-height:44px}
-.suggestion-nav button:disabled {opacity:.4; cursor:default}
 .rotation-footer {display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:16px; align-items:center}
 .rotation-footer p {margin:0; color:var(--muted); font-size:12px}
 .rotation-save {color:#92dcb0!important}
@@ -50,7 +38,7 @@
 .catalog-title {font-size:17px; margin:0 0 12px}
 .mobile-sort {display:none}
 @media(min-width:1550px) {.rotation {max-width:1500px}}
-@media(max-width:1000px) {.rotation-grid {grid-template-columns:1fr} .rotation-card {padding:16px} .slot-description {min-height:0} .suggestion-list {grid-template-columns:repeat(3,minmax(0,1fr))} .rotation-heading {flex-direction:column}}
+@media(max-width:1000px) {.rotation-grid {grid-template-columns:1fr} .rotation-card {padding:16px} .slot-description {min-height:0} .rotation-heading {flex-direction:column}}
 @media(max-width:650px) {
   body .rotation {margin-top:18px; padding:12px}
   .rotation-heading h2 {font-size:21px}
@@ -59,10 +47,6 @@
   .slot-heading h3 {line-height:1.35; overflow-wrap:anywhere}
   .slot-description {font-size:13px; line-height:1.55}
   .slot-search-label {font-size:13px}
-  .suggestion-list {grid-template-columns:1fr}
-  .suggestion strong {font-size:14px; overflow-wrap:anywhere}
-  .suggestion small {font-size:12px}
-  .suggestion-details summary {min-height:44px; padding:12px 0; line-height:1.5}
   .rotation-footer {align-items:stretch; flex-direction:column}
   .rotation-footer p {line-height:1.55}
   .rotation-footer>button {width:100%}

@@ -5,20 +5,15 @@
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const labels = {B:'Backlog', P:'Jogando', Z:'Pausado', W:'Wishlist', Q:'Desisti'};
   const titles = ['Aventura principal', 'Campanha para alternar', 'Partidas para voltar'];
-  const descriptions = ['Seu foco da vez: uma aventura ou campanha para avançar com calma.', 'Uma campanha para alternar o ritmo, considerando os outros jogos escolhidos.', 'Partidas ou tentativas independentes que tragam variedade ao conjunto.'];
+  const descriptions = ['Seu foco da vez: uma aventura ou campanha para avançar com calma.', 'Uma campanha que você queira alternar com o jogo principal.', 'Um jogo para voltar quando der vontade.'];
   const catalog = [...GAMES].sort((a,b) => a.name.localeCompare(b.name, 'pt-BR'));
   const byId = new Map(catalog.map(game => [engine.gameId(game), game]));
   let storage;
   try { storage = root.localStorage; } catch { storage = null; }
   let slots = engine.readSlots(storage, GAMES);
-  const suggestionOffsets = [0,0,0];
   const initialSaved = slots.some(Boolean);
   const saveMessage = document.getElementById('rotation-save');
   const cards = document.getElementById('rotation-cards');
-  const offerLabel = game => {
-    const price = root.GamePrices.state(game);
-    return price.label + (price.stale ? ' (dado anterior)' : '');
-  };
   cards.innerHTML = titles.map((title,index) => `<article class="rotation-card" aria-labelledby="slot-title-${index}">
     <div class="slot-heading"><span class="slot-number">0${index + 1}</span><h3 id="slot-title-${index}">${title}</h3></div>
     <p class="slot-description">${descriptions[index]}</p>
@@ -27,8 +22,6 @@
     <select class="slot-select" id="slot-select-${index}" aria-label="Escolher o ${index + 1}º jogo"></select>
     <div class="slot-summary" id="slot-summary-${index}"></div>
     <button class="slot-clear" id="slot-clear-${index}" type="button">Liberar este slot</button>
-    <details class="suggestion-details" id="slot-alternatives-${index}" open><summary class="suggestion-heading" id="suggestion-heading-${index}"></summary>
-    <div id="slot-suggestions-${index}"></div></details>
   </article>`).join('');
   function options(index) {
     const term = document.getElementById(`slot-search-${index}`).value.toLocaleLowerCase('pt-BR').trim();
@@ -43,17 +36,6 @@
     root.currentRotation = [...slots];
     document.dispatchEvent(new CustomEvent('rotationchange', {detail:[...slots]}));
   }
-  function renderSuggestions(index) {
-    const offset = suggestionOffsets[index];
-    const rows = engine.recommend(GAMES, slots, index, offset + 4);
-    const suggestions = rows.slice(offset,offset + 3);
-    const container = document.getElementById(`slot-suggestions-${index}`);
-    if (index === 1 && !slots[0]) container.innerHTML = '<p class="suggestion-empty">Escolha o primeiro jogo para receber campanhas que combinem com ele.</p>';
-    else if (index === 2 && (!slots[0] || !slots[1])) container.innerHTML = '<p class="suggestion-empty">Escolha os dois primeiros jogos para encontrar uma terceira experiência.</p>';
-    else if (!suggestions.length) container.innerHTML = '<p class="suggestion-empty">Sem sugestões com os critérios atuais. Você pode escolher qualquer jogo no seletor.</p>';
-    else container.innerHTML = `<ul class="suggestion-list">${suggestions.map(({game,reason}) => `<li><button type="button" class="suggestion" data-slot="${index}" data-game="${escape(engine.gameId(game))}" aria-label="Escolher ${escape(game.name)} como ${index + 1}º jogo"><strong>${escape(game.name)} <span aria-hidden="true">↗</span></strong><small>${escape(reason)}</small><small class="suggestion-list-label">${escape(labels[game.list] || 'Catálogo')} · <span data-price-label="${escape(engine.gameId(game))}">${escape(offerLabel(game))}</span></small><small>${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : ''}</small></button></li>`).join('')}</ul>
-      <div class="suggestion-nav"><button type="button" data-suggestion-page="${index}" data-offset="${offset - 3}" aria-label="Opções anteriores para o ${index + 1}º jogo" ${offset === 0 ? 'disabled' : ''}>Anteriores</button><span role="status">${offset + 1}–${offset + suggestions.length}</span><button type="button" data-suggestion-page="${index}" data-offset="${offset + 3}" aria-label="Mais opções para o ${index + 1}º jogo" ${rows.length <= offset + 3 ? 'disabled' : ''}>Mais opções</button></div>`;
-  }
   function render() {
     for (let index = 0; index < 3; index++) {
       options(index);
@@ -61,19 +43,16 @@
       const summary = document.getElementById(`slot-summary-${index}`);
       document.getElementById(`slot-clear-${index}`).hidden = !game;
       if (game) {
-        const profile = engine.profile(game);
-        const duration = profile.kind === 'session' ? 'Por partidas / tentativas' : profile.duration ? `Campanha ≈ ${new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(profile.duration)} h` : 'Duração não informada';
+        const main = Number(game.hltb?.main);
+        const duration = Number.isFinite(main) && main > 0 ? `HLTB · principal ≈ ${new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(main)} h` : 'Duração não informada';
         summary.innerHTML = `<strong>${escape(game.name)}</strong><span class="muted">${escape(duration)} · ${escape(labels[game.list] || 'Catálogo')}</span><div class="muted">${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : game.play?.status === 'waiting' ? ' · aguardando disponibilidade' : ''}</div><div class="slot-price" data-price-game="${escape(engine.gameId(game))}">${root.GamePrices.render(game)}</div>`;
-      } else summary.innerHTML = '<span class="muted">Slot livre. Escolha no catálogo ou use uma sugestão abaixo.</span>';
-      document.getElementById(`slot-alternatives-${index}`).open = !game;
-      document.getElementById(`suggestion-heading-${index}`).textContent = game ? 'Alternativas para este slot' : index ? 'Sugestões para combinar' : 'Boas aventuras para começar';
-      renderSuggestions(index);
+      } else summary.innerHTML = '<span class="muted">Slot livre. Busque e escolha um jogo acima.</span>';
+
     }
     document.getElementById('rotation-share').disabled = !slots.some(Boolean);
   }
   function save(next) {
     slots = engine.normalizeSlots(next, GAMES);
-    suggestionOffsets.fill(0);
     const saved = engine.saveSlots(storage, slots);
     saveMessage.textContent = saved ? 'Seleção salva neste navegador.' : 'Não foi possível salvar neste navegador. Use o link para guardar sua seleção.';
     saveMessage.classList.toggle('warning', !saved);
@@ -90,25 +69,6 @@
       const next = [...slots]; next[index] = null; save(next);
     });
   }
-  cards.addEventListener('click', event => {
-    const pageButton = event.target.closest('button[data-suggestion-page]');
-    if (pageButton) {
-      const index = Number(pageButton.dataset.suggestionPage);
-      const direction = Number(pageButton.dataset.offset) > suggestionOffsets[index] ? 1 : 0;
-      suggestionOffsets[index] = Number(pageButton.dataset.offset);
-      renderSuggestions(index);
-      const buttons = document.querySelectorAll(`#slot-suggestions-${index} .suggestion-nav button`);
-      (buttons[direction].disabled ? buttons[1 - direction] : buttons[direction]).focus();
-      return;
-    }
-    const button = event.target.closest('button[data-game]');
-    if (!button) return;
-    const index = Number(button.dataset.slot);
-    const next = [...slots]; next[index] = button.dataset.game;
-    document.getElementById(`slot-search-${index}`).value = '';
-    save(next);
-    document.getElementById(`slot-select-${index}`).focus();
-  });
   document.getElementById('rotation-share').addEventListener('click', async () => {
     const url = new URL(root.location.href);
     url.hash = 'rotation=' + encodeURIComponent(JSON.stringify(slots));
@@ -136,7 +96,6 @@
   }
   root.addEventListener('storage', event => {
     if (event.key !== engine.STORAGE_KEY) return;
-    suggestionOffsets.fill(0);
     slots = engine.readSlots(storage, GAMES); render(); notifyCatalog();
     saveMessage.textContent = 'Seleção atualizada em outra aba.';
   });
@@ -149,10 +108,7 @@
         if (focused) element.querySelector('a')?.focus({preventScroll:true});
       }
     });
-    cards.querySelectorAll('[data-price-label]').forEach(element => {
-      const game = byId.get(element.dataset.priceLabel);
-      if (game) element.textContent = offerLabel(game);
-    });
+
   });
   root.addEventListener('hashchange', readShared);
   saveMessage.textContent = initialSaved ? 'Seleção restaurada deste navegador.' : 'Escolha seu primeiro jogo para começar.';
