@@ -29,6 +29,9 @@
 .suggestion small {display:block; color:#aab5c2; font-size:11px; line-height:1.5}
 .suggestion .suggestion-list-label {color:#78cfa0; margin-top:5px}
 .suggestion-empty {font-size:12px; color:var(--muted); padding:12px; border:1px dashed #34404c; border-radius:7px; margin:0}
+.suggestion-nav {display:flex; align-items:center; justify-content:space-between; gap:6px; margin-top:10px; color:var(--muted); font-size:11px}
+.suggestion-nav button {font-size:12px; padding:7px 9px; min-height:44px}
+.suggestion-nav button:disabled {opacity:.4; cursor:default}
 .rotation-footer {display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:16px; align-items:center}
 .rotation-footer p {margin:0; color:var(--muted); font-size:12px}
 .rotation-save {color:#92dcb0!important}

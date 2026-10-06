@@ -99,3 +99,69 @@ test('browser export matches Node API and metadata gaps do not crash ranking', (
   assert.deepEqual(R.recommend([unknown],[],0),[]);
   assert.equal(R.gameId({name:'Pokémon: Édition!'}),'pokemon-edition');
 });
+
+test('main-game alternatives consider both other slots, but not the game being replaced', () => {
+  const rows = (second, third, first = botw) => R.recommend(games,
+    [id(first),id(second),id(third)],0,500);
+  const score = list => list.find(row => row.game.name === 'Persona 5 Royal').score;
+  assert.ok(score(rows('Titanfall 2','Rocket League')) > score(rows('Inscryption','Rocket League')));
+  assert.ok(score(rows('Titanfall 2','Rocket League')) > score(rows('Titanfall 2','Balatro')));
+  assert.equal(score(rows('Titanfall 2','Balatro')),score(rows('Titanfall 2','Balatro','Blue Prince')));
+  const reason = rows('Titanfall 2','Balatro').find(row => row.game.name === 'Persona 5 Royal').reason;
+  assert.match(reason,/Titanfall 2/);
+  assert.match(reason,/Balatro/);
+  assert.doesNotMatch(reason,/Breath of the Wild/);
+});
+
+test('alternating campaigns also take the third slot into account', () => {
+  const rows = third => R.recommend(games,[id(botw),null,id(third)],1,500);
+  const inscryption = third => rows(third).find(row => row.game.name === 'Inscryption');
+  assert.ok(inscryption('Rocket League').score > inscryption('Balatro').score);
+  assert.match(inscryption('Balatro').reason,/Balatro/);
+});
+
+test('duration boundaries never strand campaigns outside both campaign slots', () => {
+  const principal = {...named(botw),hltb:{main:80}};
+  for (const duration of [5,21.9,22,22.1,24.9,25,25.1,35,80]) {
+    const game = {name:'Test campaign',list:'B',hltb:{main:duration},metacritic:{genres:['Action Adventure']}};
+    const sample = [principal,game];
+    assert.ok(R.recommend(sample,[],0).some(row => row.game.name === game.name),String(duration));
+    assert.ok(R.recommend(sample,[id(botw)],1).some(row => row.game.name === game.name),String(duration));
+  }
+});
+
+test('main slot does not reward a hundred-hour campaign just for being longer', () => {
+  const sample = [30,100].map(duration => ({name:`Campaign ${duration}`,list:'B',critic:85,
+    hltb:{main:duration},metacritic:{genres:['Western RPG']}}));
+  const rows = R.recommend(sample,[],0);
+  assert.ok(rows.find(row=>row.game.name === 'Campaign 30').score >= rows.find(row=>row.game.name === 'Campaign 100').score);
+});
+
+test('second-slot commitment is judged relative to the main campaign', () => {
+  const main = {...named(botw),hltb:{main:60}};
+  const candidate = {...named('Stellar Blade'),hltb:{main:23}};
+  const score = duration => R.recommend([{...main,hltb:{main:duration}},candidate],[id(botw)],1)[0]?.score;
+  assert.equal(typeof score(60),'number');
+  assert.ok(score(60) > score(12));
+});
+
+test('suggestion slate diversifies similar candidates without losing unique results', () => {
+  const sample = [named(botw),named('Inscryption'),...['Valorant','Overwatch','Warhammer 40,000: Darktide','Rocket League','Hades']
+    .map(name=>({...named(name),list:'B',critic:90}))];
+  const slots = [id(botw),id('Inscryption')];
+  const rows = R.recommend(sample,slots,2,3);
+  assert.ok(new Set(rows.map(row=>R.profile(row.game).tags.includes('shooter'))).size > 1);
+  const all = R.recommend(sample,slots,2,100);
+  assert.equal(all.length,5);
+  assert.equal(new Set(all.map(row=>R.gameId(row.game))).size,5);
+  assert.deepEqual(all.slice(0,3),rows,'requesting more alternatives must retain the same prefix');
+  assert.deepEqual(R.recommend(sample,slots,2,0),[]);
+});
+
+test('explanations disclose absent duration and overlapping mechanics', () => {
+  const main = named(botw), cards = named('Balatro');
+  const campaign = {...named('Inscryption'),hltb:{main:null}};
+  const [row] = R.recommend([main,cards,campaign],[id(botw),null,id('Balatro')],1);
+  assert.match(row.reason,/duração.*(indisponível|informada|conhecida)/i);
+  assert.match(row.reason,/compartilha.*Balatro/i);
+});

@@ -13,11 +13,21 @@ Clique em **+** para ver instruções, fontes e datas por jogo.
 
 No topo da página, escolha uma **aventura principal**, uma **campanha para alternar**
 e um jogo de **partidas ou tentativas**. Há busca e seleção manual em cada slot.
-A segunda posição sugere campanhas menores com mecânicas que contrastem com a
-primeira; a terceira considera os dois jogos escolhidos. As sugestões combinam
-perfis de estrutura, gêneros, duração e lista pessoal, com uma explicação visível.
-Backlog e Jogando têm prioridade; jogos em Desisti e lançamentos indisponíveis
-ficam fora das sugestões. A seleção manual continua livre.
+Todos os slots consideram os outros jogos escolhidos, inclusive ao substituir o
+principal. A segunda posição favorece campanhas menores em relação à principal;
+campanhas longas continuam elegíveis, com menor prioridade para alternar. O tempo
+de campanha não é tratado como duração de uma partida. Não há um corte rígido de
+22 horas nem um bônus crescente para aventuras cada vez mais longas.
+
+As sugestões combinam perfis de estrutura, gêneros, duração e lista pessoal.
+Jogando favorece continuidade e Backlog tem prioridade sobre Pausados e Wishlist.
+Cada grupo procura variar as mecânicas entre as alternativas exibidas; **Mais
+opções** e **Anteriores** percorrem outras sugestões sem alterar sua seleção.
+As explicações apontam diferenças, mecânicas compartilhadas, compromisso de tempo
+e dados ausentes. Perfis inferidos dos metadados são identificados. É um ranking
+por regras sobre seu catálogo e rotação, sem inferir gostos a partir de cliques.
+Jogos em Desisti e lançamentos indisponíveis ficam fora das sugestões. A seleção
+manual continua livre.
 
 As escolhas são salvas automaticamente no `localStorage` deste navegador, sem
 conta ou servidor. **Minha rotação** filtra os jogos escolhidos; as listas originais

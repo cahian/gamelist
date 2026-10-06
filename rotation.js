@@ -145,59 +145,112 @@
     return Math.min(novel, 8) * 2 - shared * 3;
   }
   const hours = value => new Intl.NumberFormat('pt-BR', {maximumFractionDigits:1}).format(value);
-  function attentionDescription(p) {
-    if (p.tags.includes('cards')) return 'cartas e estratégia';
-    if (p.tags.includes('rhythm')) return 'ação e ritmo';
-    if (p.tags.includes('shooter')) return 'tiro e reflexos';
-    if (p.tags.includes('exploration')) return 'exploração e progressão';
-    if (p.tags.includes('story')) return 'narrativa';
-    if (p.tags.includes('platforming')) return 'plataforma';
-    if (p.tags.includes('strategy')) return 'estratégia';
-    if (p.tags.includes('reflexes')) return 'ação e reflexos';
-    return 'uma campanha';
-  }
-  function reasonFor(game, p, selected, index) {
-    const length = p.duration != null ? ` (~${hours(p.duration)} h de campanha)` : '';
-    const base = `${p.description[0].toUpperCase()}${p.description.slice(1)}${length}.`;
-    if (!index) return `${base} Pode ocupar o espaço de jogo principal da rotação.`;
-    const first = selected[0], firstProfile = profile(first);
-    if (index === 1) {
-      const shared = p.tags.includes('exploration') && firstProfile.tags.includes('exploration');
-      return `${base} Ao lado de ${first.name}, oferece ${p.tags.includes('cards') ? 'estratégia por turnos' : p.tags.includes('rhythm') ? 'fases guiadas pela música' : p.tags.includes('shooter') ? 'ação por missões' : p.tags.includes('story') ? 'uma história mais concentrada' : 'objetivos mais delimitados'}${shared ? ', ainda mantendo alguma exploração' : ''}.`;
+  const TAG_LABELS = {action:'ação', reflexes:'reflexos', exploration:'exploração', strategy:'estratégia',
+    progression:'progressão', cards:'cartas', shooter:'tiro', platforming:'plataforma', horror:'terror',
+    story:'narrativa', dialogue:'diálogos', puzzle:'enigmas', rhythm:'ritmo', racing:'corridas',
+    sports:'esportes', fighting:'lutas', rpg:'RPG', relaxed:'ritmo tranquilo', coop:'cooperação',
+    multiplayer:'multiplayer', party:'rodadas em grupo', spatial:'raciocínio espacial', stealth:'furtividade'};
+
+  // Duration is a preference, not an eligibility gate. A 23-hour campaign can
+  // alternate with a 60-hour adventure; a 25-hour metadata boundary must not
+  // make it disappear. Completion time says nothing about session length.
+  function commitment(p, selected, index) {
+    if (index === 2) return {score:0, reason:''};
+    if (index === 0) {
+      const secondTime = selected[1]?.p.duration;
+      const shorter = p.duration != null && secondTime != null && p.duration < secondTime;
+      return {score:(p.kind === 'long' ? 8 : Math.min((p.duration || 0) / 3,8)) - (shorter ? 6 : 0),
+        reason:shorter ? 'É mais curto que a campanha para alternar; considere inverter os dois slots.' : ''};
     }
-    const second = selected[1], secondProfile = profile(second);
-    const different = contrast(p,firstProfile) > 0 && contrast(p,secondProfile) > 0;
-    return `${base} ${first.name} traz ${attentionDescription(firstProfile)} e ${second.name}, ${attentionDescription(secondProfile)}; ${different ? 'esta opção acrescenta outra mecânica em partidas ou tentativas' : 'esta opção acrescenta uma estrutura de partidas ou tentativas, mesmo compartilhando algumas mecânicas'}.`;
+    const mainTime = selected[0]?.p.duration;
+    const target = mainTime != null ? Math.max(4,Math.min(18,mainTime / 2)) : 12;
+    const score = p.duration == null ? -3
+      : Math.max(0,1 - p.duration / target) * 8 - Math.min(24,Math.max(0,p.duration - target) * .8);
+    let reason = '';
+    if (p.duration != null && mainTime != null) {
+      reason = p.duration < mainTime
+        ? `Campanha mais curta que ${selected[0].game.name} (~${hours(mainTime)} h).`
+        : `Exige tanto ou mais tempo total que ${selected[0].game.name} (~${hours(mainTime)} h).`;
+    }
+    if (p.kind === 'long') reason += ' A progressão extensa pode disputar atenção com o jogo principal.';
+    return {score:score - (p.kind === 'long' ? 6 : 0), reason:reason.trim()};
+  }
+
+  function reasonFor(game, p, context, fit) {
+    const length = p.duration != null ? ` (~${hours(p.duration)} h de campanha)` : '';
+    const parts = [`${p.description[0].toUpperCase()}${p.description.slice(1)}${length}.`];
+    if (p.structure === 'campaign' && p.duration == null) parts.push('Duração de campanha não informada.');
+    if (fit.reason) parts.push(fit.reason);
+    for (const other of context) {
+      if (!p.tags.length || !other.p.tags.length) {
+        parts.push(`Faltam dados de mecânicas para comparar com ${other.game.name}.`);
+        continue;
+      }
+      const shared = p.tags.filter(tag => other.p.tags.includes(tag))
+        .sort((a,b) => (WEIGHTS[b] || 1) - (WEIGHTS[a] || 1));
+      const detail = shared.slice(0,2).map(tag => TAG_LABELS[tag] || tag).join(' e ');
+      if (contrast(p,other.p) > 0) {
+        parts.push(`Varia as mecânicas em relação a ${other.game.name}${detail ? `, mas compartilha ${detail}` : ''}.`);
+      } else {
+        parts.push(`Compartilha ${detail} com ${other.game.name}; oferece menos contraste.`);
+      }
+    }
+    if (game.list === 'P') parts.push('Já está em Jogando: favorece continuar o que você começou.');
+    else if (game.list === 'B') parts.push('Prioridade ao seu Backlog.');
+    else if (game.list === 'Z') parts.push('Está em Pausados: opção para retomar.');
+    if (p.confidence === 'metadata') parts.push('Perfil estimado pelos metadados.');
+    return parts.join(' ');
+  }
+
+  function similarity(a, b) {
+    const union = new Set([...a.tags,...b.tags]);
+    if (!union.size) return 0;
+    let shared = 0, total = 0;
+    for (const tag of union) {
+      const weight = WEIGHTS[tag] || 1;
+      total += weight;
+      if (a.tags.includes(tag) && b.tags.includes(tag)) shared += weight;
+    }
+    return shared / total;
+  }
+
+  // Greedy diversification retains the strongest match first, then discounts
+  // resemblance to alternatives already shown. Keep the underlying fit score
+  // independent of the display limit and return a stable prefix for pagination.
+  function diversify(rows, limit) {
+    const remaining = rows.map(row => ({...row, redundancy:0})), result = [];
+    while (remaining.length && result.length < limit) {
+      remaining.sort((a,b) => (b.score - b.redundancy) - (a.score - a.redundancy)
+        || b.score - a.score || a.game.name.localeCompare(b.game.name,'pt-BR'));
+      const next = remaining.shift();
+      result.push({game:next.game,reason:next.reason,score:next.score});
+      for (const row of remaining) row.redundancy = Math.max(row.redundancy,28 * similarity(row.p,next.p));
+    }
+    return result;
   }
 
   function recommend(games, input, index, limit = 6) {
     if (!Array.isArray(games) || ![0,1,2].includes(index)) return [];
     const slots = normalizeSlots(input, games), byId = new Map(games.map(game => [gameId(game),game]));
-    const selected = slots.map(id => byId.get(id));
+    const selected = slots.map(id => byId.has(id) ? {game:byId.get(id),p:profile(byId.get(id))} : null);
     if (index > 0 && !selected[0] || index === 2 && !selected[1]) return [];
     const used = new Set(slots.filter(Boolean));
     const max = Number.isFinite(Number(limit)) ? Math.max(0,Math.floor(Number(limit))) : 6;
-    return games.filter(game => isAvailable(game) && game.list !== 'Q' && !used.has(gameId(game)))
+    if (!max) return [];
+    const context = selected.filter((game,slot) => game && slot !== index);
+    const ranked = [...byId.values()].filter(game => isAvailable(game) && game.list !== 'Q' && !used.has(gameId(game)))
       .map(game => ({game, p:profile(game)}))
-      .filter(({p}) => index === 0 ? p.kind === 'long' : index === 1 ? p.kind === 'campaign' && (p.duration == null || p.duration <= 22) : p.kind === 'session')
+      .filter(({p}) => index === 2 ? p.kind === 'session' : p.structure === 'campaign')
       .map(({game,p}) => {
-        let score = {B:20,P:20,Z:8,W:0}[game.list] ?? 0;
-        score += p.confidence === 'curated' ? 6 : 0;
+        let score = {B:20,P:24,Z:8,W:0}[game.list] ?? 0;
+        score += p.confidence === 'curated' ? 2 : 0;
         score += Math.max(0,Math.min(Number(game.critic) || 0,100)) / 20;
-        if (index === 0) score += Math.min(p.duration || 30,80) / 10;
-        if (index === 1) {
-          score += contrast(p,profile(selected[0]));
-          if (p.duration != null) {
-            score += Math.max(0,16 - p.duration) / 2;
-            const mainTime = profile(selected[0]).duration;
-            if (mainTime != null && p.duration < mainTime * .5) score += 5;
-          }
-          if (p.tags.includes('exploration')) score -= 5;
-        }
-        if (index === 2) score += contrast(p,profile(selected[0])) + contrast(p,profile(selected[1]));
-        return {game,reason:reasonFor(game,p,selected,index),score:Math.round(score * 100) / 100};
-      }).sort((a,b) => b.score - a.score || a.game.name.localeCompare(b.game.name,'pt-BR'))
-      .slice(0,max);
+        if (context.length) score += context.reduce((sum,other) => sum + contrast(p,other.p),0) / context.length;
+        const fit = commitment(p,selected,index);
+        score += fit.score;
+        return {game,p,reason:reasonFor(game,p,context,fit),score:Math.round(score * 100) / 100};
+      });
+    return diversify(ranked,max);
   }
 
   const api = {STORAGE_KEY, gameId, isAvailable, profile, normalizeSlots, readSlots, saveSlots, recommend};

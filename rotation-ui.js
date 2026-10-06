@@ -5,12 +5,13 @@
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const labels = {B:'Backlog', P:'Jogando', Z:'Pausado', W:'Wishlist', Q:'Desisti'};
   const titles = ['Aventura principal', 'Campanha para alternar', 'Partidas para voltar'];
-  const descriptions = ['Um jogo maior para explorar, se envolver e avançar com calma.', 'Uma campanha mais curta e direcionada, que varie o ritmo do primeiro.', 'Partidas ou tentativas independentes, com uma experiência diferente dos outros dois.'];
+  const descriptions = ['Seu foco da vez: uma aventura ou campanha para avançar com calma.', 'Uma campanha para alternar o ritmo, considerando os outros jogos escolhidos.', 'Partidas ou tentativas independentes que tragam variedade ao conjunto.'];
   const catalog = [...GAMES].sort((a,b) => a.name.localeCompare(b.name, 'pt-BR'));
   const byId = new Map(catalog.map(game => [engine.gameId(game), game]));
   let storage;
   try { storage = root.localStorage; } catch { storage = null; }
   let slots = engine.readSlots(storage, GAMES);
+  const suggestionOffsets = [0,0,0];
   const initialSaved = slots.some(Boolean);
   const saveMessage = document.getElementById('rotation-save');
   const cards = document.getElementById('rotation-cards');
@@ -42,6 +43,17 @@
     root.currentRotation = [...slots];
     document.dispatchEvent(new CustomEvent('rotationchange', {detail:[...slots]}));
   }
+  function renderSuggestions(index) {
+    const offset = suggestionOffsets[index];
+    const rows = engine.recommend(GAMES, slots, index, offset + 4);
+    const suggestions = rows.slice(offset,offset + 3);
+    const container = document.getElementById(`slot-suggestions-${index}`);
+    if (index === 1 && !slots[0]) container.innerHTML = '<p class="suggestion-empty">Escolha o primeiro jogo para receber campanhas que combinem com ele.</p>';
+    else if (index === 2 && (!slots[0] || !slots[1])) container.innerHTML = '<p class="suggestion-empty">Escolha os dois primeiros jogos para encontrar uma terceira experiência.</p>';
+    else if (!suggestions.length) container.innerHTML = '<p class="suggestion-empty">Sem sugestões com os critérios atuais. Você pode escolher qualquer jogo no seletor.</p>';
+    else container.innerHTML = `<ul class="suggestion-list">${suggestions.map(({game,reason}) => `<li><button type="button" class="suggestion" data-slot="${index}" data-game="${escape(engine.gameId(game))}" aria-label="Escolher ${escape(game.name)} como ${index + 1}º jogo"><strong>${escape(game.name)} <span aria-hidden="true">↗</span></strong><small>${escape(reason)}</small><small class="suggestion-list-label">${escape(labels[game.list] || 'Catálogo')} · <span data-price-label="${escape(engine.gameId(game))}">${escape(offerLabel(game))}</span></small><small>${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : ''}</small></button></li>`).join('')}</ul>
+      <div class="suggestion-nav"><button type="button" data-suggestion-page="${index}" data-offset="${offset - 3}" aria-label="Opções anteriores para o ${index + 1}º jogo" ${offset === 0 ? 'disabled' : ''}>Anteriores</button><span role="status">${offset + 1}–${offset + suggestions.length}</span><button type="button" data-suggestion-page="${index}" data-offset="${offset + 3}" aria-label="Mais opções para o ${index + 1}º jogo" ${rows.length <= offset + 3 ? 'disabled' : ''}>Mais opções</button></div>`;
+  }
   function render() {
     for (let index = 0; index < 3; index++) {
       options(index);
@@ -53,19 +65,15 @@
         const duration = profile.kind === 'session' ? 'Por partidas / tentativas' : profile.duration ? `Campanha ≈ ${new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(profile.duration)} h` : 'Duração não informada';
         summary.innerHTML = `<strong>${escape(game.name)}</strong><span class="muted">${escape(duration)} · ${escape(labels[game.list] || 'Catálogo')}</span><div class="muted">${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : game.play?.status === 'waiting' ? ' · aguardando disponibilidade' : ''}</div><div class="slot-price" data-price-game="${escape(engine.gameId(game))}">${root.GamePrices.render(game)}</div>`;
       } else summary.innerHTML = '<span class="muted">Slot livre. Escolha no catálogo ou use uma sugestão abaixo.</span>';
-      const suggestions = engine.recommend(GAMES, slots, index, 3);
       document.getElementById(`slot-alternatives-${index}`).open = !game;
       document.getElementById(`suggestion-heading-${index}`).textContent = game ? 'Alternativas para este slot' : index ? 'Sugestões para combinar' : 'Boas aventuras para começar';
-      const container = document.getElementById(`slot-suggestions-${index}`);
-      if (index === 1 && !slots[0]) container.innerHTML = '<p class="suggestion-empty">Escolha o primeiro jogo para receber campanhas que combinem com ele.</p>';
-      else if (index === 2 && (!slots[0] || !slots[1])) container.innerHTML = '<p class="suggestion-empty">Escolha os dois primeiros jogos para encontrar uma terceira experiência.</p>';
-      else if (!suggestions.length) container.innerHTML = '<p class="suggestion-empty">Sem sugestões com os critérios atuais. Você pode escolher qualquer jogo no seletor.</p>';
-      else container.innerHTML = `<ul class="suggestion-list">${suggestions.map(({game,reason}) => `<li><button type="button" class="suggestion" data-slot="${index}" data-game="${escape(engine.gameId(game))}" aria-label="Escolher ${escape(game.name)} como ${index + 1}º jogo"><strong>${escape(game.name)} <span aria-hidden="true">↗</span></strong><small>${escape(reason)}</small><small class="suggestion-list-label">${escape(labels[game.list] || 'Catálogo')} · <span data-price-label="${escape(engine.gameId(game))}">${escape(offerLabel(game))}</span></small><small>${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : ''}</small></button></li>`).join('')}</ul>`;
+      renderSuggestions(index);
     }
     document.getElementById('rotation-share').disabled = !slots.some(Boolean);
   }
   function save(next) {
     slots = engine.normalizeSlots(next, GAMES);
+    suggestionOffsets.fill(0);
     const saved = engine.saveSlots(storage, slots);
     saveMessage.textContent = saved ? 'Seleção salva neste navegador.' : 'Não foi possível salvar neste navegador. Use o link para guardar sua seleção.';
     saveMessage.classList.toggle('warning', !saved);
@@ -83,6 +91,16 @@
     });
   }
   cards.addEventListener('click', event => {
+    const pageButton = event.target.closest('button[data-suggestion-page]');
+    if (pageButton) {
+      const index = Number(pageButton.dataset.suggestionPage);
+      const direction = Number(pageButton.dataset.offset) > suggestionOffsets[index] ? 1 : 0;
+      suggestionOffsets[index] = Number(pageButton.dataset.offset);
+      renderSuggestions(index);
+      const buttons = document.querySelectorAll(`#slot-suggestions-${index} .suggestion-nav button`);
+      (buttons[direction].disabled ? buttons[1 - direction] : buttons[direction]).focus();
+      return;
+    }
     const button = event.target.closest('button[data-game]');
     if (!button) return;
     const index = Number(button.dataset.slot);
@@ -118,6 +136,7 @@
   }
   root.addEventListener('storage', event => {
     if (event.key !== engine.STORAGE_KEY) return;
+    suggestionOffsets.fill(0);
     slots = engine.readSlots(storage, GAMES); render(); notifyCatalog();
     saveMessage.textContent = 'Seleção atualizada em outra aba.';
   });
