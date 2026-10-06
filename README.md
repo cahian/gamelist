@@ -41,15 +41,34 @@ lançamentos sem preço e jogos sem edição Steam confirmada têm estados disti
 Há ordenação por preço e filtros de promoção, gratuitos e pagos. Promoções podem
 mudar depois da consulta; a oferta válida é a apresentada na loja.
 
-A fonte `steamPrice` tem cache independente de 23 horas, permitindo renovar a
-cotação em cada execução diária. Falhas preservam a última
-cotação e sua data, identificadas como **dado anterior**; cotações com mais de 48 h
-também recebem esse aviso. Preços antigos não entram no filtro de promoções.
-Para consultar só preços sem atualizar os demais metadados:
+Os preços têm uma coleta independente **a cada hora**, usando lotes de até 20
+AppIDs (`filters=price_overview`) e detalhes individuais quando necessário. Os
+lotes sempre verificam todos os AppIDs para detectar novas ofertas; classificações
+sem preço (gratuito, em breve ou indisponível) podem ser reutilizadas por até 23 h,
+conservando a data da consulta original. O restante dos metadados continua diário.
+
+O resultado é salvo em `prices.json`, separado do catálogo. A página busca esse
+arquivo ao abrir, a cada **5 minutos** enquanto visível e ao voltar à aba, com cache
+desabilitado. Os preços do catálogo, slots e sugestões se atualizam sem recarregar
+a página nem perder seleção, busca ou detalhes abertos. As datas são mostradas por
+jogo. Isso é uma atualização periódica automática, **não uma consulta em tempo real
+à Steam a cada visita**; agendamento e publicação também podem sofrer atrasos.
+
+Falhas preservam a última cotação e sua data, identificadas como **dado anterior**.
+Preços pagos com mais de 3 h e classificações sem preço com mais de 26 h também
+recebem esse aviso. Preços antigos não entram no filtro de promoções. Falha total
+retorna erro e preserva o snapshot anterior. Para executar só preços:
 
 ```sh
-python3 -u scripts/refresh.py --prices-only
+python3 -u scripts/refresh_prices.py
+# Também renovar imediatamente as classificações sem preço:
+python3 -u scripts/refresh_prices.py --force
 ```
+
+O job pode rodar no GitHub Actions ou em um Mac ligado, com `launchd`. Há scripts
+de configuração, execução e acesso privado opcional via Tailscale em
+[docs/macos.md](docs/macos.md). A página pública continua funcionando sem conexão
+com o Mac ou com a rede Tailscale.
 
 A preferência é pelo Deck quando a referência anterior de desempenho favorece o
 portátil. Jogos pesados vão para PC Linux. Bloqueios de Linux ficam explícitos como
@@ -64,12 +83,14 @@ crítica PC aparece separadamente quando disponível.
 
 ## Atualização automática
 
-O workflow [refresh.yml](.github/workflows/refresh.yml) executa todos os dias às
-09:17 UTC (06:17 em São Paulo), também ao alterar catálogo/integrações, e pode ser
-executado em **Actions → Atualizar playlist → Run workflow**. O GitHub pode atrasar
-execuções agendadas. Ele testa, consulta as APIs, salva o snapshot e publica no Pages.
-A atualização não depende de computador ligado, sessão do navegador ou credenciais
-pessoais. O token automático do GitHub é usado para publicar e consultar relatórios.
+O workflow [refresh.yml](.github/workflows/refresh.yml) consulta metadados todos os
+dias às 09:17 UTC (06:17 em São Paulo), e preços a cada hora, no minuto 23. Mudanças
+no catálogo ou código executam a coleta completa; pushes contendo apenas os arquivos
+de preços publicam diretamente. Em **Actions → Atualizar playlist → Run workflow**,
+é possível escolher `all`, `prices` ou `publish`. O GitHub pode atrasar execuções
+agendadas. Ele testa, consulta as APIs, salva o snapshot e publica no Pages.
+Na opção padrão do GitHub Actions, a atualização não depende de computador ligado,
+sessão do navegador ou credenciais pessoais. O token automático do GitHub é usado para publicar e consultar relatórios.
 
 Fontes consultadas:
 
@@ -111,7 +132,15 @@ o snapshot anterior.
 - `index.html` e `app.js`: catálogo estático, sem build.
 - `rotation.js`: perfis, ranking contextual e persistência versionada da rotação.
 - `rotation-ui.js` e `rotation.css`: seleção, sugestões e transferência por link.
-- `prices.js`: apresentação e estados de preço compartilhados pelo catálogo e slots.
+- `prices.js`: apresentação, validação e mesclagem dos preços do catálogo e slots.
+- `price-refresh.js`: consulta periódica do snapshot, tratamento de falha e atualização
+  da página aberta.
+- `scripts/refresh_prices.py`: coletor de preços em lote, independente dos metadados.
+- `prices.json` e `prices-report.json`: cotações e diagnóstico da coleta de preços.
+- `scripts/macos/` e `docs/macos.md`: automação opcional no macOS.
+
+Em telas de até 650 px o catálogo usa cartões com rótulos visíveis, ordenação própria
+e controles de toque de pelo menos 44 px. No desktop mantém a tabela ordenável.
 - `refresh-report.json`: cobertura e falhas da execução mais recente.
 
 ```sh

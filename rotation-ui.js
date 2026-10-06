@@ -51,7 +51,7 @@
       if (game) {
         const profile = engine.profile(game);
         const duration = profile.kind === 'session' ? 'Por partidas / tentativas' : profile.duration ? `Campanha ≈ ${new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(profile.duration)} h` : 'Duração não informada';
-        summary.innerHTML = `<strong>${escape(game.name)}</strong><span class="muted">${escape(duration)} · ${escape(labels[game.list] || 'Catálogo')}</span><div class="muted">${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : game.play?.status === 'waiting' ? ' · aguardando disponibilidade' : ''}</div>${root.GamePrices.render(game)}`;
+        summary.innerHTML = `<strong>${escape(game.name)}</strong><span class="muted">${escape(duration)} · ${escape(labels[game.list] || 'Catálogo')}</span><div class="muted">${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : game.play?.status === 'waiting' ? ' · aguardando disponibilidade' : ''}</div><div class="slot-price" data-price-game="${escape(engine.gameId(game))}">${root.GamePrices.render(game)}</div>`;
       } else summary.innerHTML = '<span class="muted">Slot livre. Escolha no catálogo ou use uma sugestão abaixo.</span>';
       const suggestions = engine.recommend(GAMES, slots, index, 3);
       document.getElementById(`slot-alternatives-${index}`).open = !game;
@@ -60,7 +60,7 @@
       if (index === 1 && !slots[0]) container.innerHTML = '<p class="suggestion-empty">Escolha o primeiro jogo para receber campanhas que combinem com ele.</p>';
       else if (index === 2 && (!slots[0] || !slots[1])) container.innerHTML = '<p class="suggestion-empty">Escolha os dois primeiros jogos para encontrar uma terceira experiência.</p>';
       else if (!suggestions.length) container.innerHTML = '<p class="suggestion-empty">Sem sugestões com os critérios atuais. Você pode escolher qualquer jogo no seletor.</p>';
-      else container.innerHTML = `<ul class="suggestion-list">${suggestions.map(({game,reason}) => `<li><button type="button" class="suggestion" data-slot="${index}" data-game="${escape(engine.gameId(game))}" aria-label="Escolher ${escape(game.name)} como ${index + 1}º jogo"><strong>${escape(game.name)} <span aria-hidden="true">↗</span></strong><small>${escape(reason)}</small><small class="suggestion-list-label">${escape(labels[game.list] || 'Catálogo')} · ${escape(offerLabel(game))}</small><small>${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : ''}</small></button></li>`).join('')}</ul>`;
+      else container.innerHTML = `<ul class="suggestion-list">${suggestions.map(({game,reason}) => `<li><button type="button" class="suggestion" data-slot="${index}" data-game="${escape(engine.gameId(game))}" aria-label="Escolher ${escape(game.name)} como ${index + 1}º jogo"><strong>${escape(game.name)} <span aria-hidden="true">↗</span></strong><small>${escape(reason)}</small><small class="suggestion-list-label">${escape(labels[game.list] || 'Catálogo')} · <span data-price-label="${escape(engine.gameId(game))}">${escape(offerLabel(game))}</span></small><small>${escape(game.play?.device || '')}${game.play?.status === 'check' ? ' · conferir ajustes' : ''}</small></button></li>`).join('')}</ul>`;
     }
     document.getElementById('rotation-share').disabled = !slots.some(Boolean);
   }
@@ -120,6 +120,20 @@
     if (event.key !== engine.STORAGE_KEY) return;
     slots = engine.readSlots(storage, GAMES); render(); notifyCatalog();
     saveMessage.textContent = 'Seleção atualizada em outra aba.';
+  });
+  document.addEventListener('priceschange', () => {
+    cards.querySelectorAll('[data-price-game]').forEach(element => {
+      const game = byId.get(element.dataset.priceGame);
+      const focused = element.contains(document.activeElement);
+      if (game) {
+        element.innerHTML = root.GamePrices.render(game);
+        if (focused) element.querySelector('a')?.focus({preventScroll:true});
+      }
+    });
+    cards.querySelectorAll('[data-price-label]').forEach(element => {
+      const game = byId.get(element.dataset.priceLabel);
+      if (game) element.textContent = offerLabel(game);
+    });
   });
   root.addEventListener('hashchange', readShared);
   saveMessage.textContent = initialSaved ? 'Seleção restaurada deste navegador.' : 'Escolha seu primeiro jogo para começar.';

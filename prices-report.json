@@ -1,0 +1,21 @@
+{
+  "attemptedAt": "2026-10-06T00:23:34+00:00",
+  "allFailed": false,
+  "skipped": false,
+  "stats": {
+    "apps": 327,
+    "selected": 327,
+    "requested": 327,
+    "refreshed": 296,
+    "reused": 31,
+    "batchRequests": 17,
+    "detailRequests": 0,
+    "available": 296,
+    "free": 11,
+    "unavailable": 13,
+    "coming_soon": 7,
+    "stale": 0,
+    "error": 0
+  },
+  "errors": []
+}

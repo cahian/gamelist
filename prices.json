@@ -1,0 +1,4928 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-06T00:23:34+00:00",
+  "country": "BR",
+  "currency": "BRL",
+  "prices": {
+    "400": {
+      "data": {
+        "appid": 400,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3299,
+        "final": 659,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/400/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "500": {
+      "data": {
+        "appid": 500,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3299,
+        "final": 659,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/500/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "550": {
+      "data": {
+        "appid": 550,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3299,
+        "final": 659,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/550/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "620": {
+      "data": {
+        "appid": 620,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3299,
+        "final": 659,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/620/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "2320": {
+      "data": {
+        "appid": 2320,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2999,
+        "final": 1199,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2320/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "7670": {
+      "data": {
+        "appid": 7670,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2999,
+        "final": 749,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/7670/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "8850": {
+      "data": {
+        "appid": 8850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2999,
+        "final": 449,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/8850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "8870": {
+      "data": {
+        "appid": 8870,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 2249,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/8870/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "8980": {
+      "data": {
+        "appid": 8980,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 6999,
+        "final": 1399,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/8980/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "12210": {
+      "data": {
+        "appid": 12210,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7900,
+        "final": 2370,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/12210/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "17410": {
+      "data": {
+        "appid": 17410,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10900,
+        "final": 3815,
+        "discountPercent": 65,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/17410/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "19680": {
+      "data": {
+        "appid": 19680,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4900,
+        "final": 1225,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/19680/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "45740": {
+      "data": {
+        "appid": 45740,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8900,
+        "final": 2225,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/45740/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "48000": {
+      "data": {
+        "appid": 48000,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3649,
+        "final": 364,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/48000/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "50300": {
+      "data": {
+        "appid": 50300,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/50300/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:42:13+00:00",
+      "status": "ok"
+    },
+    "107100": {
+      "data": {
+        "appid": 107100,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4699,
+        "final": 939,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/107100/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "201810": {
+      "data": {
+        "appid": 201810,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4999,
+        "final": 1249,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/201810/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "202170": {
+      "data": {
+        "appid": 202170,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/202170/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:42:05+00:00",
+      "status": "ok"
+    },
+    "203160": {
+      "data": {
+        "appid": 203160,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8349,
+        "final": 1252,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/203160/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "205100": {
+      "data": {
+        "appid": 205100,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2999,
+        "final": 749,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/205100/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "208650": {
+      "data": {
+        "appid": 208650,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 1799,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/208650/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "210970": {
+      "data": {
+        "appid": 210970,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7299,
+        "final": 729,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/210970/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "222480": {
+      "data": {
+        "appid": 222480,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8900,
+        "final": 2225,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/222480/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "224760": {
+      "data": {
+        "appid": 224760,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 1699,
+        "final": 849,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/224760/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "230230": {
+      "data": {
+        "appid": 230230,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/230230/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:39:39+00:00",
+      "status": "ok"
+    },
+    "230410": {
+      "data": {
+        "appid": 230410,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/230410/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:43:33+00:00",
+      "status": "ok"
+    },
+    "232090": {
+      "data": {
+        "appid": 232090,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5599,
+        "final": 559,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/232090/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "233270": {
+      "data": {
+        "appid": 233270,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4499,
+        "final": 1124,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/233270/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "238010": {
+      "data": {
+        "appid": 238010,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8349,
+        "final": 834,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/238010/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "239140": {
+      "data": {
+        "appid": 239140,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9900,
+        "final": 990,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/239140/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "241540": {
+      "data": {
+        "appid": 241540,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/241540/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:42:24+00:00",
+      "status": "ok"
+    },
+    "242550": {
+      "data": {
+        "appid": 242550,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 8999,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/242550/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "250900": {
+      "data": {
+        "appid": 250900,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2799,
+        "final": 2099,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/250900/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "252950": {
+      "data": {
+        "appid": 252950,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/252950/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:37:48+00:00",
+      "status": "ok"
+    },
+    "257850": {
+      "data": {
+        "appid": 257850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3699,
+        "final": 924,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/257850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "268050": {
+      "data": {
+        "appid": 268050,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4999,
+        "final": 1249,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/268050/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "268910": {
+      "data": {
+        "appid": 268910,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3699,
+        "final": 2589,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/268910/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "275850": {
+      "data": {
+        "appid": 275850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 16200,
+        "final": 6480,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/275850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "282140": {
+      "data": {
+        "appid": 282140,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 1779,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/282140/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "286690": {
+      "data": {
+        "appid": 286690,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9900,
+        "final": 990,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/286690/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "287290": {
+      "data": {
+        "appid": 287290,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8900,
+        "final": 2225,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/287290/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "287390": {
+      "data": {
+        "appid": 287390,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9900,
+        "final": 990,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/287390/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "287700": {
+      "data": {
+        "appid": 287700,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9900,
+        "final": 5940,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/287700/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "291550": {
+      "data": {
+        "appid": 291550,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/291550/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:36:16+00:00",
+      "status": "ok"
+    },
+    "292030": {
+      "data": {
+        "appid": 292030,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 15999,
+        "final": 7999,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/292030/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "302510": {
+      "data": {
+        "appid": 302510,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3799,
+        "final": 1329,
+        "discountPercent": 65,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/302510/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "311340": {
+      "data": {
+        "appid": 311340,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3699,
+        "final": 3699,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/311340/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "311810": {
+      "data": {
+        "appid": 311810,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "coming_soon",
+        "url": "https://store.steampowered.com/app/311810/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:41:23+00:00",
+      "status": "ok"
+    },
+    "312520": {
+      "data": {
+        "appid": 312520,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7399,
+        "final": 3329,
+        "discountPercent": 55,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/312520/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "322330": {
+      "data": {
+        "appid": 322330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2799,
+        "final": 951,
+        "discountPercent": 66,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/322330/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "323470": {
+      "data": {
+        "appid": 323470,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7999,
+        "final": 799,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/323470/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "327410": {
+      "data": {
+        "appid": 327410,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 1379,
+        "final": 275,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/327410/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "331160": {
+      "data": {
+        "appid": 331160,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 2999,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/331160/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "332200": {
+      "data": {
+        "appid": 332200,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3699,
+        "final": 924,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/332200/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "335300": {
+      "data": {
+        "appid": 335300,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 15490,
+        "final": 7745,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/335300/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "337000": {
+      "data": {
+        "appid": 337000,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12499,
+        "final": 1249,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/337000/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "350080": {
+      "data": {
+        "appid": 350080,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4999,
+        "final": 1249,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/350080/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "356670": {
+      "data": {
+        "appid": 356670,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/356670/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:42:24+00:00",
+      "status": "ok"
+    },
+    "362890": {
+      "data": {
+        "appid": 362890,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 3599,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/362890/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "374320": {
+      "data": {
+        "appid": 374320,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22990,
+        "final": 11495,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/374320/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:09+00:00",
+      "status": "ok"
+    },
+    "377160": {
+      "data": {
+        "appid": 377160,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 2399,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/377160/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "383870": {
+      "data": {
+        "appid": 383870,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 1199,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/383870/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "387290": {
+      "data": {
+        "appid": 387290,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9900,
+        "final": 2475,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/387290/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "388880": {
+      "data": {
+        "appid": 388880,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3299,
+        "final": 3299,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/388880/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "391220": {
+      "data": {
+        "appid": 391220,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12499,
+        "final": 1874,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/391220/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "391540": {
+      "data": {
+        "appid": 391540,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 1999,
+        "final": 499,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/391540/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "403640": {
+      "data": {
+        "appid": 403640,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 1799,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/403640/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "412020": {
+      "data": {
+        "appid": 412020,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 14900,
+        "final": 1490,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/412020/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "413150": {
+      "data": {
+        "appid": 413150,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2499,
+        "final": 1749,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/413150/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "414340": {
+      "data": {
+        "appid": 414340,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9900,
+        "final": 2475,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/414340/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "418370": {
+      "data": {
+        "appid": 418370,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8900,
+        "final": 3560,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/418370/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "423230": {
+      "data": {
+        "appid": 423230,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 1799,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/423230/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "424840": {
+      "data": {
+        "appid": 424840,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8490,
+        "final": 2122,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/424840/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "435150": {
+      "data": {
+        "appid": 435150,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9099,
+        "final": 2274,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/435150/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "448510": {
+      "data": {
+        "appid": 448510,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3899,
+        "final": 389,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/448510/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "454650": {
+      "data": {
+        "appid": 454650,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7750,
+        "final": 1937,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/454650/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "474960": {
+      "data": {
+        "appid": 474960,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7299,
+        "final": 1824,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/474960/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "476600": {
+      "data": {
+        "appid": 476600,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 32990,
+        "final": 32990,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/476600/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "477160": {
+      "data": {
+        "appid": 477160,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3799,
+        "final": 1139,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/477160/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "480490": {
+      "data": {
+        "appid": 480490,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 1799,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/480490/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:08+00:00",
+      "status": "ok"
+    },
+    "482400": {
+      "data": {
+        "appid": 482400,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 5970,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/482400/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "485510": {
+      "data": {
+        "appid": 485510,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 3735,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/485510/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "499180": {
+      "data": {
+        "appid": 499180,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 599,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/499180/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "504230": {
+      "data": {
+        "appid": 504230,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 1499,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/504230/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "524220": {
+      "data": {
+        "appid": 524220,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10700,
+        "final": 4280,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/524220/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "541570": {
+      "data": {
+        "appid": 541570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 1049,
+        "final": 1049,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/541570/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "546560": {
+      "data": {
+        "appid": 546560,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 16200,
+        "final": 4050,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/546560/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "553420": {
+      "data": {
+        "appid": 553420,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 4449,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/553420/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "557340": {
+      "data": {
+        "appid": 557340,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 1199,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/557340/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "570940": {
+      "data": {
+        "appid": 570940,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 15490,
+        "final": 7745,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/570940/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "577940": {
+      "data": {
+        "appid": 577940,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/577940/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:37:06+00:00",
+      "status": "ok"
+    },
+    "587620": {
+      "data": {
+        "appid": 587620,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8400,
+        "final": 4200,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/587620/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "589360": {
+      "data": {
+        "appid": 589360,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 25790,
+        "final": 4126,
+        "discountPercent": 84,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/589360/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "595520": {
+      "data": {
+        "appid": 595520,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 16599,
+        "final": 4979,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/595520/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "601430": {
+      "data": {
+        "appid": 601430,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 15500,
+        "final": 3100,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/601430/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "606160": {
+      "data": {
+        "appid": 606160,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7399,
+        "final": 4809,
+        "discountPercent": 35,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/606160/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "612880": {
+      "data": {
+        "appid": 612880,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 15500,
+        "final": 2325,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/612880/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "622650": {
+      "data": {
+        "appid": 622650,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5799,
+        "final": 1739,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/622650/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "627270": {
+      "data": {
+        "appid": 627270,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22999,
+        "final": 2299,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/627270/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "631510": {
+      "data": {
+        "appid": 631510,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12900,
+        "final": 4257,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/631510/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "632360": {
+      "data": {
+        "appid": 632360,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 1979,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/632360/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "632470": {
+      "data": {
+        "appid": 632470,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 11999,
+        "final": 2999,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/632470/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "638970": {
+      "data": {
+        "appid": 638970,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/638970/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:42:58+00:00",
+      "status": "ok"
+    },
+    "646570": {
+      "data": {
+        "appid": 646570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7499,
+        "final": 1874,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/646570/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "678950": {
+      "data": {
+        "appid": 678950,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 23250,
+        "final": 3720,
+        "discountPercent": 84,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/678950/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "683320": {
+      "data": {
+        "appid": 683320,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4699,
+        "final": 939,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/683320/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "692850": {
+      "data": {
+        "appid": 692850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12999,
+        "final": 3249,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/692850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "728880": {
+      "data": {
+        "appid": 728880,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5990,
+        "final": 1497,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/728880/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "731490": {
+      "data": {
+        "appid": 731490,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 21990,
+        "final": 8796,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/731490/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "736260": {
+      "data": {
+        "appid": 736260,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2899,
+        "final": 2899,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/736260/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "742300": {
+      "data": {
+        "appid": 742300,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12900,
+        "final": 4257,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/742300/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "750920": {
+      "data": {
+        "appid": 750920,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 16649,
+        "final": 2497,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/750920/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "752590": {
+      "data": {
+        "appid": 752590,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 13990,
+        "final": 1399,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/752590/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "753640": {
+      "data": {
+        "appid": 753640,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 6799,
+        "final": 3399,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/753640/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "782330": {
+      "data": {
+        "appid": 782330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 14900,
+        "final": 4917,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/782330/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "787480": {
+      "data": {
+        "appid": 787480,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12900,
+        "final": 4257,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/787480/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "798460": {
+      "data": {
+        "appid": 798460,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 21490,
+        "final": 3223,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/798460/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "801800": {
+      "data": {
+        "appid": 801800,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 13499,
+        "final": 5399,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/801800/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "813230": {
+      "data": {
+        "appid": 813230,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7499,
+        "final": 5249,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/813230/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "814380": {
+      "data": {
+        "appid": 814380,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 27400,
+        "final": 13700,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/814380/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "837470": {
+      "data": {
+        "appid": 837470,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 2399,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/837470/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "843380": {
+      "data": {
+        "appid": 843380,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/843380/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:43:25+00:00",
+      "status": "ok"
+    },
+    "860510": {
+      "data": {
+        "appid": 860510,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12745,
+        "final": 4205,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/860510/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "870780": {
+      "data": {
+        "appid": 870780,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9999,
+        "final": 1499,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/870780/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "894020": {
+      "data": {
+        "appid": 894020,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 599,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/894020/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "914800": {
+      "data": {
+        "appid": 914800,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4199,
+        "final": 2099,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/914800/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "921570": {
+      "data": {
+        "appid": 921570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22699,
+        "final": 6809,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/921570/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "948740": {
+      "data": {
+        "appid": 948740,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7250,
+        "final": 1450,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/948740/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "952070": {
+      "data": {
+        "appid": 952070,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 25900,
+        "final": 5180,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/952070/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "953490": {
+      "data": {
+        "appid": 953490,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 1199,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/953490/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "960910": {
+      "data": {
+        "appid": 960910,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 449,
+        "discountPercent": 95,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/960910/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "960990": {
+      "data": {
+        "appid": 960990,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 449,
+        "discountPercent": 95,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/960990/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "972660": {
+      "data": {
+        "appid": 972660,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9999,
+        "final": 999,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/972660/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "976310": {
+      "data": {
+        "appid": 976310,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22999,
+        "final": 2299,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/976310/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "976730": {
+      "data": {
+        "appid": 976730,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 19900,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/976730/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "999220": {
+      "data": {
+        "appid": 999220,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 1779,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/999220/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1004640": {
+      "data": {
+        "appid": 1004640,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 21990,
+        "final": 13194,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1004640/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1030300": {
+      "data": {
+        "appid": 1030300,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 5999,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1030300/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1030840": {
+      "data": {
+        "appid": 1030840,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19990,
+        "final": 3998,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1030840/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1036890": {
+      "data": {
+        "appid": 1036890,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10799,
+        "final": 2159,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1036890/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1055540": {
+      "data": {
+        "appid": 1055540,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 1659,
+        "final": 995,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1055540/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1056960": {
+      "data": {
+        "appid": 1056960,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 1499,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1056960/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1057090": {
+      "data": {
+        "appid": 1057090,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12900,
+        "final": 1290,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1057090/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1086940": {
+      "data": {
+        "appid": 1086940,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19999,
+        "final": 13999,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1086940/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1091500": {
+      "data": {
+        "appid": 1091500,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19990,
+        "final": 5997,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1091500/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1092790": {
+      "data": {
+        "appid": 1092790,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4999,
+        "final": 1999,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1092790/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1097150": {
+      "data": {
+        "appid": 1097150,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/1097150/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:43:06+00:00",
+      "status": "ok"
+    },
+    "1097840": {
+      "data": {
+        "appid": 1097840,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 14900,
+        "final": 14900,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1097840/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1113560": {
+      "data": {
+        "appid": 1113560,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 9996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1113560/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1135690": {
+      "data": {
+        "appid": 1135690,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 2399,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1135690/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1145350": {
+      "data": {
+        "appid": 1145350,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 6229,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1145350/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1145360": {
+      "data": {
+        "appid": 1145360,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7399,
+        "final": 1849,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1145360/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1150690": {
+      "data": {
+        "appid": 1150690,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3799,
+        "final": 3039,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1150690/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1172380": {
+      "data": {
+        "appid": 1172380,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 3980,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1172380/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1172470": {
+      "data": {
+        "appid": 1172470,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/1172470/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:42:58+00:00",
+      "status": "ok"
+    },
+    "1173370": {
+      "data": {
+        "appid": 1173370,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/1173370/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:43:25+00:00",
+      "status": "ok"
+    },
+    "1190460": {
+      "data": {
+        "appid": 1190460,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/1190460/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:36:23+00:00",
+      "status": "ok"
+    },
+    "1225570": {
+      "data": {
+        "appid": 1225570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10900,
+        "final": 1635,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1225570/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1229490": {
+      "data": {
+        "appid": 1229490,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7499,
+        "final": 5624,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1229490/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1235140": {
+      "data": {
+        "appid": 1235140,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9990,
+        "final": 3996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1235140/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:14+00:00",
+      "status": "ok"
+    },
+    "1237970": {
+      "data": {
+        "appid": 1237970,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8900,
+        "final": 1335,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1237970/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1245620": {
+      "data": {
+        "appid": 1245620,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 27450,
+        "final": 27450,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1245620/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1252330": {
+      "data": {
+        "appid": 1252330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24995,
+        "final": 4999,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1252330/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1259420": {
+      "data": {
+        "appid": 1259420,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19950,
+        "final": 7980,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1259420/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1260130": {
+      "data": {
+        "appid": 1260130,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 899,
+        "final": 629,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1260130/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1260320": {
+      "data": {
+        "appid": 1260320,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 6495,
+        "final": 3897,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1260320/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1262540": {
+      "data": {
+        "appid": 1262540,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8900,
+        "final": 2225,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1262540/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1263240": {
+      "data": {
+        "appid": 1263240,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4490,
+        "final": 3143,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1263240/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1265920": {
+      "data": {
+        "appid": 1265920,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 3980,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1265920/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1293830": {
+      "data": {
+        "appid": 1293830,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/1293830/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:43:16+00:00",
+      "status": "ok"
+    },
+    "1304930": {
+      "data": {
+        "appid": 1304930,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10799,
+        "final": 1079,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1304930/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1313140": {
+      "data": {
+        "appid": 1313140,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 6495,
+        "final": 3247,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1313140/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1328670": {
+      "data": {
+        "appid": 1328670,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 6225,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1328670/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1332010": {
+      "data": {
+        "appid": 1332010,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 4499,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1332010/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1353230": {
+      "data": {
+        "appid": 1353230,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10799,
+        "final": 5399,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1353230/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1361210": {
+      "data": {
+        "appid": 1361210,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 14995,
+        "final": 3748,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1361210/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1367590": {
+      "data": {
+        "appid": 1367590,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9999,
+        "final": 2499,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1367590/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1369630": {
+      "data": {
+        "appid": 1369630,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4949,
+        "final": 1979,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1369630/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1378990": {
+      "data": {
+        "appid": 1378990,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 21990,
+        "final": 10995,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1378990/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1382330": {
+      "data": {
+        "appid": 1382330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 7470,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1382330/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1384160": {
+      "data": {
+        "appid": 1384160,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 17399,
+        "final": 8699,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1384160/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1422450": {
+      "data": {
+        "appid": 1422450,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "coming_soon",
+        "url": "https://store.steampowered.com/app/1422450/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:39:31+00:00",
+      "status": "ok"
+    },
+    "1448440": {
+      "data": {
+        "appid": 1448440,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 9950,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1448440/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1449690": {
+      "data": {
+        "appid": 1449690,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 13499,
+        "final": 3374,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1449690/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1462040": {
+      "data": {
+        "appid": 1462040,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 17490,
+        "final": 4372,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1462040/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1466060": {
+      "data": {
+        "appid": 1466060,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12199,
+        "final": 6099,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1466060/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1497440": {
+      "data": {
+        "appid": 1497440,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 6799,
+        "final": 2719,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1497440/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1501750": {
+      "data": {
+        "appid": 1501750,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 11999,
+        "final": 3959,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1501750/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1510580": {
+      "data": {
+        "appid": 1510580,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4199,
+        "final": 293,
+        "discountPercent": 93,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1510580/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1522160": {
+      "data": {
+        "appid": 1522160,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10799,
+        "final": 4319,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1522160/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1533420": {
+      "data": {
+        "appid": 1533420,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7499,
+        "final": 2999,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1533420/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1551360": {
+      "data": {
+        "appid": 1551360,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 9960,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1551360/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1551980": {
+      "data": {
+        "appid": 1551980,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 14990,
+        "final": 14990,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1551980/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1562430": {
+      "data": {
+        "appid": 1562430,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8999,
+        "final": 3599,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1562430/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1569580": {
+      "data": {
+        "appid": 1569580,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 5339,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1569580/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1583230": {
+      "data": {
+        "appid": 1583230,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10799,
+        "final": 2699,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1583230/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1593500": {
+      "data": {
+        "appid": 1593500,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19990,
+        "final": 7996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1593500/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1601570": {
+      "data": {
+        "appid": 1601570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10199,
+        "final": 4589,
+        "discountPercent": 55,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1601570/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1608070": {
+      "data": {
+        "appid": 1608070,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 21990,
+        "final": 7696,
+        "discountPercent": 65,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1608070/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1620730": {
+      "data": {
+        "appid": 1620730,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 17999,
+        "final": 5399,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1620730/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1623730": {
+      "data": {
+        "appid": 1623730,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 6229,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1623730/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1627720": {
+      "data": {
+        "appid": 1627720,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 12495,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1627720/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1636440": {
+      "data": {
+        "appid": 1636440,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 28490,
+        "final": 28490,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1636440/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1643320": {
+      "data": {
+        "appid": 1643320,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 23900,
+        "final": 16730,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1643320/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1649240": {
+      "data": {
+        "appid": 1649240,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 8246,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1649240/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1659040": {
+      "data": {
+        "appid": 1659040,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 889,
+        "discountPercent": 90,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1659040/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1659420": {
+      "data": {
+        "appid": 1659420,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19990,
+        "final": 6596,
+        "discountPercent": 67,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1659420/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1663850": {
+      "data": {
+        "appid": 1663850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 4499,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1663850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1675830": {
+      "data": {
+        "appid": 1675830,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 3599,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1675830/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1687950": {
+      "data": {
+        "appid": 1687950,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 7497,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1687950/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1693980": {
+      "data": {
+        "appid": 1693980,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 4980,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1693980/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1757350": {
+      "data": {
+        "appid": 1757350,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "coming_soon",
+        "url": "https://store.steampowered.com/app/1757350/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:40:25+00:00",
+      "status": "ok"
+    },
+    "1771300": {
+      "data": {
+        "appid": 1771300,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 11960,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1771300/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1774580": {
+      "data": {
+        "appid": 1774580,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 4485,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1774580/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1778820": {
+      "data": {
+        "appid": 1778820,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 17690,
+        "final": 10614,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1778820/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1790600": {
+      "data": {
+        "appid": 1790600,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 20650,
+        "final": 12390,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1790600/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1790930": {
+      "data": {
+        "appid": 1790930,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5499,
+        "final": 4124,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1790930/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1796580": {
+      "data": {
+        "appid": 1796580,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7399,
+        "final": 5179,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1796580/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1809540": {
+      "data": {
+        "appid": 1809540,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8899,
+        "final": 4449,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1809540/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1817070": {
+      "data": {
+        "appid": 1817070,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 9996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1817070/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1817190": {
+      "data": {
+        "appid": 1817190,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19990,
+        "final": 7996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1817190/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1817230": {
+      "data": {
+        "appid": 1817230,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10900,
+        "final": 4905,
+        "discountPercent": 55,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1817230/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1867530": {
+      "data": {
+        "appid": 1867530,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9999,
+        "final": 2499,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1867530/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1868140": {
+      "data": {
+        "appid": 1868140,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 2999,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1868140/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1875830": {
+      "data": {
+        "appid": 1875830,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29990,
+        "final": 8997,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1875830/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1888930": {
+      "data": {
+        "appid": 1888930,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 12495,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1888930/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1895880": {
+      "data": {
+        "appid": 1895880,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 9996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1895880/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1934570": {
+      "data": {
+        "appid": 1934570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 14900,
+        "final": 10430,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1934570/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1944430": {
+      "data": {
+        "appid": 1944430,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7399,
+        "final": 1479,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1944430/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1971650": {
+      "data": {
+        "appid": 1971650,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29990,
+        "final": 11996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1971650/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "1973530": {
+      "data": {
+        "appid": 1973530,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/1973530/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:40:34+00:00",
+      "status": "ok"
+    },
+    "1984270": {
+      "data": {
+        "appid": 1984270,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 31990,
+        "final": 18234,
+        "discountPercent": 43,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/1984270/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2000950": {
+      "data": {
+        "appid": 2000950,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 32990,
+        "final": 32990,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2000950/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2001120": {
+      "data": {
+        "appid": 2001120,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 12935,
+        "discountPercent": 35,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2001120/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2017080": {
+      "data": {
+        "appid": 2017080,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 13499,
+        "final": 4049,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2017080/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2051120": {
+      "data": {
+        "appid": 2051120,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 16900,
+        "final": 2535,
+        "discountPercent": 85,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2051120/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2089600": {
+      "data": {
+        "appid": 2089600,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5499,
+        "final": 3849,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2089600/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2101960": {
+      "data": {
+        "appid": 2101960,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 12450,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2101960/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2108330": {
+      "data": {
+        "appid": 2108330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/2108330/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:43:06+00:00",
+      "status": "ok"
+    },
+    "2111190": {
+      "data": {
+        "appid": 2111190,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4995,
+        "final": 3246,
+        "discountPercent": 35,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2111190/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:22+00:00",
+      "status": "ok"
+    },
+    "2114740": {
+      "data": {
+        "appid": 2114740,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10900,
+        "final": 2725,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2114740/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2124490": {
+      "data": {
+        "appid": 2124490,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 34990,
+        "final": 34990,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2124490/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2129530": {
+      "data": {
+        "appid": 2129530,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10799,
+        "final": 8099,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2129530/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2131640": {
+      "data": {
+        "appid": 2131640,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9996,
+        "final": 9996,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2131640/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2131650": {
+      "data": {
+        "appid": 2131650,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9996,
+        "final": 9996,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2131650/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2138330": {
+      "data": {
+        "appid": 2138330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9999,
+        "final": 5999,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2138330/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2138720": {
+      "data": {
+        "appid": 2138720,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8900,
+        "final": 3560,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2138720/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2141730": {
+      "data": {
+        "appid": 2141730,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3299,
+        "final": 2474,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2141730/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2161700": {
+      "data": {
+        "appid": 2161700,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 7497,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2161700/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2171440": {
+      "data": {
+        "appid": 2171440,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2489,
+        "final": 2489,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2171440/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2183900": {
+      "data": {
+        "appid": 2183900,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19990,
+        "final": 4997,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2183900/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2195250": {
+      "data": {
+        "appid": 2195250,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/2195250/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:43:06+00:00",
+      "status": "ok"
+    },
+    "2208350": {
+      "data": {
+        "appid": 2208350,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7399,
+        "final": 4439,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2208350/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2208920": {
+      "data": {
+        "appid": 2208920,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19999,
+        "final": 3999,
+        "discountPercent": 80,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2208920/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2215200": {
+      "data": {
+        "appid": 2215200,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29999,
+        "final": 20999,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2215200/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2215430": {
+      "data": {
+        "appid": 2215430,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 14994,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2215430/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2254740": {
+      "data": {
+        "appid": 2254740,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 7497,
+        "discountPercent": 70,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2254740/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2272250": {
+      "data": {
+        "appid": 2272250,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 8399,
+        "final": 3359,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2272250/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2277560": {
+      "data": {
+        "appid": 2277560,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 13930,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2277560/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2318330": {
+      "data": {
+        "appid": 2318330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "coming_soon",
+        "url": "https://store.steampowered.com/app/2318330/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:41:05+00:00",
+      "status": "ok"
+    },
+    "2322010": {
+      "data": {
+        "appid": 2322010,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 16743,
+        "discountPercent": 33,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2322010/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2344520": {
+      "data": {
+        "appid": 2344520,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29990,
+        "final": 22492,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2344520/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2357570": {
+      "data": {
+        "appid": 2357570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/2357570/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:37:30+00:00",
+      "status": "ok"
+    },
+    "2358720": {
+      "data": {
+        "appid": 2358720,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22999,
+        "final": 22999,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2358720/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2379780": {
+      "data": {
+        "appid": 2379780,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4499,
+        "final": 3599,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2379780/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2406770": {
+      "data": {
+        "appid": 2406770,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10199,
+        "final": 8159,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2406770/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2407270": {
+      "data": {
+        "appid": 2407270,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12199,
+        "final": 7929,
+        "discountPercent": 35,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2407270/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2417610": {
+      "data": {
+        "appid": 2417610,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 28490,
+        "final": 19943,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2417610/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2461850": {
+      "data": {
+        "appid": 2461850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22900,
+        "final": 5725,
+        "discountPercent": 75,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2461850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2464280": {
+      "data": {
+        "appid": 2464280,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 9999,
+        "final": 6999,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2464280/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2483190": {
+      "data": {
+        "appid": 2483190,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 23920,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2483190/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2486820": {
+      "data": {
+        "appid": 2486820,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29990,
+        "final": 11996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2486820/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2492660": {
+      "data": {
+        "appid": 2492660,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 11490,
+        "final": 11490,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2492660/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2492670": {
+      "data": {
+        "appid": 2492670,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 16990,
+        "final": 16990,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2492670/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2499860": {
+      "data": {
+        "appid": 2499860,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 16243,
+        "discountPercent": 35,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2499860/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2523720": {
+      "data": {
+        "appid": 2523720,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 19900,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2523720/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2524850": {
+      "data": {
+        "appid": 2524850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5999,
+        "final": 4499,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2524850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2527390": {
+      "data": {
+        "appid": 2527390,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 21900,
+        "final": 10950,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2527390/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2536520": {
+      "data": {
+        "appid": 2536520,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 17490,
+        "final": 17490,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2536520/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2590240": {
+      "data": {
+        "appid": 2590240,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "coming_soon",
+        "url": "https://store.steampowered.com/app/2590240/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:40:51+00:00",
+      "status": "ok"
+    },
+    "2623190": {
+      "data": {
+        "appid": 2623190,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 26490,
+        "final": 18543,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2623190/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2625420": {
+      "data": {
+        "appid": 2625420,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4500,
+        "final": 3375,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2625420/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2627260": {
+      "data": {
+        "appid": 2627260,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 14950,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2627260/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2638890": {
+      "data": {
+        "appid": 2638890,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 29900,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2638890/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2651280": {
+      "data": {
+        "appid": 2651280,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 16743,
+        "discountPercent": 33,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2651280/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2668510": {
+      "data": {
+        "appid": 2668510,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24950,
+        "final": 12475,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2668510/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2669320": {
+      "data": {
+        "appid": 2669320,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/2669320/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:36:41+00:00",
+      "status": "ok"
+    },
+    "2679460": {
+      "data": {
+        "appid": 2679460,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29990,
+        "final": 11996,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2679460/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2680010": {
+      "data": {
+        "appid": 2680010,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22950,
+        "final": 13770,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2680010/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2684630": {
+      "data": {
+        "appid": 2684630,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5826,
+        "final": 4660,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2684630/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2701660": {
+      "data": {
+        "appid": 2701660,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 12495,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2701660/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2713000": {
+      "data": {
+        "appid": 2713000,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 17999,
+        "final": 17999,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2713000/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2725260": {
+      "data": {
+        "appid": 2725260,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 7399,
+        "final": 4069,
+        "discountPercent": 45,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2725260/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2769570": {
+      "data": {
+        "appid": 2769570,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 29900,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2769570/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2799860": {
+      "data": {
+        "appid": 2799860,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 37490,
+        "final": 37490,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2799860/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2814990": {
+      "data": {
+        "appid": 2814990,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 9960,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2814990/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2825860": {
+      "data": {
+        "appid": 2825860,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19800,
+        "final": 15840,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2825860/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2947440": {
+      "data": {
+        "appid": 2947440,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 34990,
+        "final": 34990,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2947440/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "2963950": {
+      "data": {
+        "appid": 2963950,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29990,
+        "final": 29990,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/2963950/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3008130": {
+      "data": {
+        "appid": 3008130,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 12450,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3008130/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3010850": {
+      "data": {
+        "appid": 3010850,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 29900,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3010850/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3014320": {
+      "data": {
+        "appid": 3014320,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 21990,
+        "final": 13194,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3014320/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3017860": {
+      "data": {
+        "appid": 3017860,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 12495,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3017860/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3036720": {
+      "data": {
+        "appid": 3036720,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "unavailable",
+        "url": "https://store.steampowered.com/app/3036720/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:40:35+00:00",
+      "status": "ok"
+    },
+    "3059520": {
+      "data": {
+        "appid": 3059520,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 19900,
+        "final": 13930,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3059520/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3159330": {
+      "data": {
+        "appid": 3159330,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 34999,
+        "final": 13999,
+        "discountPercent": 60,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3159330/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3180070": {
+      "data": {
+        "appid": 3180070,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 4699,
+        "final": 3759,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3180070/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3183480": {
+      "data": {
+        "appid": 3183480,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "coming_soon",
+        "url": "https://store.steampowered.com/app/3183480/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:40:18+00:00",
+      "status": "ok"
+    },
+    "3195440": {
+      "data": {
+        "appid": 3195440,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 6299,
+        "final": 6299,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3195440/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3199650": {
+      "data": {
+        "appid": 3199650,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 10199,
+        "final": 6629,
+        "discountPercent": 35,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3199650/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3265700": {
+      "data": {
+        "appid": 3265700,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2499,
+        "final": 1999,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3265700/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3280350": {
+      "data": {
+        "appid": 3280350,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 39990,
+        "final": 31992,
+        "discountPercent": 20,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3280350/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3354750": {
+      "data": {
+        "appid": 3354750,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/3354750/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:37:58+00:00",
+      "status": "ok"
+    },
+    "3390880": {
+      "data": {
+        "appid": 3390880,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 2999,
+        "final": 2249,
+        "discountPercent": 25,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3390880/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3405340": {
+      "data": {
+        "appid": 3405340,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 3299,
+        "final": 1979,
+        "discountPercent": 40,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3405340/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3405690": {
+      "data": {
+        "appid": 3405690,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 12500,
+        "final": 12500,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3405690/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3489700": {
+      "data": {
+        "appid": 3489700,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24990,
+        "final": 16743,
+        "discountPercent": 33,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3489700/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3564740": {
+      "data": {
+        "appid": 3564740,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 0,
+        "final": 0,
+        "discountPercent": 0,
+        "isFree": true,
+        "status": "free",
+        "url": "https://store.steampowered.com/app/3564740/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:38:24+00:00",
+      "status": "ok"
+    },
+    "3669870": {
+      "data": {
+        "appid": 3669870,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 22999,
+        "final": 22999,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3669870/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3681010": {
+      "data": {
+        "appid": 3681010,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 34900,
+        "final": 19893,
+        "discountPercent": 43,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3681010/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:28+00:00",
+      "status": "ok"
+    },
+    "3764200": {
+      "data": {
+        "appid": 3764200,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 20930,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3764200/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:34+00:00",
+      "status": "ok"
+    },
+    "3768760": {
+      "data": {
+        "appid": 3768760,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 29900,
+        "final": 20930,
+        "discountPercent": 30,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3768760/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:34+00:00",
+      "status": "ok"
+    },
+    "3859630": {
+      "data": {
+        "appid": 3859630,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 28490,
+        "final": 28490,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3859630/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:34+00:00",
+      "status": "ok"
+    },
+    "3920610": {
+      "data": {
+        "appid": 3920610,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 24900,
+        "final": 16185,
+        "discountPercent": 35,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/3920610/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:34+00:00",
+      "status": "ok"
+    },
+    "4249120": {
+      "data": {
+        "appid": 4249120,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 5700,
+        "final": 2850,
+        "discountPercent": 50,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/4249120/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:34+00:00",
+      "status": "ok"
+    },
+    "4384550": {
+      "data": {
+        "appid": 4384550,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": 33900,
+        "final": 33900,
+        "discountPercent": 0,
+        "isFree": false,
+        "status": "available",
+        "url": "https://store.steampowered.com/app/4384550/?cc=br"
+      },
+      "updatedAt": "2026-10-06T00:23:34+00:00",
+      "status": "ok"
+    },
+    "4824610": {
+      "data": {
+        "appid": 4824610,
+        "country": "BR",
+        "currency": "BRL",
+        "initial": null,
+        "final": null,
+        "discountPercent": null,
+        "isFree": false,
+        "status": "coming_soon",
+        "url": "https://store.steampowered.com/app/4824610/?cc=br"
+      },
+      "updatedAt": "2026-10-05T23:41:48+00:00",
+      "status": "ok"
+    }
+  },
+  "stats": {
+    "apps": 327,
+    "selected": 327,
+    "requested": 327,
+    "refreshed": 296,
+    "reused": 31,
+    "batchRequests": 17,
+    "detailRequests": 0,
+    "available": 296,
+    "free": 11,
+    "unavailable": 13,
+    "coming_soon": 7,
+    "stale": 0,
+    "error": 0
+  }
+}
