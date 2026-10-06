@@ -14,7 +14,7 @@ from urllib.error import HTTPError
 from urllib.parse import urlencode, quote, urlparse
 from urllib.request import Request, urlopen
 
-from game_metadata import match_game, normalize, parse_hltb, parse_metacritic, parse_proton, parse_ign, parse_steam_price, recommend
+from game_metadata import match_game, normalize, parse_hltb, parse_metacritic, parse_proton, parse_ign, parse_steam_price, recommend, nintendo_console
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'Mozilla/5.0 (compatible; GameList/1.0; +https://github.com/cahian/gamelist)'
@@ -447,13 +447,13 @@ def enrich(game, previous, providers):
             proton = fetch('proton', str(compatibility_appid), lambda: providers.proton(compatibility_appid))
             deck = fetch('deck', str(compatibility_appid), lambda: providers.deck(compatibility_appid))
     platforms = list(dict.fromkeys((hltb or {}).get('platforms', []) + (mc or {}).get('platforms', []) + (ign or {}).get('platforms', [])))
-    if not steam:
+    if not steam and 'PC' not in platforms and not nintendo_console(game, platforms):
         emulation = fetch('emulation', game['name'], lambda: providers.emulation(game, platforms))
         if emulation and emulation.get('databaseStatus') in {'stale', 'error'}:
             sources['emulation'].update(status='stale', updatedAt=emulation.get('databaseUpdatedAt'), error='Base RPCS3 indisponível; usando última consulta válida')
-    play = recommend(game, steam, proton, deck, emulation, platforms)
+    play = recommend(game, steam, proton, deck, emulation, platforms, release_date=(mc or {}).get('releaseDate'))
     if steam and steam.get('vrOnly'):
-        play.update(device='PC Linux', status='check', reason='VR exige headset e compatibilidade do runtime no Linux; Steam Deck não é recomendado.')
+        play.update(device='PC', status='check' if play['status'] != 'waiting' else 'waiting', reason='VR exige headset e compatibilidade do runtime no PC.')
     result = {**game, 'sources': sources, 'play': play, 'hltb': hltb, 'steam': steam,
               'proton': proton, 'deck': deck, 'emulation': emulation, 'metacritic': mc}
     if mc:

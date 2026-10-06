@@ -135,20 +135,21 @@ class MetadataTests(unittest.TestCase):
         game = {'name': 'Heavy game', 'dg': 'F', 'plat': 'PC'}
         result = gm.recommend(game, steam={'appid': 1, 'linux': False, 'comingSoon': False},
                               proton={'tier': 'platinum'}, deck={'category': 3})
-        self.assertEqual(result['device'], 'PC Linux')
+        self.assertEqual(result['device'], 'PC')
         self.assertNotIn('60 fps', result['reason'])
 
     def test_anticheat_keeps_windows_as_explicit_fallback(self):
         result = gm.recommend({'name': 'Blocked game', 'dg': 'X'},
                               steam={'appid': 1, 'linux': False},
                               proton={'tier': 'borked'}, deck={'category': 1})
-        self.assertEqual(result['device'], 'PC Windows')
+        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['method'], 'Windows')
         self.assertEqual(result['status'], 'fallback')
 
     def test_native_linux_can_work_even_without_proton_reports(self):
         result = gm.recommend({'name': 'Native game', 'dg': 'A'},
                               steam={'appid': 1, 'linux': True}, deck={'category': 3})
-        self.assertEqual(result['device'], 'Steam Deck')
+        self.assertEqual(result['device'], 'PC')
         self.assertEqual(result['method'], 'Nativo Linux')
 
     def test_unreleased_steam_game_does_not_reuse_old_performance_claim(self):
@@ -156,11 +157,11 @@ class MetadataTests(unittest.TestCase):
                               steam={'appid': 1, 'comingSoon': True}, proton={'tier': 'gold'})
         self.assertEqual(result['status'], 'waiting')
 
-    def test_new_release_can_become_deck_recommendation_without_editing_old_grade(self):
+    def test_new_release_stays_on_pc_regardless_of_deck_grade(self):
         result = gm.recommend({'name': 'Now released', 'dg': 'N'},
                               steam={'appid': 1, 'comingSoon': False},
                               proton={'tier': 'gold'}, deck={'category': 3})
-        self.assertEqual(result['device'], 'Steam Deck')
+        self.assertEqual(result['device'], 'PC')
         self.assertNotIn('referência anterior', result['reason'])
 
     def test_rpcs3_ingame_is_not_reported_as_playable(self):
@@ -172,15 +173,67 @@ class MetadataTests(unittest.TestCase):
         result = gm.recommend({'name': "Demon's Souls", 'plat': 'PlayStation 5', 'dg': 'X'},
                               platforms=['PlayStation 5'])
         self.assertEqual(result['status'], 'waiting')
-        self.assertEqual(result['device'], 'Aguardando')
+        self.assertEqual(result['device'], 'PC')
 
-    def test_switch_route_is_emulation_on_pc_or_deck(self):
+    def test_nintendo_game_uses_its_console_instead_of_emulation(self):
         result = gm.recommend({'name': 'Metroid Dread', 'plat': 'Nintendo Switch', 'dg': 'A'},
                               emulation={'emulator': 'Eden', 'status': 'Referência anterior',
                                          'verified': False, 'console': 'Switch'})
-        self.assertEqual(result['device'], 'Steam Deck')
-        self.assertEqual(result['method'], 'Emulação · Eden')
+        self.assertEqual(result['device'], 'Nintendo')
+        self.assertEqual(result['method'], 'Nintendo Switch')
+        self.assertEqual(result['status'], 'ready')
+        self.assertNotIn('emulador', result['how'].lower())
+
+    def test_non_nintendo_emulation_targets_pc_even_with_good_deck_grade(self):
+        result = gm.recommend({'name': 'PS2 game', 'dg': 'A'},
+                              emulation={'emulator': 'PCSX2', 'status': 'A confirmar', 'verified': False})
+        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['method'], 'Emulação · PCSX2')
         self.assertEqual(result['status'], 'check')
+        self.assertNotIn('EmuDeck', result['how'])
+
+    def test_pc_release_wins_over_an_old_nintendo_preference(self):
+        for steam, platforms in [({'appid': 1}, ['Nintendo Switch']),
+                                 (None, ['Nintendo Switch', 'PC'])]:
+            with self.subTest(steam=steam, platforms=platforms):
+                result = gm.recommend({'name': 'Multiplatform', 'plat': 'Nintendo Switch'},
+                                      steam=steam, platforms=platforms)
+                self.assertEqual(result['device'], 'PC')
+
+    def test_confirmed_pc_edition_does_not_reuse_an_old_nintendo_emulator(self):
+        result = gm.recommend({'name': 'Multiplatform', 'plat': 'Nintendo Switch'},
+                              platforms=['Nintendo Switch', 'PC'],
+                              emulation={'emulator': 'Eden', 'console': 'Switch', 'verified': False})
+        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['method'], 'Proton / Lutris')
+
+    def test_nintendo_console_uses_known_edition_instead_of_old_hardware_preference(self):
+        result = gm.recommend({'name': 'Nintendo game', 'plat': 'Nintendo Switch 2'},
+                              platforms=['Nintendo Switch'])
+        self.assertEqual(result['device'], 'Nintendo')
+        self.assertEqual(result['method'], 'Nintendo Switch')
+
+    def test_nintendo_platforms_are_detected_without_name_or_emulation_heuristics(self):
+        for platform in ['Nintendo Switch 2', 'Nintendo Switch', 'Wii U', 'Wii',
+                         'GameCube', 'Nintendo 64', 'Nintendo 3DS', 'Nintendo DS', 'Game Boy Advance']:
+            with self.subTest(platform=platform):
+                result = gm.recommend({'name': 'Example', 'plat': 'Steam Deck'}, platforms=[platform])
+                self.assertEqual(result['device'], 'Nintendo')
+                self.assertEqual(result['method'], platform)
+                self.assertEqual(result['status'], 'ready')
+
+    def test_announced_games_keep_their_target_platform_without_becoming_available(self):
+        for game, steam, platforms in [({'name': 'Future Nintendo', 'released': False}, None, ['Nintendo Switch 2']),
+                                      ({'name': 'Future PC'}, {'appid': 1, 'comingSoon': True}, ['PC'])]:
+            with self.subTest(game=game):
+                result = gm.recommend(game, steam=steam, platforms=platforms)
+                self.assertEqual(result['device'], 'Nintendo' if platforms == ['Nintendo Switch 2'] else 'PC')
+                self.assertEqual(result['status'], 'waiting')
+
+    def test_future_nintendo_release_date_does_not_become_ready(self):
+        result = gm.recommend({'name': 'Future', 'plat': 'Nintendo Switch 2'}, release_date='2999-12-31')
+        self.assertEqual(result['device'], 'Nintendo')
+        self.assertEqual(result['status'], 'waiting')
 
     def test_missing_steam_listing_does_not_mean_no_pc_version(self):
         result = gm.recommend({'name': 'Old PC game', 'dg': 'A'}, platforms=['PC'])

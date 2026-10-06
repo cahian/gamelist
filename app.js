@@ -74,6 +74,7 @@
   function methodGroup(game) {
     const method = game.play?.method || '';
     if (game.play?.status === 'waiting') return 'waiting';
+    if (game.play?.device === 'Nintendo') return 'console';
     if (method.startsWith('Emulação')) return 'emulation';
     if (method === 'Nativo Linux') return 'native';
     if (method === 'Windows') return 'windows';
@@ -91,7 +92,7 @@
     rows.sort((a,b) => compare(value(a,S.k),value(b,S.k),S.asc) || a.name.localeCompare(b.name, 'pt-BR'));
     $('tb').innerHTML = rows.map((game, index) => {
       const tier = game.proton?.trendingTier || game.proton?.tier;
-      const play = game.play || {device:'Aguardando', method:'Consulta pendente', status:'check'};
+      const play = game.play || {device:'PC', method:'Consulta pendente', status:'check'};
       const missingMC = !game.metacritic;
       return `<tr data-game="${escapeHtml(root.RotationEngine.gameId(game))}"><td class="name" data-label="Jogo"><div class="title-row">${link(game.metacritic?.url || (game.mslug ? `https://www.metacritic.com/game/${game.mslug}/` : ''), game.name)}<button class="expand" aria-expanded="false" aria-controls="details-${index}" aria-label="Detalhes de ${escapeHtml(game.name)}">+</button></div><span class="why">${escapeHtml(play.reason || '')}</span>${(root.currentRotation || []).includes(root.RotationEngine.gameId(game)) ? `<span class="rotation-tag">Na sua rotação · ${(root.currentRotation || []).indexOf(root.RotationEngine.gameId(game)) + 1}º jogo</span>` : ''}<div id="details-${index}" hidden>${details(game)}</div></td>
         <td data-label="Metacritic" title="${escapeHtml(missingMC ? 'Snapshot de 30/09/2026; atualização ainda não confirmada' : 'Plataforma: ' + (game.metacritic.platform || 'principal'))}">${badge(game.critic,100)}${missingMC ? '<span class="old" aria-label="Nota anterior">*</span>' : ''}</td>

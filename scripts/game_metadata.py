@@ -1,4 +1,5 @@
-"""Provider parsing and conservative PC/Steam Deck recommendations."""
+"""Provider parsing and Nintendo/PC recommendations with availability evidence."""
+from datetime import date
 import re
 import unicodedata
 from difflib import SequenceMatcher
@@ -169,63 +170,84 @@ def recommendation(device, method, status, reason, how):
     return dict(device=device, method=method, status=status, reason=reason, how=how)
 
 
-def recommend(game, steam=None, proton=None, deck=None, emulation=None, platforms=None):
+NINTENDO_CONSOLES = ('Nintendo Switch 2', 'Nintendo Switch', 'Wii U', 'Wii',
+                     'Nintendo GameCube', 'GameCube', 'Nintendo 64', 'Nintendo 3DS',
+                     'Nintendo DS', 'Game Boy Advance', 'Game Boy Color', 'Game Boy',
+                     'Super Nintendo', 'SNES', 'NES')
+
+
+def nintendo_console(game, platforms=None, steam=None):
+    """Prefer the PC edition when present; otherwise use an evidenced Nintendo edition."""
+    platforms = platforms or []
+    if steam or any(p in {'PC', 'Windows', 'Linux'} for p in platforms):
+        return None
+    # A previous hardware preference is not proof of a Switch 2 edition.
+    known = [p for p in NINTENDO_CONSOLES if p in platforms]
+    if known:
+        return known[0]
+    if not platforms and game.get('plat') in NINTENDO_CONSOLES:
+        return game['plat']
+    return None
+
+
+def recommend(game, steam=None, proton=None, deck=None, emulation=None, platforms=None, release_date=None):
     steam, proton, deck, emulation = steam or {}, proton or {}, deck or {}, emulation or {}
     platforms = platforms or []
-    grade = game.get('dg')
-    portable = grade in {'A', 'B', 'C'} or (grade == 'D' and game.get('plat') == 'Steam Deck')
-    if steam.get('comingSoon'):
-        return recommendation('Aguardando', 'Versão PC anunciada', 'waiting',
-                              'A Steam ainda marca esta versão como não lançada.',
+    console = nintendo_console(game, platforms, steam)
+    try:
+        future = date.fromisoformat(str(release_date)[:10]) > date.today()
+    except ValueError:
+        future = False
+    if game.get('released') is False or steam.get('comingSoon') or future:
+        return recommendation('Nintendo' if console else 'PC', console or 'Versão PC anunciada', 'waiting',
+                              'Esta edição ainda está indicada como não lançada.',
                               'A compatibilidade será consultada novamente nas próximas atualizações.')
+    if console:
+        return recommendation('Nintendo', console, 'ready',
+                              f'Edição para {console}; preferência pelo console Nintendo.',
+                              f'Jogar a edição de {console} no console correspondente. Conferir a disponibilidade na loja ou em mídia física.')
     if steam:
         native = steam.get('linux', False)
         tier = proton.get('trendingTier') or proton.get('tier')
         supported = deck.get('category') in {2, 3}
         if not native and tier == 'borked':
-            return recommendation('PC Windows', 'Windows', 'fallback',
+            return recommendation('PC', 'Windows', 'fallback',
                                   'ProtonDB indica Borked: Linux/SteamOS não é uma rota confirmada.',
                                   'Jogar no PC com Windows. Consultar os relatos para distinguir campanha e online.')
         method = 'Nativo Linux' if native else 'Proton'
         working = native or tier in {'platinum', 'gold', 'silver'} or supported
-        if not portable and grade not in {'D', 'F'}:
-            portable = supported
         if working:
-            device = 'Steam Deck' if portable and (supported or native or tier in {'platinum', 'gold'}) else 'PC Linux'
             evidence = 'versão nativa Linux' if native else f'ProtonDB {tier.title()}' if tier else 'selo da Valve'
-            detail = ('Preferência pelo portátil com base na referência anterior de desempenho.'
-                      if grade in {'A', 'B', 'C', 'D'} else 'Valve confirma compatibilidade no Deck; conferir os relatos de desempenho.') if device == 'Steam Deck' else 'PC oferece mais margem de desempenho; a API não mede fps.'
-            return recommendation(device, method, 'ready', f'{evidence}; {detail}',
+            return recommendation('PC', method, 'ready', f'Preferência pelo PC. Compatibilidade Linux: {evidence}; a API não mede fps.',
                                   'Instalar pela Steam.' if native else
                                   'Instalar pela Steam e habilitar Steam Play. Consultar os relatos do ProtonDB para a versão de Proton e ajustes por dispositivo.')
-        return recommendation('PC Linux', method, 'check',
+        return recommendation('PC', method, 'check',
                               f'ProtonDB {tier.title()}: exige conferir os relatos.' if tier else
                               'Versão PC encontrada; compatibilidade Linux ainda sem confirmação.',
                               'Testar pela Steam com Proton e consultar os relatos. Não há garantia de funcionamento ou fps.')
-    if emulation:
+    if emulation and 'PC' not in platforms:
         emulator = emulation['emulator']
         if emulation.get('verified') and emulation.get('status') != 'Playable':
-            return recommendation('Aguardando', f'Emulação · {emulator}', 'waiting',
+            return recommendation('PC', f'Emulação · {emulator}', 'waiting',
                                   f"A base do {emulator} informa {emulation.get('status')}; não confirma um jogo completo jogável.",
                                   'Acompanhar a fonte de compatibilidade; o estado será atualizado automaticamente.')
-        device = 'Steam Deck' if portable and emulator not in {'RPCS3', 'shadPS4', 'Xenia Canary'} else 'PC Linux'
         verified = emulation.get('verified', False)
-        return recommendation(device, f'Emulação · {emulator}', 'ready' if verified else 'check',
+        return recommendation('PC', f'Emulação · {emulator}', 'ready' if verified else 'check',
                               f'{emulator}: Playable na base de compatibilidade; o desempenho depende do hardware.' if verified else
                               f'{emulator} é uma rota candidata. Falta confirmação atual por jogo e por dispositivo.',
                               f'Configurar {emulator} com resolução nativa e consultar a fonte do jogo antes de aumentar a resolução. '
                               + ('No Linux, Xenia via Proton requer validação adicional.' if emulator == 'Xenia Canary' else
-                                 'No Deck, adicionar o emulador ao modo Jogo (EmuDeck quando disponível).'))
+                                 'Usar a versão do emulador compatível com o sistema do PC.'))
     pc = 'PC' in platforms or game.get('plat') in {'PC', 'Steam Deck', 'Windows'}
     if pc:
         blocked = game.get('plat') == 'Windows' or re.search(r'bloqueia Linux|bloqueou Linux|só Windows|anticheat.*Linux', game.get('dset', ''), re.I)
         if blocked:
-            return recommendation('PC Windows', 'Windows', 'fallback',
+            return recommendation('PC', 'Windows', 'fallback',
                                   'A referência anterior indica bloqueio de Linux; ainda sem confirmação automática de uma alternativa.',
                                   'Usar a versão PC no Windows e consultar a fonte de compatibilidade.')
-        return recommendation('Steam Deck' if portable else 'PC Linux', 'Proton / Lutris', 'check',
+        return recommendation('PC', 'Proton / Lutris', 'check',
                               'Versão PC fora da Steam ou sem correspondência segura; funcionamento no Linux a confirmar.',
                               'Instalar pelo launcher da loja via Lutris, Heroic ou Bottles; consultar os ajustes específicos do jogo.')
-    return recommendation('Aguardando', 'Sem rota PC/Deck confirmada', 'waiting',
+    return recommendation('PC', 'Sem rota PC confirmada', 'waiting',
                           'Não foi encontrada uma versão PC nem emulação jogável confirmada para esta edição.',
                           'Aguardar port ou avanço da emulação. Streaming de console só é alternativa se houver acesso ao console.')

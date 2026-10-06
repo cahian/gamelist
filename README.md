@@ -1,11 +1,11 @@
-# Playlist · PC & Steam Deck
+# Playlist · Nintendo & PC
 
 [Ver a playlist](https://cahian.github.io/gamelist/). Mantém os 407 jogos e as listas
 Backlog, Wishlist, Jogando, Pausados e Desisti importadas do IGN.
 
 Cada jogo mostra Metacritic (crítica e usuários), tempo médio de campanha, campanha +
 extras e 100%, ProtonDB para Linux, avaliação oficial da Valve para Steam Deck e a
-rota recomendada: Linux nativo, Proton, launcher externo ou emulação. Há filtros,
+rota recomendada: console Nintendo, PC com Linux nativo, Proton, launcher externo ou emulação. Há filtros,
 ordenação por duração/nota/compatibilidade e soma das horas dos jogos filtrados.
 Clique em **+** para ver instruções, fontes e datas por jogo.
 
@@ -80,11 +80,18 @@ de configuração, execução e acesso privado opcional via Tailscale em
 [docs/macos.md](docs/macos.md). A página pública continua funcionando sem conexão
 com o Mac ou com a rede Tailscale.
 
-A preferência é pelo Deck quando a referência anterior de desempenho favorece o
-portátil. Jogos pesados vão para PC Linux. Bloqueios de Linux ficam explícitos como
-**PC Windows**. Edições sem port ou emulação jogável confirmada ficam **Aguardando**;
-não se promete que todo exclusivo já possa rodar. Emuladores sem uma API confiável
-por jogo ficam **Conferir ajustes**, com a fonte anterior quando disponível.
+As plataformas recomendadas são **Nintendo** e **PC**, no catálogo, nos filtros e
+nos três slots. Havendo versão PC confirmada pela Steam ou pelos metadados, a
+preferência é PC, mesmo que o jogo também exista no Nintendo. Sem versão PC, uma
+edição Nintendo identificada nas fontes usa seu console correspondente, sem
+recomendar emulação. A preferência antiga de hardware só é usada como referência
+Nintendo quando não há plataformas consultadas; ela não comprova uma edição Switch 2.
+
+Os demais jogos têm PC como destino. A disponibilidade continua independente:
+edições sem port ou emulação jogável confirmada ficam **Aguardando** e fora das
+sugestões automáticas. Bloqueios de Linux aparecem na rota **Windows** e no estado
+**Requer Windows**. Emuladores sem uma API confiável por jogo ficam **Conferir
+ajustes**. A nota antiga do Deck não decide mais a plataforma recomendada.
 
 ProtonDB e o selo da Valve medem compatibilidade, não fps. A nota A–F do Deck LCD
 foi preservada nos detalhes como **referência de 30/09/2026**, sem apresentá-la como
