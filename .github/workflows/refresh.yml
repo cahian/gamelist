@@ -2,10 +2,17 @@ name: Atualizar playlist
 on:
   schedule:
     - cron: '17 9 * * *' # 06:17 America/Sao_Paulo
+    - cron: '23 * * * *' # Preços: uma vez por hora, fora do pico do minuto zero
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'O que atualizar'
+        type: choice
+        default: all
+        options: [all, prices, publish]
   push:
     branches: [main]
-    paths: ['catalog.json', 'scripts/**', 'tests/**', '*.js', '*.css', 'index.html', '.github/workflows/refresh.yml']
+    paths: ['catalog.json', 'scripts/**', 'tests/**', '*.js', '*.css', 'index.html', 'prices.json', 'prices-report.json', '.github/workflows/refresh.yml']
 
 permissions:
   contents: write
@@ -18,6 +25,8 @@ concurrency:
 
 jobs:
   refresh:
+    # O Mac é opcional. Esta variável desliga somente o agendamento horário na nuvem.
+    if: github.event_name != 'schedule' || github.event.schedule != '23 * * * *' || vars.PRICE_REFRESH_RUNNER != 'macos'
     runs-on: ubuntu-latest
     timeout-minutes: 50
     environment:
@@ -25,6 +34,38 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Escolher atualização
+        id: mode
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          MANUAL_MODE: ${{ inputs.mode }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import subprocess
+          event = os.environ['EVENT_NAME']
+          mode = 'all'
+          if event == 'schedule' and os.environ['EVENT_SCHEDULE'] == '23 * * * *':
+              mode = 'prices'
+          elif event == 'workflow_dispatch':
+              mode = os.environ['MANUAL_MODE'] or 'all'
+          elif event == 'push':
+              before = os.environ['PUSH_BEFORE']
+              if before and set(before) != {'0'}:
+                  changed = set(subprocess.check_output(
+                      ['git', 'diff', '--name-only', before, os.environ['GITHUB_SHA']], text=True).splitlines())
+                  if changed and changed <= {'prices.json', 'prices-report.json'}:
+                      mode = 'publish'
+          if mode not in {'all', 'prices', 'publish'}:
+              raise ValueError('Modo de atualização inválido')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write(f'mode={mode}\n')
+          print(f'Modo: {mode}')
+          PY
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -32,6 +73,7 @@ jobs:
         with:
           node-version: '22'
       - uses: actions/cache@v4
+        if: steps.mode.outputs.mode != 'publish'
         with:
           path: .cache
           key: playlist-api-v1-${{ github.run_id }}
@@ -40,29 +82,44 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -v
           node --test tests/*.test.cjs
-      - name: Consultar APIs
+      - name: Consultar metadados diários
+        if: steps.mode.outputs.mode == 'all'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 -u scripts/refresh.py
+      - name: Consultar preços horários
+        if: steps.mode.outputs.mode == 'prices'
+        run: python3 -u scripts/refresh_prices.py
+      - name: Renovar preços após os metadados
+        if: steps.mode.outputs.mode == 'all'
+        run: python3 -u scripts/refresh_prices.py --force
       - name: Guardar diagnóstico
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: refresh-report
-          path: refresh-report.json
+          path: |
+            refresh-report.json
+            prices-report.json
       - name: Salvar dados atualizados
+        if: steps.mode.outputs.mode != 'publish'
+        env:
+          UPDATE_MODE: ${{ steps.mode.outputs.mode }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data.js index.html refresh-report.json
+          git add -- prices.json prices-report.json
+          if [ "$UPDATE_MODE" = all ]; then
+            git add -- data.js index.html refresh-report.json
+          fi
           if ! git diff --cached --quiet; then
-            git commit -m 'Atualiza tempo, Metacritic e compatibilidade pelas APIs'
+            git commit -m "Atualiza dados automáticos ($UPDATE_MODE)"
             git push
           fi
       - name: Preparar página
         run: |
           mkdir -p public
-          cp index.html app.js data.js prices.js rotation.js rotation-ui.js rotation.css public/
+          cp index.html app.js data.js prices.json prices.js price-refresh.js rotation.js rotation-ui.js rotation.css public/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

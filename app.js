@@ -80,6 +80,10 @@
     return 'proton';
   }
   function render() {
+    const expanded = new Set([...$('tb').querySelectorAll('tr[data-game]')].filter(tr => tr.querySelector('.expand')?.getAttribute('aria-expanded') === 'true').map(tr => tr.dataset.game));
+    const focusedRow = document.activeElement?.closest('#tb tr[data-game]');
+    const focused = focusedRow?.dataset.game;
+    const focusedIndex = focusedRow ? [...focusedRow.querySelectorAll('a,button')].indexOf(document.activeElement) : -1;
     const rows = GAMES.filter(game => (S.list === '*' || (S.list === 'R' ? (root.currentRotation || []).includes(root.RotationEngine.gameId(game)) : game.list === S.list))
       && (!S.price || (S.price === 'sale' ? root.GamePrices.state(game).discount > 0 && !root.GamePrices.state(game).stale : S.price === 'free' ? root.GamePrices.state(game).free : root.GamePrices.state(game).value > 0))
       && (!S.device || game.play?.device === S.device) && (!S.method || methodGroup(game) === S.method)
@@ -89,24 +93,36 @@
       const tier = game.proton?.trendingTier || game.proton?.tier;
       const play = game.play || {device:'Aguardando', method:'Consulta pendente', status:'check'};
       const missingMC = !game.metacritic;
-      return `<tr><td class="name"><div class="title-row">${link(game.metacritic?.url || (game.mslug ? `https://www.metacritic.com/game/${game.mslug}/` : ''), game.name)}<button class="expand" aria-expanded="false" aria-controls="details-${index}" aria-label="Detalhes de ${escapeHtml(game.name)}">+</button></div><span class="why">${escapeHtml(play.reason || '')}</span>${(root.currentRotation || []).includes(root.RotationEngine.gameId(game)) ? `<span class="rotation-tag">Na sua rotação · ${(root.currentRotation || []).indexOf(root.RotationEngine.gameId(game)) + 1}º jogo</span>` : ''}<div id="details-${index}" hidden>${details(game)}</div></td>
-        <td title="${escapeHtml(missingMC ? 'Snapshot de 30/09/2026; atualização ainda não confirmada' : 'Plataforma: ' + (game.metacritic.platform || 'principal'))}">${badge(game.critic,100)}${missingMC ? '<span class="old" aria-label="Nota anterior">*</span>' : ''}</td>
-        <td>${badge(game.user,10)}</td><td class="time">${game.hltb ? link(game.hltb.url, hours(game.hltb[S.time])) : '–'}</td>
-        <td>${root.GamePrices.render(game)}</td>
-        <td><span class="pill ${escapeHtml(tier || 'unknown')}">${escapeHtml(TIERS[tier] || (game.steam?.linux ? 'Nativo' : game.emulation ? 'Emulação' : 'Sem relatos'))}</span></td>
-        <td><span class="pill deck-${game.deck?.category ?? 'unknown'}">${escapeHtml(DECK[game.deck?.category] || (game.emulation ? 'Emulação' : 'Sem avaliação'))}</span></td>
-        <td class="route"><b>${escapeHtml(play.device)}</b><span>${escapeHtml(play.method)}</span><span class="status ${escapeHtml(play.status)}">${escapeHtml(STATUS[play.status] || 'Conferir')}</span></td></tr>`;
+      return `<tr data-game="${escapeHtml(root.RotationEngine.gameId(game))}"><td class="name" data-label="Jogo"><div class="title-row">${link(game.metacritic?.url || (game.mslug ? `https://www.metacritic.com/game/${game.mslug}/` : ''), game.name)}<button class="expand" aria-expanded="false" aria-controls="details-${index}" aria-label="Detalhes de ${escapeHtml(game.name)}">+</button></div><span class="why">${escapeHtml(play.reason || '')}</span>${(root.currentRotation || []).includes(root.RotationEngine.gameId(game)) ? `<span class="rotation-tag">Na sua rotação · ${(root.currentRotation || []).indexOf(root.RotationEngine.gameId(game)) + 1}º jogo</span>` : ''}<div id="details-${index}" hidden>${details(game)}</div></td>
+        <td data-label="Metacritic" title="${escapeHtml(missingMC ? 'Snapshot de 30/09/2026; atualização ainda não confirmada' : 'Plataforma: ' + (game.metacritic.platform || 'principal'))}">${badge(game.critic,100)}${missingMC ? '<span class="old" aria-label="Nota anterior">*</span>' : ''}</td>
+        <td data-label="Usuários">${badge(game.user,10)}</td><td class="time" data-label="${TIME[S.time]}">${game.hltb ? link(game.hltb.url, hours(game.hltb[S.time])) : '–'}</td>
+        <td data-label="Steam · R$">${root.GamePrices.render(game)}</td>
+        <td data-label="ProtonDB · Linux"><span class="pill ${escapeHtml(tier || 'unknown')}">${escapeHtml(TIERS[tier] || (game.steam?.linux ? 'Nativo' : game.emulation ? 'Emulação' : 'Sem relatos'))}</span></td>
+        <td data-label="Steam Deck · Valve"><span class="pill deck-${game.deck?.category ?? 'unknown'}">${escapeHtml(DECK[game.deck?.category] || (game.emulation ? 'Emulação' : 'Sem avaliação'))}</span></td>
+        <td class="route" data-label="Onde / como jogar"><b>${escapeHtml(play.device)}</b><span>${escapeHtml(play.method)}</span><span class="status ${escapeHtml(play.status)}">${escapeHtml(STATUS[play.status] || 'Conferir')}</span></td></tr>`;
     }).join('');
     if (!rows.length) $('tb').innerHTML = '<tr><td colspan="8" class="empty">Nenhum jogo com esses filtros.</td></tr>';
     const measured = rows.filter(game => game.hltb?.[S.time] != null);
     $('cnt').textContent = `${rows.length} ${rows.length === 1 ? 'jogo' : 'jogos'}`;
     $('total').textContent = `${TIME[S.time]}: ${hours(measured.reduce((sum,game) => sum + game.hltb[S.time],0))} em ${measured.length} jogos com duração disponível`;
     $('time-label').textContent = TIME[S.time];
+    $('sort-key').value = S.k;
+    const alphabetical = ['name','device'].includes(S.k);
+    $('sort-direction').textContent = alphabetical ? (S.asc ? 'A → Z' : 'Z → A') : (S.asc ? 'Menor primeiro ↑' : 'Maior primeiro ↓');
+    $('sort-direction').setAttribute('aria-label', 'Inverter ordem: ' + $('sort-direction').textContent);
     document.querySelectorAll('th[data-k]').forEach(th => {
       th.classList.toggle('on', th.dataset.k === S.k);
       th.setAttribute('aria-sort', th.dataset.k === S.k ? (S.asc ? 'ascending' : 'descending') : 'none');
     });
     document.querySelectorAll('.tab').forEach(tab => tab.classList.toggle('on', tab.dataset.list === S.list));
+    $('tb').querySelectorAll('tr[data-game]').forEach(tr => {
+      const button = tr.querySelector('.expand');
+      if (expanded.has(tr.dataset.game)) {
+        button.setAttribute('aria-expanded', 'true'); button.textContent = '−';
+        $(button.getAttribute('aria-controls')).hidden = false;
+      }
+      if (focusedIndex >= 0 && focused === tr.dataset.game) tr.querySelectorAll('a,button')[focusedIndex]?.focus({preventScroll:true});
+    });
     $('tb').querySelectorAll('tr').forEach(tr => tr.addEventListener('click', event => {
       if (event.target.closest('a') || event.target.closest('.details')) return;
       const button = tr.querySelector('.expand'); if (!button) return;
@@ -130,6 +146,9 @@
   for (const key of ['device','method','status']) $(key).onchange = event => { S[key]=event.target.value; render(); };
   $('price-filter').onchange = event => { S.price=event.target.value; render(); };
   document.addEventListener('rotationchange', render);
+  document.addEventListener('priceschange', render);
+  $('sort-key').onchange = event => { S.k=event.target.value; S.asc=['name','time','device','price'].includes(S.k); render(); };
+  $('sort-direction').onclick = () => { S.asc=!S.asc; render(); };
   $('time-mode').onchange = event => { S.time=event.target.value; render(); };
   $('q').oninput = event => { S.q=event.target.value.toLocaleLowerCase('pt-BR'); render(); };
   render();
