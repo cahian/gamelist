@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Playlist · Nintendo & PC</title>
+<title>Playlist · PC, Steam Deck & Nintendo</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234ade80'/%3E%3Cpath d='M11 8v16l13-8Z' fill='%230f1115'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="rotation.css?v=3">
 <style>
@@ -36,8 +36,8 @@
 </style>
 </head>
 <body>
-<h1>Playlist · Nintendo & PC</h1>
-<p class="sub">Seu próximo jogo, com tempo médio para terminar e Metacritic. Jogos com versão PC ficam no PC; os demais usam a edição Nintendo quando disponível. ProtonDB e Valve trazem informações adicionais de compatibilidade. Clique em <b>+</b> para ver como jogar e as fontes.</p>
+<h1>Playlist · PC, Steam Deck & Nintendo</h1>
+<p class="sub">Prioridade à versão PC, escolhendo PC ou Steam Deck conforme compatibilidade e referências de desempenho. Sem versão PC, Nintendo nativo; nos demais casos, emulação no PC/Deck ou aguardando uma rota viável. Clique em <b>+</b> para ver como jogar e as fontes.</p>
 <p class="summary">Atualização automática diária · última execução: <span id="gen"></span><span id="freshness"></span></p>
 <section id="rotation" class="rotation" aria-labelledby="rotation-title">
   <div class="rotation-heading"><div><p class="eyebrow">Seu próximo capítulo</p><h2 id="rotation-title">Sua rotação de jogos</h2><p>Três espaços para vontades diferentes. Você escolhe; as sugestões se adaptam à sua combinação.</p></div></div>
@@ -57,8 +57,8 @@
 </div>
 <div class="bar" aria-label="Filtros">
   <input id="q" type="search" placeholder="Buscar jogo…" aria-label="Buscar jogo" size="24">
-  <select id="device" aria-label="Onde jogar"><option value="">Nintendo e PC</option></select>
-  <select id="method" aria-label="Como jogar"><option value="">Todas as rotas</option><option value="console">Console Nintendo</option><option value="native">Nativo Linux</option><option value="proton">Proton / Lutris</option><option value="emulation">Emulação</option><option value="windows">Windows</option><option value="waiting">Aguardando disponibilidade</option></select>
+  <select id="device" aria-label="Onde jogar"><option value="">PC, Steam Deck e Nintendo</option></select>
+  <select id="method" aria-label="Como jogar"><option value="">Todas as rotas</option><option value="console">Console Nintendo</option><option value="native">Nativo Linux</option><option value="proton">Proton / Lutris</option><option value="emulation">Emulação</option><option value="windows">Windows</option><option value="vr">SteamVR</option><option value="waiting">Aguardando disponibilidade</option></select>
   <select id="status" aria-label="Disponibilidade"><option value="">Todos os estados</option><option value="ready">Disponível</option><option value="check">Conferir ajustes</option><option value="fallback">Requer Windows</option><option value="waiting">Aguardando</option></select>
   <select id="price-filter" aria-label="Preço Steam"><option value="">Todos os preços</option><option value="sale">Em promoção</option><option value="free">Gratuitos</option><option value="paid">Pagos</option></select>
   <select id="time-mode" aria-label="Tipo de duração"><option value="main">Tempo: campanha</option><option value="extras">Tempo: campanha + extras</option><option value="complete">Tempo: 100%</option></select>
@@ -78,10 +78,10 @@
   </tr></thead><tbody id="tb"></tbody>
 </table></div>
 <noscript>Ative o JavaScript para consultar e filtrar sua lista.</noscript>
-<script src="data.js?v=53fd5721dc6c"></script>
+<script src="data.js?v=07b75f6c8100"></script>
 <script src="prices.js?v=2"></script>
 <script src="rotation.js?v=2"></script>
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 <script src="rotation-ui.js?v=3"></script>
 <script src="price-refresh.js?v=1"></script>
 </body>

@@ -78,6 +78,7 @@
     if (method.startsWith('Emulação')) return 'emulation';
     if (method === 'Nativo Linux') return 'native';
     if (method === 'Windows') return 'windows';
+    if (method === 'SteamVR') return 'vr';
     return 'proton';
   }
   function render() {

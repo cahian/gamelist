@@ -1,4 +1,4 @@
-# Playlist · Nintendo & PC
+# Playlist · PC, Steam Deck & Nintendo
 
 [Ver a playlist](https://cahian.github.io/gamelist/). Mantém os 407 jogos e as listas
 Backlog, Wishlist, Jogando, Pausados e Desisti importadas do IGN.
@@ -80,18 +80,26 @@ de configuração, execução e acesso privado opcional via Tailscale em
 [docs/macos.md](docs/macos.md). A página pública continua funcionando sem conexão
 com o Mac ou com a rede Tailscale.
 
-As plataformas recomendadas são **Nintendo** e **PC**, no catálogo, nos filtros e
-nos três slots. Havendo versão PC confirmada pela Steam ou pelos metadados, a
-preferência é PC, mesmo que o jogo também exista no Nintendo. Sem versão PC, uma
-edição Nintendo identificada nas fontes usa seu console correspondente, sem
-recomendar emulação. A preferência antiga de hardware só é usada como referência
-Nintendo quando não há plataformas consultadas; ela não comprova uma edição Switch 2.
+A ordem de preferência vale no catálogo, nos filtros e nos três slots:
 
-Os demais jogos têm PC como destino. A disponibilidade continua independente:
-edições sem port ou emulação jogável confirmada ficam **Aguardando** e fora das
-sugestões automáticas. Bloqueios de Linux aparecem na rota **Windows** e no estado
-**Requer Windows**. Emuladores sem uma API confiável por jogo ficam **Conferir
-ajustes**. A nota antiga do Deck não decide mais a plataforma recomendada.
+1. **Versão PC primeiro**, mesmo que também exista no Nintendo. Entre PC e Steam
+   Deck, a indicação combina compatibilidade e a referência anterior de desempenho.
+   Referências A–C favorecem o portátil quando há suporte; D/F/X, restrição atual da
+   Valve e VR favorecem o PC. Sem referência de desempenho, o selo jogável/verificado
+   da Valve permite sugerir o Deck, deixando explícito que não é um benchmark.
+2. **Nintendo nativo** quando não há versão PC identificada. A edição indicada nas
+   fontes usa seu console correspondente. A preferência antiga de hardware só é
+   usada como referência Nintendo quando faltam plataformas consultadas; ela não
+   comprova uma edição Switch 2.
+3. **Emulação no PC/Deck** nos demais casos. Emuladores conhecidos de sistemas mais
+   leves podem usar o Deck quando a referência de desempenho é favorável. RPCS3,
+   shadPS4, Xenia e rotas sem evidência para o portátil ficam no PC. Sem uma rota
+   identificada, aparece **Emulação futura · Aguardando**, sem promessa de funcionamento.
+
+A disponibilidade continua independente da plataforma: lançamentos e emulação
+ainda não jogável ficam **Aguardando** e fora das sugestões automáticas. Bloqueios
+de Linux aparecem na rota **Windows** e no estado **Requer Windows**. Emulação e
+launchers sem confirmação atual por jogo ficam **Conferir ajustes**.
 
 ProtonDB e o selo da Valve medem compatibilidade, não fps. A nota A–F do Deck LCD
 foi preservada nos detalhes como **referência de 30/09/2026**, sem apresentá-la como

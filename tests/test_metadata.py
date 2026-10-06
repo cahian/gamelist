@@ -149,7 +149,7 @@ class MetadataTests(unittest.TestCase):
     def test_native_linux_can_work_even_without_proton_reports(self):
         result = gm.recommend({'name': 'Native game', 'dg': 'A'},
                               steam={'appid': 1, 'linux': True}, deck={'category': 3})
-        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['device'], 'Steam Deck')
         self.assertEqual(result['method'], 'Nativo Linux')
 
     def test_unreleased_steam_game_does_not_reuse_old_performance_claim(self):
@@ -157,11 +157,11 @@ class MetadataTests(unittest.TestCase):
                               steam={'appid': 1, 'comingSoon': True}, proton={'tier': 'gold'})
         self.assertEqual(result['status'], 'waiting')
 
-    def test_new_release_stays_on_pc_regardless_of_deck_grade(self):
+    def test_new_release_can_use_deck_when_valve_confirms_compatibility(self):
         result = gm.recommend({'name': 'Now released', 'dg': 'N'},
                               steam={'appid': 1, 'comingSoon': False},
                               proton={'tier': 'gold'}, deck={'category': 3})
-        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['device'], 'Steam Deck')
         self.assertNotIn('referência anterior', result['reason'])
 
     def test_rpcs3_ingame_is_not_reported_as_playable(self):
@@ -174,6 +174,7 @@ class MetadataTests(unittest.TestCase):
                               platforms=['PlayStation 5'])
         self.assertEqual(result['status'], 'waiting')
         self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['method'], 'Emulação futura')
 
     def test_nintendo_game_uses_its_console_instead_of_emulation(self):
         result = gm.recommend({'name': 'Metroid Dread', 'plat': 'Nintendo Switch', 'dg': 'A'},
@@ -184,13 +185,71 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(result['status'], 'ready')
         self.assertNotIn('emulador', result['how'].lower())
 
-    def test_non_nintendo_emulation_targets_pc_even_with_good_deck_grade(self):
+    def test_light_emulation_can_use_deck_with_a_good_performance_reference(self):
         result = gm.recommend({'name': 'PS2 game', 'dg': 'A'},
                               emulation={'emulator': 'PCSX2', 'status': 'A confirmar', 'verified': False})
-        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['device'], 'Steam Deck')
         self.assertEqual(result['method'], 'Emulação · PCSX2')
         self.assertEqual(result['status'], 'check')
-        self.assertNotIn('EmuDeck', result['how'])
+        self.assertIn('Deck', result['how'])
+
+    def test_pc_family_release_wins_over_nintendo_even_when_deck_is_best(self):
+        result = gm.recommend({'name': 'Multiplatform', 'plat': 'Nintendo Switch', 'dg': 'A'},
+                              steam={'appid': 1}, proton={'tier': 'gold'},
+                              deck={'category': 3}, platforms=['Nintendo Switch', 'PC'])
+        self.assertEqual(result['device'], 'Steam Deck')
+        self.assertEqual(result['method'], 'Proton')
+
+    def test_heavy_or_blocked_deck_games_stay_on_pc_despite_valve_compatibility(self):
+        for grade in ['D', 'F', 'X']:
+            with self.subTest(grade=grade):
+                result = gm.recommend({'name': 'Demanding game', 'dg': grade},
+                                      steam={'appid': 1}, proton={'tier': 'gold'}, deck={'category': 3})
+                self.assertEqual(result['device'], 'PC')
+
+    def test_deck_unsupported_overrides_an_old_good_grade(self):
+        result = gm.recommend({'name': 'Unsupported', 'dg': 'A'}, steam={'appid': 1},
+                              proton={'tier': 'gold'}, deck={'category': 1})
+        self.assertEqual(result['device'], 'PC')
+
+    def test_vr_only_games_use_pc_and_keep_unreleased_state(self):
+        for coming_soon in [False, True]:
+            with self.subTest(coming_soon=coming_soon):
+                result = gm.recommend({'name': 'VR', 'dg': 'A'},
+                                      steam={'appid': 1, 'vrOnly': True, 'comingSoon': coming_soon},
+                                      proton={'tier': 'gold'}, deck={'category': 3})
+                self.assertEqual(result['device'], 'PC')
+                self.assertEqual(result['status'], 'waiting' if coming_soon else 'check')
+
+    def test_heavy_emulators_stay_on_pc_and_unplayable_reports_stay_waiting(self):
+        for emulator in ['RPCS3', 'shadPS4', 'Xenia Canary']:
+            for status in ['Playable', 'Ingame']:
+                with self.subTest(emulator=emulator, status=status):
+                    result = gm.recommend({'name': 'Console game', 'dg': 'A'},
+                                          emulation={'emulator': emulator, 'verified': True, 'status': status})
+                    self.assertEqual(result['device'], 'PC')
+                    self.assertEqual(result['status'], 'ready' if status == 'Playable' else 'waiting')
+
+    def test_no_deck_evidence_defaults_to_pc(self):
+        result = gm.recommend({'name': 'Unknown performance'}, steam={'appid': 1}, proton={'tier': 'gold'})
+        self.assertEqual(result['device'], 'PC')
+
+    def test_non_steam_pc_release_can_use_deck_but_keeps_compatibility_caveat(self):
+        result = gm.recommend({'name': 'External launcher', 'dg': 'A'}, platforms=['PC', 'Nintendo Switch'])
+        self.assertEqual(result['device'], 'Steam Deck')
+        self.assertEqual(result['status'], 'check')
+
+    def test_non_steam_linux_block_overrides_a_good_deck_grade(self):
+        result = gm.recommend({'name': 'Blocked launcher', 'dg': 'A', 'plat': 'Windows'}, platforms=['PC'])
+        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['method'], 'Windows')
+
+    def test_old_pc_hardware_preference_does_not_invent_a_pc_edition(self):
+        result = gm.recommend({'name': 'Console-only edition', 'plat': 'PC', 'dg': 'A'},
+                              platforms=['PlayStation 5'])
+        self.assertEqual(result['device'], 'PC')
+        self.assertEqual(result['method'], 'Emulação futura')
+        self.assertEqual(result['status'], 'waiting')
 
     def test_pc_release_wins_over_an_old_nintendo_preference(self):
         for steam, platforms in [({'appid': 1}, ['Nintendo Switch']),
