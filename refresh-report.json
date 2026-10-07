@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T16:01:31+00:00",
+  "generatedAt": "2026-10-07T16:51:07+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -8,8 +8,21 @@
     "steam": 327,
     "proton": 319,
     "deck": 327,
-    "emulation": 20,
+    "emulation": 22,
     "steamPrice": 307
   },
-  "errors": []
+  "errors": [
+    {
+      "name": "Octopath Traveler",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Okami HD",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    }
+  ]
 }
