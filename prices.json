@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T07:37:55+00:00",
+  "generatedAt": "2026-10-08T15:44:46+00:00",
   "country": "BR",
   "currency": "BRL",
   "prices": {
@@ -16,7 +16,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/400/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "500": {
@@ -31,7 +31,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/500/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "550": {
@@ -46,7 +46,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/550/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "620": {
@@ -61,7 +61,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/620/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "2320": {
@@ -76,7 +76,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2320/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "7670": {
@@ -91,7 +91,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/7670/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "8850": {
@@ -106,7 +106,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/8850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "8870": {
@@ -121,7 +121,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/8870/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "8980": {
@@ -136,7 +136,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/8980/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "12210": {
@@ -151,7 +151,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/12210/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "17410": {
@@ -166,7 +166,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/17410/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "19680": {
@@ -181,7 +181,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/19680/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "45740": {
@@ -196,7 +196,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/45740/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "48000": {
@@ -211,7 +211,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/48000/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "50300": {
@@ -241,7 +241,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/107100/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "201810": {
@@ -256,7 +256,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/201810/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "202170": {
@@ -286,7 +286,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/203160/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "205100": {
@@ -301,7 +301,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/205100/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:41+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "208650": {
@@ -316,7 +316,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/208650/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "210970": {
@@ -331,7 +331,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/210970/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "222480": {
@@ -346,7 +346,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/222480/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "224760": {
@@ -361,7 +361,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/224760/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "230230": {
@@ -406,7 +406,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/232090/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "233270": {
@@ -421,7 +421,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/233270/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "238010": {
@@ -436,7 +436,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/238010/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "239140": {
@@ -451,7 +451,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/239140/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "241540": {
@@ -481,7 +481,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/242550/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "250900": {
@@ -496,7 +496,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/250900/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "252950": {
@@ -526,7 +526,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/257850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "268050": {
@@ -541,7 +541,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/268050/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "268910": {
@@ -556,7 +556,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/268910/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "275850": {
@@ -571,7 +571,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/275850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "282140": {
@@ -586,7 +586,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/282140/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "286690": {
@@ -601,7 +601,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/286690/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:42+00:00",
+      "updatedAt": "2026-10-08T15:44:33+00:00",
       "status": "ok"
     },
     "287290": {
@@ -616,7 +616,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/287290/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "287390": {
@@ -631,7 +631,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/287390/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "287700": {
@@ -646,7 +646,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/287700/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "291550": {
@@ -676,7 +676,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/292030/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "302510": {
@@ -691,7 +691,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/302510/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "311340": {
@@ -706,7 +706,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/311340/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "311810": {
@@ -736,7 +736,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/312520/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "322330": {
@@ -751,7 +751,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/322330/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "323470": {
@@ -766,7 +766,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/323470/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "327410": {
@@ -781,7 +781,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/327410/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "331160": {
@@ -796,7 +796,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/331160/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "332200": {
@@ -811,7 +811,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/332200/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "335300": {
@@ -826,7 +826,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/335300/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "337000": {
@@ -841,7 +841,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/337000/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "350080": {
@@ -856,7 +856,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/350080/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "356670": {
@@ -886,7 +886,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/362890/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "374320": {
@@ -901,7 +901,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/374320/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:43+00:00",
+      "updatedAt": "2026-10-08T15:44:34+00:00",
       "status": "ok"
     },
     "377160": {
@@ -916,7 +916,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/377160/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "383870": {
@@ -931,7 +931,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/383870/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "387290": {
@@ -946,7 +946,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/387290/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "388880": {
@@ -961,7 +961,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/388880/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "391220": {
@@ -976,7 +976,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/391220/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "391540": {
@@ -991,7 +991,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/391540/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "403640": {
@@ -1006,7 +1006,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/403640/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "412020": {
@@ -1021,7 +1021,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/412020/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "413150": {
@@ -1036,7 +1036,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/413150/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "414340": {
@@ -1051,7 +1051,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/414340/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "418370": {
@@ -1066,7 +1066,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/418370/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "423230": {
@@ -1081,7 +1081,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/423230/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "424840": {
@@ -1096,7 +1096,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/424840/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "435150": {
@@ -1111,7 +1111,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/435150/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "448510": {
@@ -1126,7 +1126,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/448510/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "454650": {
@@ -1141,7 +1141,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/454650/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "474960": {
@@ -1156,7 +1156,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/474960/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "476600": {
@@ -1171,7 +1171,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/476600/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "477160": {
@@ -1186,7 +1186,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/477160/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "480490": {
@@ -1201,7 +1201,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/480490/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:44+00:00",
+      "updatedAt": "2026-10-08T15:44:35+00:00",
       "status": "ok"
     },
     "482400": {
@@ -1216,7 +1216,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/482400/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "485510": {
@@ -1231,7 +1231,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/485510/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "499180": {
@@ -1246,7 +1246,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/499180/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "504230": {
@@ -1261,7 +1261,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/504230/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "524220": {
@@ -1276,7 +1276,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/524220/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "541570": {
@@ -1291,7 +1291,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/541570/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "546560": {
@@ -1306,7 +1306,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/546560/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "553420": {
@@ -1321,7 +1321,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/553420/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "557340": {
@@ -1336,7 +1336,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/557340/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "570940": {
@@ -1351,7 +1351,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/570940/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "577940": {
@@ -1381,7 +1381,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/587620/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "589360": {
@@ -1396,7 +1396,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/589360/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "595520": {
@@ -1411,7 +1411,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/595520/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "601430": {
@@ -1426,7 +1426,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/601430/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "606160": {
@@ -1441,7 +1441,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/606160/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "612880": {
@@ -1456,7 +1456,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/612880/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "622650": {
@@ -1471,7 +1471,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/622650/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "627270": {
@@ -1486,7 +1486,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/627270/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "631510": {
@@ -1501,7 +1501,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/631510/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:36+00:00",
       "status": "ok"
     },
     "632360": {
@@ -1516,7 +1516,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/632360/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "632470": {
@@ -1531,7 +1531,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/632470/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "638970": {
@@ -1561,7 +1561,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/646570/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "678950": {
@@ -1576,7 +1576,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/678950/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "683320": {
@@ -1591,7 +1591,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/683320/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "692850": {
@@ -1606,7 +1606,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/692850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "728880": {
@@ -1621,7 +1621,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/728880/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "731490": {
@@ -1636,7 +1636,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/731490/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "736260": {
@@ -1651,7 +1651,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/736260/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "742300": {
@@ -1666,7 +1666,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/742300/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "750920": {
@@ -1681,7 +1681,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/750920/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "752590": {
@@ -1696,7 +1696,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/752590/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "753640": {
@@ -1711,7 +1711,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/753640/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "782330": {
@@ -1726,7 +1726,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/782330/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "787480": {
@@ -1741,7 +1741,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/787480/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "798460": {
@@ -1756,7 +1756,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/798460/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "801800": {
@@ -1771,7 +1771,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/801800/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "813230": {
@@ -1786,7 +1786,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/813230/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "814380": {
@@ -1801,7 +1801,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/814380/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:45+00:00",
+      "updatedAt": "2026-10-08T15:44:37+00:00",
       "status": "ok"
     },
     "837470": {
@@ -1816,7 +1816,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/837470/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "843380": {
@@ -1846,7 +1846,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/860510/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "870780": {
@@ -1861,7 +1861,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/870780/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "894020": {
@@ -1876,7 +1876,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/894020/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "914800": {
@@ -1891,7 +1891,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/914800/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "921570": {
@@ -1906,7 +1906,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/921570/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "948740": {
@@ -1921,7 +1921,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/948740/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "952070": {
@@ -1936,7 +1936,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/952070/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "953490": {
@@ -1951,7 +1951,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/953490/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "960910": {
@@ -1966,7 +1966,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/960910/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "960990": {
@@ -1981,7 +1981,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/960990/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "972660": {
@@ -1996,7 +1996,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/972660/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "976310": {
@@ -2011,7 +2011,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/976310/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "976730": {
@@ -2026,7 +2026,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/976730/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "999220": {
@@ -2041,7 +2041,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/999220/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "1004640": {
@@ -2056,7 +2056,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1004640/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "1030300": {
@@ -2071,7 +2071,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1030300/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "1030840": {
@@ -2086,7 +2086,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1030840/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "1036890": {
@@ -2101,7 +2101,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1036890/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:46+00:00",
+      "updatedAt": "2026-10-08T15:44:38+00:00",
       "status": "ok"
     },
     "1055540": {
@@ -2116,7 +2116,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1055540/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1056960": {
@@ -2131,7 +2131,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1056960/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1057090": {
@@ -2146,7 +2146,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1057090/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1086940": {
@@ -2161,7 +2161,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1086940/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1091500": {
@@ -2176,7 +2176,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1091500/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1092790": {
@@ -2191,7 +2191,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1092790/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1097150": {
@@ -2221,7 +2221,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1097840/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1113560": {
@@ -2236,7 +2236,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1113560/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1135690": {
@@ -2251,7 +2251,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1135690/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1145350": {
@@ -2266,7 +2266,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1145350/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1145360": {
@@ -2281,7 +2281,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1145360/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1150690": {
@@ -2296,7 +2296,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1150690/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1172380": {
@@ -2311,7 +2311,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1172380/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1172470": {
@@ -2371,7 +2371,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1225570/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1229490": {
@@ -2386,7 +2386,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1229490/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1235140": {
@@ -2401,7 +2401,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1235140/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:47+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1237970": {
@@ -2416,7 +2416,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1237970/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1245620": {
@@ -2431,7 +2431,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1245620/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1252330": {
@@ -2446,7 +2446,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1252330/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1259420": {
@@ -2461,7 +2461,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1259420/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1260130": {
@@ -2476,7 +2476,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1260130/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1260320": {
@@ -2491,7 +2491,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1260320/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1262540": {
@@ -2506,7 +2506,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1262540/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1263240": {
@@ -2521,7 +2521,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1263240/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1265920": {
@@ -2536,7 +2536,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1265920/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1293830": {
@@ -2566,7 +2566,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1304930/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1313140": {
@@ -2581,7 +2581,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1313140/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1328670": {
@@ -2596,7 +2596,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1328670/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1332010": {
@@ -2611,7 +2611,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1332010/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1353230": {
@@ -2626,7 +2626,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1353230/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1361210": {
@@ -2641,7 +2641,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1361210/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1367590": {
@@ -2656,7 +2656,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1367590/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1369630": {
@@ -2671,7 +2671,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1369630/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1378990": {
@@ -2686,7 +2686,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1378990/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1382330": {
@@ -2701,7 +2701,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1382330/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:48+00:00",
+      "updatedAt": "2026-10-08T15:44:39+00:00",
       "status": "ok"
     },
     "1384160": {
@@ -2716,7 +2716,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1384160/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1422450": {
@@ -2746,7 +2746,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1448440/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1449690": {
@@ -2761,7 +2761,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1449690/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1462040": {
@@ -2776,7 +2776,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1462040/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1466060": {
@@ -2791,7 +2791,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1466060/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1497440": {
@@ -2806,7 +2806,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1497440/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1501750": {
@@ -2821,7 +2821,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1501750/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1510580": {
@@ -2836,7 +2836,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1510580/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1522160": {
@@ -2851,7 +2851,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1522160/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1533420": {
@@ -2866,7 +2866,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1533420/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1551360": {
@@ -2881,7 +2881,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1551360/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1551980": {
@@ -2896,7 +2896,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1551980/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1562430": {
@@ -2911,7 +2911,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1562430/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1569580": {
@@ -2926,7 +2926,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1569580/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1583230": {
@@ -2941,7 +2941,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1583230/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1593500": {
@@ -2956,7 +2956,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1593500/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1601570": {
@@ -2971,7 +2971,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1601570/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1608070": {
@@ -2986,7 +2986,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1608070/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1620730": {
@@ -3001,7 +3001,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1620730/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:49+00:00",
+      "updatedAt": "2026-10-08T15:44:40+00:00",
       "status": "ok"
     },
     "1623730": {
@@ -3016,7 +3016,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1623730/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1627720": {
@@ -3031,7 +3031,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1627720/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1636440": {
@@ -3046,7 +3046,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1636440/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1643320": {
@@ -3061,7 +3061,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1643320/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1649240": {
@@ -3076,7 +3076,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1649240/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1659040": {
@@ -3091,7 +3091,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1659040/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1659420": {
@@ -3106,7 +3106,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1659420/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1663850": {
@@ -3121,7 +3121,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1663850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1675830": {
@@ -3136,7 +3136,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1675830/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1687950": {
@@ -3151,7 +3151,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1687950/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1693980": {
@@ -3166,7 +3166,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1693980/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1757350": {
@@ -3196,7 +3196,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1771300/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1774580": {
@@ -3211,7 +3211,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1774580/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1778820": {
@@ -3226,7 +3226,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1778820/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1790600": {
@@ -3241,7 +3241,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1790600/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1790930": {
@@ -3256,7 +3256,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1790930/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1796580": {
@@ -3271,7 +3271,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1796580/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1809540": {
@@ -3286,7 +3286,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1809540/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1817070": {
@@ -3301,7 +3301,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1817070/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:50+00:00",
+      "updatedAt": "2026-10-08T15:44:41+00:00",
       "status": "ok"
     },
     "1817190": {
@@ -3316,7 +3316,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1817190/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1817230": {
@@ -3331,7 +3331,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1817230/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1867530": {
@@ -3346,7 +3346,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1867530/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1868140": {
@@ -3361,7 +3361,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1868140/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1875830": {
@@ -3376,7 +3376,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1875830/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1888930": {
@@ -3391,7 +3391,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1888930/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1895880": {
@@ -3406,7 +3406,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1895880/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1934570": {
@@ -3421,7 +3421,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1934570/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1944430": {
@@ -3436,7 +3436,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1944430/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1971650": {
@@ -3451,7 +3451,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1971650/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "1973530": {
@@ -3481,7 +3481,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/1984270/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2000950": {
@@ -3496,7 +3496,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2000950/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2001120": {
@@ -3511,7 +3511,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2001120/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2017080": {
@@ -3526,7 +3526,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2017080/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2051120": {
@@ -3541,7 +3541,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2051120/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2089600": {
@@ -3556,7 +3556,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2089600/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2101960": {
@@ -3571,7 +3571,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2101960/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2108330": {
@@ -3601,7 +3601,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2111190/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:42+00:00",
       "status": "ok"
     },
     "2114740": {
@@ -3616,7 +3616,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2114740/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2124490": {
@@ -3631,7 +3631,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2124490/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2129530": {
@@ -3646,7 +3646,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2129530/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2131640": {
@@ -3661,7 +3661,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2131640/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2131650": {
@@ -3676,7 +3676,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2131650/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2138330": {
@@ -3691,7 +3691,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2138330/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2138720": {
@@ -3706,7 +3706,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2138720/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2141730": {
@@ -3721,7 +3721,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2141730/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2161700": {
@@ -3736,7 +3736,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2161700/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2171440": {
@@ -3751,7 +3751,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2171440/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2183900": {
@@ -3766,7 +3766,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2183900/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2195250": {
@@ -3796,7 +3796,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2208350/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2208920": {
@@ -3811,7 +3811,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2208920/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2215200": {
@@ -3826,7 +3826,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2215200/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2215430": {
@@ -3841,7 +3841,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2215430/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2254740": {
@@ -3856,7 +3856,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2254740/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2272250": {
@@ -3871,7 +3871,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2272250/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2277560": {
@@ -3886,7 +3886,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2277560/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:51+00:00",
+      "updatedAt": "2026-10-08T15:44:43+00:00",
       "status": "ok"
     },
     "2318330": {
@@ -3916,7 +3916,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2322010/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2344520": {
@@ -3931,7 +3931,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2344520/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2357570": {
@@ -3961,7 +3961,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2358720/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2379780": {
@@ -3976,7 +3976,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2379780/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2406770": {
@@ -3991,7 +3991,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2406770/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2407270": {
@@ -4006,7 +4006,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2407270/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2417610": {
@@ -4021,7 +4021,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2417610/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2461850": {
@@ -4036,7 +4036,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2461850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2464280": {
@@ -4051,7 +4051,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2464280/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2483190": {
@@ -4066,7 +4066,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2483190/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2486820": {
@@ -4081,7 +4081,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2486820/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2492660": {
@@ -4096,7 +4096,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2492660/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2492670": {
@@ -4111,7 +4111,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2492670/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2499860": {
@@ -4126,7 +4126,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2499860/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2523720": {
@@ -4141,7 +4141,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2523720/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2524850": {
@@ -4156,7 +4156,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2524850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2527390": {
@@ -4171,7 +4171,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2527390/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2536520": {
@@ -4186,7 +4186,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2536520/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:52+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2590240": {
@@ -4216,7 +4216,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2623190/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2625420": {
@@ -4231,7 +4231,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2625420/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2627260": {
@@ -4246,7 +4246,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2627260/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2638890": {
@@ -4261,7 +4261,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2638890/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2651280": {
@@ -4276,7 +4276,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2651280/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2668510": {
@@ -4291,7 +4291,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2668510/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2669320": {
@@ -4321,7 +4321,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2679460/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2680010": {
@@ -4336,7 +4336,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2680010/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2684630": {
@@ -4351,7 +4351,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2684630/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2701660": {
@@ -4366,7 +4366,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2701660/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2713000": {
@@ -4381,7 +4381,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2713000/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2725260": {
@@ -4396,7 +4396,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2725260/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2769570": {
@@ -4411,7 +4411,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2769570/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2799860": {
@@ -4426,7 +4426,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2799860/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2814990": {
@@ -4441,7 +4441,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2814990/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2825860": {
@@ -4456,7 +4456,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2825860/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2947440": {
@@ -4471,7 +4471,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2947440/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "2963950": {
@@ -4486,7 +4486,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/2963950/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "3008130": {
@@ -4501,7 +4501,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3008130/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:53+00:00",
+      "updatedAt": "2026-10-08T15:44:44+00:00",
       "status": "ok"
     },
     "3010850": {
@@ -4516,7 +4516,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3010850/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3014320": {
@@ -4531,7 +4531,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3014320/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3017860": {
@@ -4546,7 +4546,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3017860/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3036720": {
@@ -4576,7 +4576,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3059520/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3159330": {
@@ -4591,7 +4591,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3159330/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3180070": {
@@ -4606,7 +4606,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3180070/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3183480": {
@@ -4636,7 +4636,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3195440/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3199650": {
@@ -4651,7 +4651,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3199650/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3265700": {
@@ -4666,7 +4666,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3265700/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3280350": {
@@ -4681,7 +4681,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3280350/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3354750": {
@@ -4711,7 +4711,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3390880/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3405340": {
@@ -4726,7 +4726,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3405340/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3405690": {
@@ -4741,7 +4741,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3405690/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3489700": {
@@ -4756,7 +4756,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3489700/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3564740": {
@@ -4786,7 +4786,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3669870/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3681010": {
@@ -4801,7 +4801,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3681010/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:54+00:00",
+      "updatedAt": "2026-10-08T15:44:45+00:00",
       "status": "ok"
     },
     "3764200": {
@@ -4816,7 +4816,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3764200/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:55+00:00",
+      "updatedAt": "2026-10-08T15:44:46+00:00",
       "status": "ok"
     },
     "3768760": {
@@ -4831,7 +4831,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3768760/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:55+00:00",
+      "updatedAt": "2026-10-08T15:44:46+00:00",
       "status": "ok"
     },
     "3859630": {
@@ -4846,7 +4846,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3859630/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:55+00:00",
+      "updatedAt": "2026-10-08T15:44:46+00:00",
       "status": "ok"
     },
     "3920610": {
@@ -4861,7 +4861,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/3920610/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:55+00:00",
+      "updatedAt": "2026-10-08T15:44:46+00:00",
       "status": "ok"
     },
     "4249120": {
@@ -4876,7 +4876,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/4249120/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:55+00:00",
+      "updatedAt": "2026-10-08T15:44:46+00:00",
       "status": "ok"
     },
     "4384550": {
@@ -4891,7 +4891,7 @@
         "status": "available",
         "url": "https://store.steampowered.com/app/4384550/?cc=br"
       },
-      "updatedAt": "2026-10-08T07:37:55+00:00",
+      "updatedAt": "2026-10-08T15:44:46+00:00",
       "status": "ok"
     },
     "4824610": {
