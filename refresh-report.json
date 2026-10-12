@@ -1,123 +1,51 @@
 {
-  "generatedAt": "2026-10-11T16:01:56+00:00",
+  "generatedAt": "2026-10-12T19:27:00+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
     "hltb": 389,
     "metacritic": 404,
-    "steam": 327,
-    "proton": 319,
-    "deck": 327,
+    "steam": 330,
+    "proton": 323,
+    "deck": 330,
     "emulation": 22,
-    "steamPrice": 307
+    "steamPrice": 314
   },
   "errors": [
     {
-      "name": "Wuchang: Fallen Feathers",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
+      "name": "Human Fall Flat",
+      "provider": "metacritic",
+      "error": "Metacritic: produto ausente",
       "status": "stale"
     },
     {
-      "name": "A Bird Story",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
+      "name": "Mario + Rabbids Sparks of Hope",
+      "provider": "metacritic",
+      "error": "'data'",
       "status": "stale"
     },
     {
-      "name": "A Plague Tale: Innocence",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
+      "name": "Replaced",
+      "provider": "metacritic",
+      "error": "The read operation timed out",
       "status": "stale"
     },
     {
-      "name": "007 First Light",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
+      "name": "God of War: Ghost of Sparta",
+      "provider": "metacritic",
+      "error": "'data'",
       "status": "stale"
     },
     {
-      "name": "A Short Hike",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
+      "name": "Gears of War: E-Day",
+      "provider": "metacritic",
+      "error": "Metacritic: produto ausente",
       "status": "stale"
     },
     {
-      "name": "AI Limit",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Metro 2033 Redux",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "My Friend Pedro",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Neon White",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Neverway",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Ni No Kuni II: Revenant Kingdom",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Nier Automata",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Cult of the Lamb",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Digimon Story: Time Stranger",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Final Fantasy VII Remake Intergrade",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Hitman: World of Assassination",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Lies of P",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Megabonk",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
+      "name": "Half-Life: Alyx",
+      "provider": "metacritic",
+      "error": "The read operation timed out",
       "status": "stale"
     }
   ]
