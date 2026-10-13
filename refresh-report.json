@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T19:27:00+00:00",
+  "generatedAt": "2026-10-13T16:59:29+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -11,42 +11,5 @@
     "emulation": 22,
     "steamPrice": 314
   },
-  "errors": [
-    {
-      "name": "Human Fall Flat",
-      "provider": "metacritic",
-      "error": "Metacritic: produto ausente",
-      "status": "stale"
-    },
-    {
-      "name": "Mario + Rabbids Sparks of Hope",
-      "provider": "metacritic",
-      "error": "'data'",
-      "status": "stale"
-    },
-    {
-      "name": "Replaced",
-      "provider": "metacritic",
-      "error": "The read operation timed out",
-      "status": "stale"
-    },
-    {
-      "name": "God of War: Ghost of Sparta",
-      "provider": "metacritic",
-      "error": "'data'",
-      "status": "stale"
-    },
-    {
-      "name": "Gears of War: E-Day",
-      "provider": "metacritic",
-      "error": "Metacritic: produto ausente",
-      "status": "stale"
-    },
-    {
-      "name": "Half-Life: Alyx",
-      "provider": "metacritic",
-      "error": "The read operation timed out",
-      "status": "stale"
-    }
-  ]
+  "errors": []
 }
