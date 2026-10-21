@@ -1,21 +1,232 @@
 {
-  "attemptedAt": "2026-10-21T08:40:49+00:00",
+  "attemptedAt": "2026-10-21T09:48:06+00:00",
   "allFailed": false,
   "skipped": false,
   "stats": {
     "apps": 331,
     "selected": 331,
     "requested": 331,
-    "refreshed": 304,
-    "reused": 27,
+    "refreshed": 289,
+    "reused": 0,
     "batchRequests": 17,
-    "detailRequests": 0,
+    "detailRequests": 25,
     "available": 304,
     "free": 11,
     "unavailable": 10,
     "coming_soon": 6,
-    "stale": 0,
+    "stale": 42,
     "error": 0
   },
-  "errors": []
+  "errors": [
+    {
+      "appid": 1675830,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1693980,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1850570,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1620730,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1817230,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1771300,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 2017080,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1809540,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1623730,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1687950,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1895880,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1663850,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1649240,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1934570,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1817070,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1817190,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1774580,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1888930,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1659420,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1944430,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 2000950,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1790930,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 2101960,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1868140,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1422450,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1790600,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1757350,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1973530,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1971650,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1643320,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1875830,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1636440,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1867530,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1796580,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 2001120,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 2089600,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1172470,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 2051120,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1778820,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1984270,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1659040,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "appid": 1627720,
+      "status": "stale",
+      "error": "HTTP Error 429: Too Many Requests"
+    }
+  ]
 }
