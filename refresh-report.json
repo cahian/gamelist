@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T09:47:00+00:00",
+  "generatedAt": "2026-10-22T09:48:37+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -13,13 +13,115 @@
   },
   "errors": [
     {
-      "name": "Oxenfree",
+      "name": "Wolfenstein: The Old Blood",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Wolfenstein: Youngblood",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Wuchang: Fallen Feathers",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "A Plague Tale: Innocence",
       "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Overcooked",
+      "name": "Control: Resonant",
+      "provider": "metacritic",
+      "error": "'data'",
+      "status": "stale"
+    },
+    {
+      "name": "Life is Strange",
+      "provider": "metacritic",
+      "error": "'data'",
+      "status": "stale"
+    },
+    {
+      "name": "Metro Exodus",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro: Last Light Redux",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Neverway",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Neon White",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "My Friend Pedro",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Ni No Kuni II: Revenant Kingdom",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Stellar Blade",
+      "provider": "metacritic",
+      "error": "Metacritic: produto ausente",
+      "status": "stale"
+    },
+    {
+      "name": "Unpacking",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Bendy and the Ink Machine",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Warframe",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Black Myth: Wukong",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Digimon Story: Time Stranger",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Cult of the Lamb",
       "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
