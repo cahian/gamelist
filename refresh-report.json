@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T09:48:37+00:00",
+  "generatedAt": "2026-10-23T09:40:58+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -13,116 +13,74 @@
   },
   "errors": [
     {
-      "name": "Wolfenstein: The Old Blood",
+      "name": "Dark Souls III",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Wolfenstein: Youngblood",
+      "name": "Dark Souls Remastered",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Wuchang: Fallen Feathers",
+      "name": "Dave the Diver",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "A Plague Tale: Innocence",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Control: Resonant",
-      "provider": "metacritic",
-      "error": "'data'",
-      "status": "stale"
-    },
-    {
-      "name": "Life is Strange",
-      "provider": "metacritic",
-      "error": "'data'",
-      "status": "stale"
-    },
-    {
-      "name": "Metro Exodus",
+      "name": "Dead Rising 2",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Metro: Last Light Redux",
+      "name": "Dead Rising Deluxe Remaster",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Neverway",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Neon White",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "My Friend Pedro",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Ni No Kuni II: Revenant Kingdom",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Stellar Blade",
-      "provider": "metacritic",
-      "error": "Metacritic: produto ausente",
-      "status": "stale"
-    },
-    {
-      "name": "Unpacking",
+      "name": "Deadlock",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Bendy and the Ink Machine",
+      "name": "Death Stranding 2: On the Beach",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Warframe",
+      "name": "Death's Door",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Black Myth: Wukong",
+      "name": "Deus Ex: Human Revolution",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Digimon Story: Time Stranger",
-      "provider": "steam",
+      "name": "Deus Ex: Mankind Divided",
+      "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Cult of the Lamb",
-      "provider": "steam",
+      "name": "Devil May Cry HD Collection",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Disney Epic Mickey: Rebrushed",
+      "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     }
