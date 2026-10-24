@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T09:40:58+00:00",
+  "generatedAt": "2026-10-24T09:41:32+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -12,6 +12,24 @@
     "steamPrice": 315
   },
   "errors": [
+    {
+      "name": "Cyberpunk 2077",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Cyberpunk 2077: Phantom Liberty",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Dark Souls II: Scholar of the First Sin",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
     {
       "name": "Dark Souls III",
       "provider": "steamPrice",
@@ -26,61 +44,37 @@
     },
     {
       "name": "Dave the Diver",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Dave the Diver",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
       "name": "Dead Rising 2",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Dead Rising Deluxe Remaster",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Deadlock",
-      "provider": "steamPrice",
+      "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
       "name": "Death Stranding 2: On the Beach",
-      "provider": "steamPrice",
+      "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Death's Door",
-      "provider": "steamPrice",
+      "name": "Dead Rising Deluxe Remaster",
+      "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Deus Ex: Human Revolution",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Deus Ex: Mankind Divided",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Devil May Cry HD Collection",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Disney Epic Mickey: Rebrushed",
-      "provider": "steamPrice",
+      "name": "Deadlock",
+      "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     }
