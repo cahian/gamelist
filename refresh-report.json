@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T09:41:32+00:00",
+  "generatedAt": "2026-10-25T09:44:11+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -13,67 +13,115 @@
   },
   "errors": [
     {
-      "name": "Cyberpunk 2077",
+      "name": "Rematch",
+      "provider": "metacritic",
+      "error": "'data'",
+      "status": "stale"
+    },
+    {
+      "name": "Wuchang: Fallen Feathers",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Cyberpunk 2077: Phantom Liberty",
+      "name": "Wolfenstein: Youngblood",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Dark Souls II: Scholar of the First Sin",
+      "name": "A Bird Story",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Dark Souls III",
+      "name": "A Plague Tale: Innocence",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Dark Souls Remastered",
+      "name": "007 First Light",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Dave the Diver",
+      "name": "Call of Duty: Modern Warfare",
+      "provider": "metacritic",
+      "error": "'data'",
+      "status": "stale"
+    },
+    {
+      "name": "Fatal Frame II: Crimson Butterfly Remake",
+      "provider": "metacritic",
+      "error": "'data'",
+      "status": "stale"
+    },
+    {
+      "name": "My Friend Pedro",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Neverway",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro: Last Light Redux",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Neon White",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Ni No Kuni II: Revenant Kingdom",
       "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Dave the Diver",
+      "name": "Bendy and the Ink Machine",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Dead Rising 2",
+      "name": "Black Myth: Wukong",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Cult of the Lamb",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Digimon Story: Time Stranger",
       "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Death Stranding 2: On the Beach",
+      "name": "Hitman: World of Assassination",
       "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Dead Rising Deluxe Remaster",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Deadlock",
+      "name": "Final Fantasy VII Remake Intergrade",
       "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
