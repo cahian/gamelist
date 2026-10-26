@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T09:44:11+00:00",
+  "generatedAt": "2026-10-26T10:00:32+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -13,117 +13,153 @@
   },
   "errors": [
     {
-      "name": "Rematch",
+      "name": "Metroid Prime: Remastered",
       "provider": "metacritic",
       "error": "'data'",
       "status": "stale"
     },
     {
-      "name": "Wuchang: Fallen Feathers",
+      "name": "Where Winds Meet",
       "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Wo Long: Fallen Dynasty",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Wolfenstein: The New Order",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Wuchang: Fallen Feathers",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Wolfenstein: The Old Blood",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Warhammer 40,000: Space Marine II",
+      "provider": "steam",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
       "name": "Wolfenstein: Youngblood",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Dead Rising 2",
+      "provider": "metacritic",
+      "error": "The read operation timed out",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid V: The Phantom Pain",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "A Bird Story",
+      "name": "Metal Gear Solid: Master Collection Vol. 2",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "A Plague Tale: Innocence",
+      "name": "Metal Gear Solid: Peace Walker",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "007 First Light",
+      "name": "Metro 2039",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Call of Duty: Modern Warfare",
+      "name": "Metaphor: ReFantazio",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro 2033 Redux",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Resident Evil Revelations",
       "provider": "metacritic",
       "error": "'data'",
       "status": "stale"
     },
     {
-      "name": "Fatal Frame II: Crimson Butterfly Remake",
+      "name": "Rain World",
+      "provider": "metacritic",
+      "error": "The read operation timed out",
+      "status": "stale"
+    },
+    {
+      "name": "Persona 3: Reload",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Sekiro: Shadows Die Twice",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "F1 23",
+      "provider": "metacritic",
+      "error": "The read operation timed out",
+      "status": "stale"
+    },
+    {
+      "name": "F1 23",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Party Animals",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Shadow Warrior 3: Definitive Edition",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Slapshot: Rebound",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Yakuza: Like a Dragon",
       "provider": "metacritic",
       "error": "'data'",
-      "status": "stale"
-    },
-    {
-      "name": "My Friend Pedro",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Neverway",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Metro: Last Light Redux",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Neon White",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Ni No Kuni II: Revenant Kingdom",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Bendy and the Ink Machine",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Black Myth: Wukong",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Cult of the Lamb",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Digimon Story: Time Stranger",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Hitman: World of Assassination",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Final Fantasy VII Remake Intergrade",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     }
   ]
