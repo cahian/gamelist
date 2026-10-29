@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T09:45:28+00:00",
+  "generatedAt": "2026-10-29T09:32:27+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -11,5 +11,186 @@
     "emulation": 22,
     "steamPrice": 314
   },
-  "errors": []
+  "errors": [
+    {
+      "name": "Life is Strange",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Limbus Company",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Mafia: Definitive Edition",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Mega Man 11",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid 2: Sons of Liberty",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid 3: Snake Eater",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid 4: Guns of the Patriots",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid Delta: Snake Eater",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid V: Ground Zeroes",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid V: The Phantom Pain",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid: Master Collection Vol. 2",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metal Gear Solid: Peace Walker",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metaphor: ReFantazio",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro 2039",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro Exodus",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro: Last Light Redux",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "My Friend Pedro",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Neon White",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro 2033 Redux",
+      "provider": "steam",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Metro 2033 Redux",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Neverway",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Ni No Kuni II: Revenant Kingdom",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Nier Automata",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Nier Replicant ver.1.22474487139...",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Nioh",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Nioh 2",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Nioh 3",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "No, I'm Not a Human",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Octopath Traveler",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    }
+  ]
 }
