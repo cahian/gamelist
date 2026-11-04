@@ -36,6 +36,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          # Run na fila do concurrency precisa partir da ponta da branch, não do SHA do evento.
+          ref: ${{ github.ref }}
       - name: Escolher atualização
         id: mode
         env:
