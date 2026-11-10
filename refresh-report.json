@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T09:41:27+00:00",
+  "generatedAt": "2026-11-10T09:30:06+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
@@ -13,110 +13,254 @@
   },
   "errors": [
     {
-      "name": "Wolfenstein: The Old Blood",
+      "name": "Slay the Spire",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Wolfenstein: Youngblood",
+      "name": "Sleeping Dogs",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Wuchang: Fallen Feathers",
+      "name": "Solar Ash",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "007 First Light",
+      "name": "SOMA",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "A Plague Tale: Innocence",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "A Bird Story",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Metro 2039",
+      "name": "Sorry We're Closed",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Metro Exodus",
+      "name": "Spec Ops: The Line",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Metro: Last Light Redux",
+      "name": "Spiritfarer",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Neon White",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Neverway",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "My Friend Pedro",
-      "provider": "steam",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    },
-    {
-      "name": "Unpacking",
+      "name": "Split Fiction",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Warframe",
+      "name": "Spooky's Jump Scare Mansion",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Bendy and the Ink Machine",
+      "name": "Stardew Valley",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Black Myth: Wukong",
+      "name": "State of Decay",
       "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Cult of the Lamb",
-      "provider": "steam",
+      "name": "Stellar Blade",
+      "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     },
     {
-      "name": "Digimon Story: Time Stranger",
-      "provider": "steam",
+      "name": "Stray",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "System Shock [2023]",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Tainted Grail: The Fall of Avalon",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "The Binding of Isaac: Rebirth",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "The First Berserker: Khazan",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "The Outlast Trials",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "The Sinking City 2",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "The Walking Dead: The Telltale Definitive Series",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "The Witcher 3: Wild Hunt",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "The Witness",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Tomb Raider",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Tormented Souls",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Tormented Souls II",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Toy Tinker Simulator",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Ultrakill",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Undertale",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Untitled Goose Game",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Urban Myth Dissolution Center",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Welcome to Elderfield",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Wolfenstein 2: The New Colossus",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Yakuza 0",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Celeste",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "God of War [2005]",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Animal Well",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Apex Legends",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Bloodstained: Ritual of the Night",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Bomb Rush Cyberfunk",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Cuphead",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "EA Sports FC 24",
+      "provider": "steamPrice",
+      "error": "HTTP Error 429: Too Many Requests",
+      "status": "stale"
+    },
+    {
+      "name": "Elden Ring",
+      "provider": "steamPrice",
       "error": "HTTP Error 429: Too Many Requests",
       "status": "stale"
     }
