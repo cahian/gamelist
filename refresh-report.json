@@ -1,22 +1,15 @@
 {
-  "generatedAt": "2026-11-11T09:38:17+00:00",
+  "generatedAt": "2026-11-12T09:33:48+00:00",
   "games": 407,
   "refreshed": 407,
   "coverage": {
     "hltb": 389,
     "metacritic": 404,
-    "steam": 330,
-    "proton": 322,
-    "deck": 330,
+    "steam": 331,
+    "proton": 323,
+    "deck": 331,
     "emulation": 22,
     "steamPrice": 314
   },
-  "errors": [
-    {
-      "name": "Yakuza: Like a Dragon",
-      "provider": "steamPrice",
-      "error": "HTTP Error 429: Too Many Requests",
-      "status": "stale"
-    }
-  ]
+  "errors": []
 }
