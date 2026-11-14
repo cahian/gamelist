@@ -121,7 +121,7 @@ jobs:
       - name: Preparar página
         run: |
           mkdir -p public
-          cp index.html app.js data.js prices.json prices.js price-refresh.js rotation.js rotation-ui.js rotation.css public/
+          cp index.html app.js data.js prices.json prices.js price-refresh.js rotation.js rotation-ui.js rotation.css consoles.html consoles-data.js public/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
