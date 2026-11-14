@@ -93,7 +93,7 @@ let tab=1;try{tab=+localStorage.getItem("ow-tab")||1}catch(e){}
 function card(g,i){
  const badge=g.col==1?(g.native?"S2":"S1→S2"):(g.critic?g.critic:"");
  const recs=g.col==4&&g.rec?`<div class="recs">${g.rec.slice(0,2).map((r,k)=>`<span class="rec ${k?"":"r1"}">${k+1}º ${esc(r.replace(" / Steam Machine",""))}</span>`).join("")}</div>`:"";
- const sub=g.col==1?(g.list||""):(g.dfps&&g.col!=4?esc(g.dfps):esc(g.list||""));
+ const sub=g.col==1?esc(g.list||""):g.col==2?esc(g.dfps||g.list||""):g.col==3?"Ally X: "+esc(g.ally||"30+"):esc(g.list||"");
  return `<button class="card" data-i="${i}" aria-label="${esc(g.name)}"><div class="box">${badge?`<span class="badge">${esc(badge)}</span>`:""}${g.cover?`<img loading="lazy" src="${esc(g.cover)}" alt="" onerror="this.remove()">`:""}<div class="ph">${g.cover?"":esc(g.name)}</div></div><div class="t">${esc(g.name)}</div><div class="m">${sub}</div>${recs}</button>`;
 }
 function render(){
@@ -111,7 +111,7 @@ function open(i){
  const g=GAMES[i],c=COLS[g.col-1];
  const where=g.col==1?(g.native?"Switch 2 — versão nativa":"Switch 2 — retrocompatível (versão de Switch 1)"):c.h;
  const kv=[["Lista",g.list],["Ano",g.year],["Crítica / usuários",(g.critic||"—")+" / "+(g.user||"—")],["Campanha",hrs(g.main)],["+ extras",hrs(g.extras)],["100%",hrs(g.complete)],
-  g.dfps?["Steam Deck",(g.dg?"nota "+g.dg+" · ":"")+g.dfps]:null,g.dset?["Ajustes",g.dset]:null,g.proton?["ProtonDB",g.proton]:null,
+  g.ally?["Ally X",g.ally]:null,g.dfps?["Steam Deck",(g.dg?"nota "+g.dg+" · ":"")+g.dfps]:null,g.dset?["Ajustes",g.dset]:null,g.proton?["ProtonDB",g.proton]:null,
   g.price?["Steam BR","R$ "+(g.price.f/100).toFixed(2).replace(".",",")+(g.price.d?` (-${g.price.d}%)`:"")]:null,
   g.plats&&g.plats.length?["Plataformas",g.plats.join(", ")]:null].filter(x=>x&&x[1]!=null&&x[1]!=="");
  const why=[g.note,g.why,g.dnote].filter(Boolean);
