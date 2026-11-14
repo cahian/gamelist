@@ -28,6 +28,16 @@ main{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding
 .colh h2{margin:2px 0 2px;font-size:16px;font-weight:800}
 .colh .d{color:var(--mut);font-size:12px}
 .colh .n{float:right;font:800 20px Inter;color:var(--cc)}
+.cc{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.cc select,.cc button{font:600 11px Inter;padding:5px 6px;border-radius:6px;min-width:0;width:100%}
+.cc .row{display:flex;gap:6px;min-width:0}.cc .row select{flex:1}.cc .row button{width:30px;flex:none;padding:5px 0}
+.cc button{background:var(--panel2);color:var(--txt);border:1px solid var(--line);cursor:pointer}
+.cc .rst{grid-column:1/-1;background:none;border:0;color:var(--mut);text-align:left;padding:0;font-weight:500;display:none;cursor:pointer;text-decoration:underline}
+.cc .rst.on{display:block}
+.cc select.ov{border-color:var(--cc)}
+.gbtn{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:inherit;cursor:pointer}
+.chk{display:flex;align-items:center;gap:5px;color:var(--mut);font-size:13px;white-space:nowrap}
+.chk input{width:auto;margin:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px;padding:12px}
 .card{cursor:pointer;position:relative;border:0;padding:0;background:none;color:inherit;text-align:left;font:inherit}
 .box{aspect-ratio:.71;border-radius:6px;overflow:hidden;background:var(--panel2);position:relative;box-shadow:0 2px 0 rgba(255,255,255,.04) inset,0 6px 14px rgba(0,0,0,.45);transition:transform .15s}
@@ -38,7 +48,10 @@ main{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding
 .card:focus-visible{outline:2px solid var(--cc);outline-offset:3px;border-radius:6px}
 .t{font-size:11.5px;font-weight:600;margin-top:5px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .m{font-size:10.5px;color:var(--mut);margin-top:1px}
-.badge{position:absolute;z-index:3;top:13px;right:4px;font:800 9.5px Inter;padding:2px 5px;border-radius:4px;background:rgba(0,0,0,.75);color:#fff}
+.badge{position:absolute;z-index:3;top:13px;right:4px;font:800 9.5px Inter;padding:2px 5px;border-radius:4px;background:rgba(0,0,0,.75);color:#fff;font-variant-numeric:tabular-nums}
+.badge.s2{right:auto;left:4px}
+.sc-g{background:var(--ok);color:#04271a}.sc-y{background:#f2cf3a;color:#2a2000}.sc-o{background:#fb923c;color:#2b1100}.sc-r{background:var(--bad);color:#2d0707}.sc-n{background:rgba(52,57,74,.92);color:var(--mut)}
+.t-g{color:var(--ok)}.t-y{color:#f2cf3a}.t-o{color:#fb923c}.t-r{color:var(--bad)}.t-n{color:var(--mut)}
 .recs{display:flex;gap:3px;flex-wrap:wrap;margin-top:3px}
 .rec{font:700 9.5px Inter;padding:1px 5px;border-radius:4px;background:#2a2f40;color:#cfd5e6;white-space:nowrap}
 .rec.r1{background:var(--c4);color:#1a1100}
@@ -52,6 +65,11 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
 .chip{font:600 11.5px Inter;padding:3px 8px;border-radius:999px;background:var(--panel2);border:1px solid var(--line)}
 .kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px;margin-top:6px}
 .kv b{color:var(--mut);font-weight:600}
+.scores{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:10px 0 4px}
+.sct{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:6px 8px;color:inherit;text-decoration:none;display:block;min-width:0}
+a.sct:hover{border-color:var(--cc)}
+.sct .v{font:800 20px Inter;line-height:1.15;font-variant-numeric:tabular-nums}.sct .v small{font:600 11px Inter;color:var(--mut)}
+.sct .l{font:600 10.5px Inter;color:var(--mut);line-height:1.25}
 .why{background:var(--panel2);border-radius:10px;padding:10px 12px;margin:0 18px 12px;font-size:13px}
 .links{padding:0 18px 18px;display:flex;gap:12px;flex-wrap:wrap;font-size:13px}
 .x{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--mut);font-size:22px;cursor:pointer}
@@ -59,8 +77,10 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
 @media (max-width:700px){
  .tabs{display:flex}main{grid-template-columns:1fr;padding:12px 16px}
  .col{display:none}.col.on{display:flex}
- input{width:100%}.ctrl{margin-left:0;width:100%}.ctrl select{flex:1}
+ input{width:100%}.ctrl{margin-left:0;width:100%}.ctrl select{flex:1 1 150px;min-width:0}
  .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .ctrl .gbtn{flex:none}.ctrl #min{flex:1 1 90px}.chk{flex:none;font-size:12px}
+ .scores{grid-template-columns:repeat(2,minmax(0,1fr))}
  .dl{flex-direction:column}.dl .box{width:130px}
 }
 </style>
@@ -72,7 +92,10 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
   <div class="ctrl">
    <input id="q" type="search" placeholder="Buscar jogo…" aria-label="Buscar jogo">
    <select id="lst" aria-label="Lista"><option value="">Todas as listas</option></select>
-   <select id="ord" aria-label="Ordenar"><option value="critic">Nota da crítica</option><option value="name">Nome A–Z</option><option value="main">Mais curtos</option><option value="year">Mais recentes</option></select>
+   <select id="ord" aria-label="Ordenar"></select>
+   <button id="dir" class="gbtn" type="button" aria-label="Inverter ordem" title="Inverter ordem"></button>
+   <select id="min" aria-label="Média mínima"><option value="0">Média: todas</option><option value="70">Média ≥ 70</option><option value="75">Média ≥ 75</option><option value="80">Média ≥ 80</option><option value="85">Média ≥ 85</option><option value="90">Média ≥ 90</option></select>
+   <label class="chk"><input id="only" type="checkbox"> só com nota</label>
   </div>
  </div>
  <div class="tabs" id="tabs"></div>
@@ -90,27 +113,69 @@ const $=s=>document.querySelector(s);const esc=s=>String(s??"").replace(/[&<>"]/
 const lists=[...new Set(GAMES.map(g=>g.list).filter(Boolean))].sort();
 lists.forEach(l=>$("#lst").insertAdjacentHTML("beforeend",`<option>${esc(l)}</option>`));
 let tab=1;try{tab=+localStorage.getItem("ow-tab")||1}catch(e){}
+const KEYS={avg:{l:"Média (padrão)",d:"desc",v:g=>g.avg},mcc:{l:"Metacritic crítica",d:"desc",v:g=>g.mcc},mcu:{l:"Metacritic usuário",d:"desc",v:g=>g.mcu},oc:{l:"OpenCritic",d:"desc",v:g=>g.oc},name:{l:"Nome",d:"asc"},main:{l:"Duração (main)",d:"asc",v:g=>g.main},year:{l:"Ano",d:"desc",v:g=>g.year}};
+const MINS=[70,75,80,85,90];
+let P={ord:"avg",dir:"desc",min:0,only:false,lst:"",cols:{}};
+try{const x=JSON.parse(localStorage.getItem("ow-prefs")||"{}");if(x&&typeof x=="object")P={...P,...x}}catch(e){}
+if(!KEYS[P.ord])P.ord="avg";if(P.dir!="asc"&&P.dir!="desc")P.dir=KEYS[P.ord].d;if(!P.cols||typeof P.cols!="object")P.cols={};
+const save=()=>{try{localStorage.setItem("ow-prefs",JSON.stringify(P))}catch(e){}};
+const sc=v=>v==null?"n":v>=85?"g":v>=75?"y":v>=60?"o":"r";
+const fm=(v,d)=>v==null?"—":(d==null&&Number.isInteger(v)?String(v):v.toFixed(d==null?1:d)).replace(".",",");
+const kopt=(first)=>(first?`<option value="">${first}</option>`:"")+Object.entries(KEYS).map(([k,v])=>`<option value="${k}">${v.l}</option>`).join("");
+$("#ord").innerHTML=kopt();
+function eff(c){const o=P.cols[c.id]||{};const ord=o.ord||P.ord;
+ return {ord,dir:o.dir||(o.ord?KEYS[o.ord].d:P.dir),min:o.min!=null&&o.min!==""?+o.min:P.min,only:o.only==null||o.only===""?P.only:o.only=="1"}}
+function cmp(ord,dir){const k=KEYS[ord],sg=dir=="asc"?1:-1;
+ return (a,b)=>{const A=a[0],B=b[0];const va=ord=="name"?A.name:k.v(A),vb=ord=="name"?B.name:k.v(B);
+  const byName=A.name.localeCompare(B.name,"pt-BR");
+  if(ord=="name")return sg*byName;
+  if(va==null&&vb==null)return byName;if(va==null)return 1;if(vb==null)return -1;
+  return va==vb?byName:sg*(va-vb)}}
+function colCtl(c){return `<div class="cc" data-c="${c.id}"><div class="row"><select data-k="ord" aria-label="Ordenar ${esc(c.h)}">${kopt("Ordem global")}</select><button type="button" data-k="dir" aria-label="Inverter ordem ${esc(c.h)}" title="Inverter ordem"></button></div>
+ <select data-k="min" aria-label="Média mínima ${esc(c.h)}"><option value="">Mín.: global</option><option value="0">Média: todas</option>${MINS.map(m=>`<option value="${m}">Média ≥ ${m}</option>`).join("")}</select>
+ <select data-k="only" aria-label="Só com nota ${esc(c.h)}"><option value="">Nota: global</option><option value="1">Só com nota</option><option value="0">Com e sem nota</option></select>
+ <button type="button" class="rst" data-k="rst">Redefinir esta coluna</button></div>`}
+function build(){
+ $("#main").innerHTML=COLS.map(c=>`<section class="col" data-id="${c.id}" style="--cc:${c.c}"><div class="colh"><span class="n"></span><div class="p">${c.p}</div><h2>${c.h}</h2><div class="d">${c.d}</div>${colCtl(c)}</div><div class="grid"></div></section>`).join("");
+}
 function card(g,i){
- const badge=g.col==1?(g.native?"S2":"S1→S2"):(g.critic?g.critic:"");
+ const s2=g.col==1?(g.native?"S2":"S1→S2"):"";
+ const tip=g.avg==null?"Sem nota":`Média ${fm(g.avg)} (${g.nsc} de 3 fontes) · MC ${fm(g.mcc)} · usuários ${fm(g.mcu)} · OC ${fm(g.oc)}`;
  const recs=g.col==4&&g.rec?`<div class="recs">${g.rec.slice(0,2).map((r,k)=>`<span class="rec ${k?"":"r1"}">${k+1}º ${esc(r.replace(" / Steam Machine",""))}</span>`).join("")}</div>`:"";
  const sub=g.col==1?esc(g.list||""):g.col==2?esc(g.dfps||g.list||""):g.col==3?"Ally X: "+esc(g.ally||"30+"):esc(g.list||"");
- return `<button class="card" data-i="${i}" aria-label="${esc(g.name)}"><div class="box">${badge?`<span class="badge">${esc(badge)}</span>`:""}${g.cover?`<img loading="lazy" src="${esc(g.cover)}" alt="" onerror="this.remove()">`:""}<div class="ph">${g.cover?"":esc(g.name)}</div></div><div class="t">${esc(g.name)}</div><div class="m">${sub}</div>${recs}</button>`;
+ return `<button class="card" data-i="${i}" aria-label="${esc(g.name)}"><div class="box">${s2?`<span class="badge s2">${s2}</span>`:""}<span class="badge sc-${sc(g.avg)}" title="${esc(tip)}">${g.avg==null?"—":fm(g.avg)}</span>${g.cover?`<img loading="lazy" src="${esc(g.cover)}" alt="" onerror="this.remove()">`:""}<div class="ph">${g.cover?"":esc(g.name)}</div></div><div class="t">${esc(g.name)}</div><div class="m">${sub}</div>${recs}</button>`;
 }
+const arrow=d=>d=="asc"?"↑":"↓";
 function render(){
- const q=$("#q").value.trim().toLowerCase(),l=$("#lst").value,o=$("#ord").value;
+ const q=$("#q").value.trim().toLowerCase(),l=$("#lst").value;
+ P.lst=l;
  const f=GAMES.map((g,i)=>[g,i]).filter(([g])=>(!q||g.name.toLowerCase().includes(q))&&(!l||g.list==l));
- const s={critic:(a,b)=>(b[0].critic||0)-(a[0].critic||0),name:(a,b)=>a[0].name.localeCompare(b[0].name),main:(a,b)=>(a[0].main||999)-(b[0].main||999),year:(a,b)=>(b[0].year||0)-(a[0].year||0)}[o];
- f.sort(s);
- $("#tot").textContent=f.length+" jogos";
- $("#main").innerHTML=COLS.map(c=>{const gs=f.filter(([g])=>g.col==c.id);
-  return `<section class="col ${tab==c.id?"on":""}" style="--cc:${c.c}"><div class="colh"><span class="n">${gs.length}</span><div class="p">${c.p}</div><h2>${c.h}</h2><div class="d">${c.d}</div></div><div class="grid">${gs.map(([g,i])=>card(g,i)).join("")||'<div class="empty">Nenhum jogo</div>'}</div></section>`}).join("");
- $("#tabs").innerHTML=COLS.map(c=>{const n=f.filter(([g])=>g.col==c.id).length;return `<button class="${tab==c.id?"on":""}" style="color:${c.c}" data-t="${c.id}">${c.s}<br>${n}</button>`}).join("");
+ $("#ord").value=P.ord;$("#dir").textContent=arrow(P.dir)+(P.dir=="asc"?" Cresc.":" Decr.");$("#min").value=String(P.min);$("#only").checked=!!P.only;
+ let total=0;const counts={};
+ COLS.forEach(c=>{const e=eff(c),o=P.cols[c.id]||{};
+  const gs=f.filter(([g])=>g.col==c.id&&(!e.only||g.avg!=null)&&(!e.min||(g.avg!=null&&g.avg>=e.min))).sort(cmp(e.ord,e.dir));
+  total+=gs.length;counts[c.id]=gs.length;
+  const sec=document.querySelector(`.col[data-id="${c.id}"]`);
+  sec.classList.toggle("on",tab==c.id);
+  sec.querySelector(".n").textContent=gs.length;
+  sec.querySelector(".grid").innerHTML=gs.map(([g,i])=>card(g,i)).join("")||'<div class="empty">Nenhum jogo</div>';
+  const cc=sec.querySelector(".cc");
+  [["ord",o.ord||""],["min",o.min==null?"":String(o.min)],["only",o.only==null?"":String(o.only)]].forEach(([k,v])=>{const el=cc.querySelector(`[data-k="${k}"]`);el.value=v;el.classList.toggle("ov",v!=="")});
+  const db=cc.querySelector('[data-k="dir"]');db.textContent=arrow(e.dir);db.title=e.dir=="asc"?"Crescente (clique para inverter)":"Decrescente (clique para inverter)";
+  cc.querySelector(".rst").classList.toggle("on",!!(o.ord||o.dir||(o.min!=null&&o.min!=="")||o.only!=null&&o.only!==""));
+ });
+ $("#tot").textContent=total+" jogos";
+ $("#tabs").innerHTML=COLS.map(c=>`<button class="${tab==c.id?"on":""}" style="color:${c.c}" data-t="${c.id}">${c.s}<br>${counts[c.id]}</button>`).join("");
+ save();
 }
 const hrs=h=>h?(h<1?Math.round(h*60)+" min":h.toFixed(h<10?1:0).replace(".",",")+" h"):"—";
+function scTile(label,txt,unit,val,sub,url){
+ const inner=`<div class="v t-${sc(val)}">${txt==null?"—":esc(txt)}${txt==null||!unit?"":`<small>${unit}</small>`}</div><div class="l">${esc(label)}${sub?"<br>"+esc(sub):""}</div>`;
+ return url?`<a class="sct" href="${esc(url)}" target="_blank" rel="noopener">${inner}</a>`:`<div class="sct">${inner}</div>`}
 function open(i){
  const g=GAMES[i],c=COLS[g.col-1];
  const where=g.col==1?(g.native?"Switch 2 — versão nativa":"Switch 2 — retrocompatível (versão de Switch 1)"):c.h;
- const kv=[["Lista",g.list],["Ano",g.year],["Crítica / usuários",(g.critic||"—")+" / "+(g.user||"—")],["Campanha",hrs(g.main)],["+ extras",hrs(g.extras)],["100%",hrs(g.complete)],
+ const kv=[["Lista",g.list],["Ano",g.year],["Campanha",hrs(g.main)],["+ extras",hrs(g.extras)],["100%",hrs(g.complete)],
   g.ally?["Ally X",g.ally]:null,g.dfps?["Steam Deck",(g.dg?"nota "+g.dg+" · ":"")+g.dfps]:null,g.dset?["Ajustes",g.dset]:null,g.proton?["ProtonDB",g.proton]:null,
   g.price?["Steam BR","R$ "+(g.price.f/100).toFixed(2).replace(".",",")+(g.price.d?` (-${g.price.d}%)`:"")]:null,
   g.plats&&g.plats.length?["Plataformas",g.plats.join(", ")]:null].filter(x=>x&&x[1]!=null&&x[1]!=="");
@@ -119,16 +184,35 @@ function open(i){
  <div class="dl" style="--cc:${c.c}"><div class="box">${g.cover?`<img src="${esc(g.cover)}" alt="">`:`<div class="ph">${esc(g.name)}</div>`}</div>
  <div><div style="color:${c.c};font:800 11px Inter;letter-spacing:.08em;text-transform:uppercase">${c.p}</div><h3>${esc(g.name)}</h3>
  <div class="chips"><span class="chip">${esc(where)}</span>${g.rec?g.rec.map((r,k)=>`<span class="chip" style="${k?"":"background:var(--c4);color:#1a1100;border-color:var(--c4)"}">${k+1}º ${esc(r)}</span>`).join(""):""}</div>
+ <div class="scores">${scTile("Média",g.avg==null?null:fm(g.avg),"",g.avg,g.avg==null?"":`${g.nsc} de 3 fontes`)}${scTile("Metacritic crítica",g.mcc==null?null:g.mcc,"/100",g.mcc,"",g.mc)}${scTile("Metacritic usuários",g.mcu==null?null:fm(g.mcu,1),"/10",g.mcu==null?null:g.mcu*10,"",g.mc?g.mc.replace(/\/?$/,"/")+"user-reviews/":null)}${scTile("OpenCritic",g.oc==null?null:g.oc,"/100",g.oc,"",g.ocUrl)}</div>
  <div class="kv">${kv.map(([k,v])=>`<b>${esc(k)}</b><span>${esc(v)}</span>`).join("")}</div></div></div>
  ${why.length?`<div class="why">${why.map(esc).join("<br><br>")}</div>`:""}
- <div class="links">${g.bl?`<a href="https://backloggd.com/games/${esc(g.bl)}/" target="_blank" rel="noopener">Backloggd</a>`:""}${g.appid?`<a href="https://store.steampowered.com/app/${g.appid}/" target="_blank" rel="noopener">Steam</a><a href="https://www.protondb.com/app/${g.appid}" target="_blank" rel="noopener">ProtonDB</a>`:""}${g.hltb?`<a href="${esc(g.hltb)}" target="_blank" rel="noopener">HowLongToBeat</a>`:""}${g.mc?`<a href="${esc(g.mc)}" target="_blank" rel="noopener">Metacritic</a>`:""}</div>`;
+ <div class="links">${g.bl?`<a href="https://backloggd.com/games/${esc(g.bl)}/" target="_blank" rel="noopener">Backloggd</a>`:""}${g.appid?`<a href="https://store.steampowered.com/app/${g.appid}/" target="_blank" rel="noopener">Steam</a><a href="https://www.protondb.com/app/${g.appid}" target="_blank" rel="noopener">ProtonDB</a>`:""}${g.hltb?`<a href="${esc(g.hltb)}" target="_blank" rel="noopener">HowLongToBeat</a>`:""}${g.mc?`<a href="${esc(g.mc)}" target="_blank" rel="noopener">Metacritic</a>`:""}${g.ocUrl?`<a href="${esc(g.ocUrl)}" target="_blank" rel="noopener">OpenCritic</a>`:""}</div>`;
  $("#dlg").showModal();
 }
-$("#main").addEventListener("click",e=>{const b=e.target.closest(".card");if(b)open(+b.dataset.i)});
+$("#main").addEventListener("click",e=>{
+ const k=e.target.closest("[data-k]");
+ if(k){const id=+k.closest(".cc").dataset.c,c=COLS[id-1],o=P.cols[id]=P.cols[id]||{};
+  if(k.dataset.k=="dir"){o.dir=eff(c).dir=="asc"?"desc":"asc";render()}
+  else if(k.dataset.k=="rst"){delete P.cols[id];render()}
+  return}
+ const b=e.target.closest(".card");if(b)open(+b.dataset.i)});
+$("#main").addEventListener("change",e=>{
+ const k=e.target.closest("select[data-k]");if(!k)return;
+ const id=+k.closest(".cc").dataset.c,o=P.cols[id]=P.cols[id]||{};
+ if(k.dataset.k=="ord"){o.ord=k.value||undefined;o.dir=undefined}
+ else if(k.dataset.k=="min")o.min=k.value===""?undefined:+k.value;
+ else if(k.dataset.k=="only")o.only=k.value===""?undefined:k.value;
+ render()});
 $("#tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;tab=+b.dataset.t;try{localStorage.setItem("ow-tab",tab)}catch(e){}render()});
 $("#dlg").addEventListener("click",e=>{if(e.target.id=="dlg")$("#dlg").close()});
-["q","lst","ord"].forEach(id=>$("#"+id).addEventListener("input",render));
-render();
+$("#q").addEventListener("input",render);$("#lst").addEventListener("input",render);
+$("#ord").addEventListener("input",()=>{P.ord=$("#ord").value;P.dir=KEYS[P.ord].d;render()});
+$("#dir").addEventListener("click",()=>{P.dir=P.dir=="asc"?"desc":"asc";render()});
+$("#min").addEventListener("input",()=>{P.min=+$("#min").value;render()});
+$("#only").addEventListener("change",()=>{P.only=$("#only").checked;render()});
+if(P.lst&&lists.includes(P.lst))$("#lst").value=P.lst;
+build();render();
 </script>
 </body>
 </html>
