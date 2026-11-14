@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onde Jogar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0f14;--panel:#151821;--panel2:#1c2030;--line:#262b3b;--txt:#e9ecf3;--mut:#8b93a7;
+--c1:#e60012;--c2:#1a9fff;--c3:#b04cff;--c4:#f5a524;--ok:#34d399;--warn:#fbbf24;--bad:#f87171}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--txt);font:14px/1.45 Inter,system-ui,sans-serif}
+a{color:#7cc4ff}
+header{position:sticky;top:0;z-index:20;background:rgba(13,15,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 16px}
+.top{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+h1{font-size:18px;margin:0;font-weight:800;letter-spacing:-.02em}
+h1 small{font-weight:500;color:var(--mut);font-size:13px;margin-left:6px}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+input,select{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:inherit}
+input{width:200px}
+.tabs{display:none;gap:6px;margin-top:10px}
+.tabs button{flex:1;min-width:0;background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;font:600 12px Inter;cursor:pointer}
+.tabs button.on{border-color:currentColor}
+main{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:12px 16px 40px}
+.col{background:var(--panel);border:1px solid var(--line);border-radius:14px;min-width:0;display:flex;flex-direction:column}
+.colh{padding:12px 14px 10px;border-bottom:1px solid var(--line);border-top:4px solid var(--cc);border-radius:14px 14px 0 0}
+.colh .p{font:800 11px Inter;letter-spacing:.08em;color:var(--cc);text-transform:uppercase}
+.colh h2{margin:2px 0 2px;font-size:16px;font-weight:800}
+.colh .d{color:var(--mut);font-size:12px}
+.colh .n{float:right;font:800 20px Inter;color:var(--cc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px;padding:12px}
+.card{cursor:pointer;position:relative;border:0;padding:0;background:none;color:inherit;text-align:left;font:inherit}
+.box{aspect-ratio:.71;border-radius:6px;overflow:hidden;background:var(--panel2);position:relative;box-shadow:0 2px 0 rgba(255,255,255,.04) inset,0 6px 14px rgba(0,0,0,.45);transition:transform .15s}
+.box::before{content:"";position:absolute;inset:0 0 auto 0;height:9px;background:var(--cc);opacity:.95;z-index:2}
+.box img{width:100%;height:100%;object-fit:cover;display:block}
+.box .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:14px 8px 8px;text-align:center;font:700 12px Inter;color:var(--mut)}
+.card:hover .box,.card:focus-visible .box{transform:translateY(-3px)}
+.card:focus-visible{outline:2px solid var(--cc);outline-offset:3px;border-radius:6px}
+.t{font-size:11.5px;font-weight:600;margin-top:5px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.m{font-size:10.5px;color:var(--mut);margin-top:1px}
+.badge{position:absolute;z-index:3;top:13px;right:4px;font:800 9.5px Inter;padding:2px 5px;border-radius:4px;background:rgba(0,0,0,.75);color:#fff}
+.recs{display:flex;gap:3px;flex-wrap:wrap;margin-top:3px}
+.rec{font:700 9.5px Inter;padding:1px 5px;border-radius:4px;background:#2a2f40;color:#cfd5e6;white-space:nowrap}
+.rec.r1{background:var(--c4);color:#1a1100}
+.empty{color:var(--mut);padding:20px;text-align:center}
+dialog{border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--txt);padding:0;max-width:640px;width:calc(100% - 32px)}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+.dl{display:flex;gap:16px;padding:18px}
+.dl .box{width:150px;flex:none;align-self:flex-start}
+.dl h3{margin:0 0 4px;font-size:20px;line-height:1.2}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chip{font:600 11.5px Inter;padding:3px 8px;border-radius:999px;background:var(--panel2);border:1px solid var(--line)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px;margin-top:6px}
+.kv b{color:var(--mut);font-weight:600}
+.why{background:var(--panel2);border-radius:10px;padding:10px 12px;margin:0 18px 12px;font-size:13px}
+.links{padding:0 18px 18px;display:flex;gap:12px;flex-wrap:wrap;font-size:13px}
+.x{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--mut);font-size:22px;cursor:pointer}
+@media (max-width:1100px){main{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){
+ .tabs{display:flex}main{grid-template-columns:1fr;padding:12px 16px}
+ .col{display:none}.col.on{display:flex}
+ input{width:100%}.ctrl{margin-left:0;width:100%}.ctrl select{flex:1}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .dl{flex-direction:column}.dl .box{width:130px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <h1>Onde jogar <small id="tot"></small></h1><a href="./" style="font-size:13px;color:var(--mut)">← Playlist</a>
+  <div class="ctrl">
+   <input id="q" type="search" placeholder="Buscar jogo…" aria-label="Buscar jogo">
+   <select id="lst" aria-label="Lista"><option value="">Todas as listas</option></select>
+   <select id="ord" aria-label="Ordenar"><option value="critic">Nota da crítica</option><option value="name">Nome A–Z</option><option value="main">Mais curtos</option><option value="year">Mais recentes</option></select>
+  </div>
+ </div>
+ <div class="tabs" id="tabs"></div>
+</header>
+<main id="main"></main>
+<dialog id="dlg"></dialog>
+<script src="consoles-data.js"></script>
+<script>
+const COLS=[
+ {id:1,p:"Prioridade 1",h:"Switch 2",s:"Switch 2",d:"Versão nativa ou retrocompatível rodando bem",c:"var(--c1)"},
+ {id:2,p:"Prioridade 2",h:"Steam Deck",s:"Deck",d:"30 fps ou mais, estável; ProtonDB Silver para cima",c:"var(--c2)"},
+ {id:3,p:"Prioridade 3",h:"ROG Xbox Ally X",s:"Ally X",d:"30 fps estável que o Deck não segura, ou bloqueado por anti-cheat no Linux",c:"var(--c3)"},
+ {id:4,p:"Prioridade 4",h:"Console",s:"Console",d:"Não roda bem em portátil: 1º e 2º console recomendado",c:"var(--c4)"}];
+const $=s=>document.querySelector(s);const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]);
+const lists=[...new Set(GAMES.map(g=>g.list).filter(Boolean))].sort();
+lists.forEach(l=>$("#lst").insertAdjacentHTML("beforeend",`<option>${esc(l)}</option>`));
+let tab=1;try{tab=+localStorage.getItem("ow-tab")||1}catch(e){}
+function card(g,i){
+ const badge=g.col==1?(g.native?"S2":"S1→S2"):(g.critic?g.critic:"");
+ const recs=g.col==4&&g.rec?`<div class="recs">${g.rec.slice(0,2).map((r,k)=>`<span class="rec ${k?"":"r1"}">${k+1}º ${esc(r.replace(" / Steam Machine",""))}</span>`).join("")}</div>`:"";
+ const sub=g.col==1?(g.list||""):(g.dfps&&g.col!=4?esc(g.dfps):esc(g.list||""));
+ return `<button class="card" data-i="${i}" aria-label="${esc(g.name)}"><div class="box">${badge?`<span class="badge">${esc(badge)}</span>`:""}${g.cover?`<img loading="lazy" src="${esc(g.cover)}" alt="" onerror="this.remove()">`:""}<div class="ph">${g.cover?"":esc(g.name)}</div></div><div class="t">${esc(g.name)}</div><div class="m">${sub}</div>${recs}</button>`;
+}
+function render(){
+ const q=$("#q").value.trim().toLowerCase(),l=$("#lst").value,o=$("#ord").value;
+ const f=GAMES.map((g,i)=>[g,i]).filter(([g])=>(!q||g.name.toLowerCase().includes(q))&&(!l||g.list==l));
+ const s={critic:(a,b)=>(b[0].critic||0)-(a[0].critic||0),name:(a,b)=>a[0].name.localeCompare(b[0].name),main:(a,b)=>(a[0].main||999)-(b[0].main||999),year:(a,b)=>(b[0].year||0)-(a[0].year||0)}[o];
+ f.sort(s);
+ $("#tot").textContent=f.length+" jogos";
+ $("#main").innerHTML=COLS.map(c=>{const gs=f.filter(([g])=>g.col==c.id);
+  return `<section class="col ${tab==c.id?"on":""}" style="--cc:${c.c}"><div class="colh"><span class="n">${gs.length}</span><div class="p">${c.p}</div><h2>${c.h}</h2><div class="d">${c.d}</div></div><div class="grid">${gs.map(([g,i])=>card(g,i)).join("")||'<div class="empty">Nenhum jogo</div>'}</div></section>`}).join("");
+ $("#tabs").innerHTML=COLS.map(c=>{const n=f.filter(([g])=>g.col==c.id).length;return `<button class="${tab==c.id?"on":""}" style="color:${c.c}" data-t="${c.id}">${c.s}<br>${n}</button>`}).join("");
+}
+const hrs=h=>h?(h<1?Math.round(h*60)+" min":h.toFixed(h<10?1:0).replace(".",",")+" h"):"—";
+function open(i){
+ const g=GAMES[i],c=COLS[g.col-1];
+ const where=g.col==1?(g.native?"Switch 2 — versão nativa":"Switch 2 — retrocompatível (versão de Switch 1)"):c.h;
+ const kv=[["Lista",g.list],["Ano",g.year],["Crítica / usuários",(g.critic||"—")+" / "+(g.user||"—")],["Campanha",hrs(g.main)],["+ extras",hrs(g.extras)],["100%",hrs(g.complete)],
+  g.dfps?["Steam Deck",(g.dg?"nota "+g.dg+" · ":"")+g.dfps]:null,g.dset?["Ajustes",g.dset]:null,g.proton?["ProtonDB",g.proton]:null,
+  g.price?["Steam BR","R$ "+(g.price.f/100).toFixed(2).replace(".",",")+(g.price.d?` (-${g.price.d}%)`:"")]:null,
+  g.plats&&g.plats.length?["Plataformas",g.plats.join(", ")]:null].filter(x=>x&&x[1]!=null&&x[1]!=="");
+ const why=[g.note,g.why,g.dnote].filter(Boolean);
+ $("#dlg").innerHTML=`<button class="x" aria-label="Fechar" onclick="dlg.close()">×</button>
+ <div class="dl" style="--cc:${c.c}"><div class="box">${g.cover?`<img src="${esc(g.cover)}" alt="">`:`<div class="ph">${esc(g.name)}</div>`}</div>
+ <div><div style="color:${c.c};font:800 11px Inter;letter-spacing:.08em;text-transform:uppercase">${c.p}</div><h3>${esc(g.name)}</h3>
+ <div class="chips"><span class="chip">${esc(where)}</span>${g.rec?g.rec.map((r,k)=>`<span class="chip" style="${k?"":"background:var(--c4);color:#1a1100;border-color:var(--c4)"}">${k+1}º ${esc(r)}</span>`).join(""):""}</div>
+ <div class="kv">${kv.map(([k,v])=>`<b>${esc(k)}</b><span>${esc(v)}</span>`).join("")}</div></div></div>
+ ${why.length?`<div class="why">${why.map(esc).join("<br><br>")}</div>`:""}
+ <div class="links">${g.bl?`<a href="https://backloggd.com/games/${esc(g.bl)}/" target="_blank" rel="noopener">Backloggd</a>`:""}${g.appid?`<a href="https://store.steampowered.com/app/${g.appid}/" target="_blank" rel="noopener">Steam</a><a href="https://www.protondb.com/app/${g.appid}" target="_blank" rel="noopener">ProtonDB</a>`:""}${g.hltb?`<a href="${esc(g.hltb)}" target="_blank" rel="noopener">HowLongToBeat</a>`:""}${g.mc?`<a href="${esc(g.mc)}" target="_blank" rel="noopener">Metacritic</a>`:""}</div>`;
+ $("#dlg").showModal();
+}
+$("#main").addEventListener("click",e=>{const b=e.target.closest(".card");if(b)open(+b.dataset.i)});
+$("#tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;tab=+b.dataset.t;try{localStorage.setItem("ow-tab",tab)}catch(e){}render()});
+$("#dlg").addEventListener("click",e=>{if(e.target.id=="dlg")$("#dlg").close()});
+["q","lst","ord"].forEach(id=>$("#"+id).addEventListener("input",render));
+render();
+</script>
+</body>
+</html>
