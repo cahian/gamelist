@@ -31,7 +31,7 @@ jobs:
     timeout-minutes: 50
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment_retry.outputs.page_url || steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -128,3 +128,11 @@ jobs:
       - name: Publicar playlist
         uses: actions/deploy-pages@v4
         id: deployment
+        continue-on-error: true
+      - name: Aguardar antes de retentar publicação
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 10
+      - name: Retentar publicação
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        id: deployment_retry
